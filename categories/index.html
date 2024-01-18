@@ -254,9 +254,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              分类
+              归档
               
               
             </a>
@@ -265,9 +265,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              归档
+              分类
               
               
             </a>
@@ -468,23 +468,23 @@
         
         <a href="#PHP" title="PHP" rel="5">PHP</a>
         
-        <a href="#缓存技术" title="缓存技术" rel="1">缓存技术</a>
-        
         <a href="#操作系统" title="操作系统" rel="1">操作系统</a>
-        
-        <a href="#Docker" title="Docker" rel="2">Docker</a>
         
         <a href="#网络" title="网络" rel="1">网络</a>
         
         <a href="#解决问题" title="解决问题" rel="1">解决问题</a>
         
-        <a href="#PHP基础" title="PHP基础" rel="5">PHP基础</a>
+        <a href="#Docker" title="Docker" rel="2">Docker</a>
         
-        <a href="#Redis" title="Redis" rel="1">Redis</a>
+        <a href="#缓存技术" title="缓存技术" rel="1">缓存技术</a>
+        
+        <a href="#PHP基础" title="PHP基础" rel="5">PHP基础</a>
         
         <a href="#MacOS" title="MacOS" rel="1">MacOS</a>
         
         <a href="#LaraDock" title="LaraDock" rel="2">LaraDock</a>
+        
+        <a href="#Redis" title="Redis" rel="1">Redis</a>
         
       </div>
 
@@ -716,6 +716,21 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
+          <a href="/PHP基础回顾-PHP中十六个魔术方法详解/">
+            <h2 class="post-title">
+              [PHP基础回顾]PHP中十六个魔术方法详解
+            </h2>
+            
+          </a>
+          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+        <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+        <div class="post-preview">
           <a href="/PHP基础回顾-while循环和do-while循环/">
             <h2 class="post-title">
               [PHP基础回顾]while循环和do...while循环
@@ -756,43 +771,6 @@
         </div>
         <hr>
         
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/PHP基础回顾-PHP中十六个魔术方法详解/">
-            <h2 class="post-title">
-              [PHP基础回顾]PHP中十六个魔术方法详解
-            </h2>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="缓存技术">
-          <span class="tag-text">缓存技术</span>
-        </span>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/Redis中的数据结构/">
-            <h2 class="post-title">
-              Redis中的数据结构
-            </h2>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
       </div>
       
       <div class="one-tag-list">
@@ -808,43 +786,6 @@
           <a href="/U盘如何格式化为ext3，ext4格式/">
             <h2 class="post-title">
               U盘如何格式化为ext3，ext4格式
-            </h2>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="Docker">
-          <span class="tag-text">Docker</span>
-        </span>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/Laradock中MySQL连接的坑/">
-            <h2 class="post-title">
-              Laradock中MySQL连接的坑
-            </h2>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/基于LaraDock在Docker构建Laravel应用/">
-            <h2 class="post-title">
-              基于Laradock在Docker构建Laravel应用
             </h2>
             
           </a>
@@ -899,6 +840,65 @@
       </div>
       
       <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Docker">
+          <span class="tag-text">Docker</span>
+        </span>
+        
+        <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+        <div class="post-preview">
+          <a href="/Laradock中MySQL连接的坑/">
+            <h2 class="post-title">
+              Laradock中MySQL连接的坑
+            </h2>
+            
+          </a>
+          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+        <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+        <div class="post-preview">
+          <a href="/基于LaraDock在Docker构建Laravel应用/">
+            <h2 class="post-title">
+              基于Laradock在Docker构建Laravel应用
+            </h2>
+            
+          </a>
+          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="缓存技术">
+          <span class="tag-text">缓存技术</span>
+        </span>
+        
+        <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+        <div class="post-preview">
+          <a href="/Redis中的数据结构/">
+            <h2 class="post-title">
+              Redis中的数据结构
+            </h2>
+            
+          </a>
+          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
         <span class="fa fa-tag listing-seperator" id="PHP基础">
           <span class="tag-text">PHP基础</span>
         </span>
@@ -911,6 +911,21 @@
           <a href="/PHP中的匿名函数和闭包/">
             <h2 class="post-title">
               PHP中的匿名函数和闭包
+            </h2>
+            
+          </a>
+          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+        <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+        <div class="post-preview">
+          <a href="/PHP基础回顾-PHP中十六个魔术方法详解/">
+            <h2 class="post-title">
+              [PHP基础回顾]PHP中十六个魔术方法详解
             </h2>
             
           </a>
@@ -956,43 +971,6 @@
           <a href="/PHP基础回顾-可变变量和引用操作符/">
             <h2 class="post-title">
               [PHP基础回顾]可变变量和引用操作符
-            </h2>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/PHP基础回顾-PHP中十六个魔术方法详解/">
-            <h2 class="post-title">
-              [PHP基础回顾]PHP中十六个魔术方法详解
-            </h2>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="Redis">
-          <span class="tag-text">Redis</span>
-        </span>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/Redis中的数据结构/">
-            <h2 class="post-title">
-              Redis中的数据结构
             </h2>
             
           </a>
@@ -1052,6 +1030,28 @@
           <a href="/基于LaraDock在Docker构建Laravel应用/">
             <h2 class="post-title">
               基于Laradock在Docker构建Laravel应用
+            </h2>
+            
+          </a>
+          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Redis">
+          <span class="tag-text">Redis</span>
+        </span>
+        
+        <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+        <div class="post-preview">
+          <a href="/Redis中的数据结构/">
+            <h2 class="post-title">
+              Redis中的数据结构
             </h2>
             
           </a>
