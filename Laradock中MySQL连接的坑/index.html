@@ -240,13 +240,6 @@
 
           
           
-          <li>
-            <a href="/about/">
-              
-              
-            </a>
-          </li>
-          
           
           
           <li>
@@ -260,12 +253,10 @@
           
           
           
-          
-          
           <li>
-            <a href="/categories/">
+            <a href="/tags/">
               
-              分类
+              标签
               
               
             </a>
@@ -274,9 +265,9 @@
           
           
           <li>
-            <a href="/tags/">
+            <a href="/categories/">
               
-              标签
+              分类
               
               
             </a>
@@ -476,12 +467,10 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <p>最近开始使用Laradock作为开发环境进行项目开发，按照教程将必备的软件都搭建好了，结果在项目中一直连接不上MySQL。网上查了好多资料后知道了问题原因：<br>
-Docker中每个容器都是相对独立的，所以PHP-FPM和MySQL容器也是独立开的。在项目的配置文件中数据库host配置项一般是127.0.0.1，但这样写的话项目是去访问的PHP-FPM容器，这个容器中自然没有MySQL所以访问不到。</p>
+        <p>最近开始使用Laradock作为开发环境进行项目开发，按照教程将必备的软件都搭建好了，结果在项目中一直连接不上MySQL。网上查了好多资料后知道了问题原因：<br>Docker中每个容器都是相对独立的，所以PHP-FPM和MySQL容器也是独立开的。在项目的配置文件中数据库host配置项一般是127.0.0.1，但这样写的话项目是去访问的PHP-FPM容器，这个容器中自然没有MySQL所以访问不到。</p>
 <p>解决方案：</p>
 <ol>
-<li>首先打开<code>docker-compose.yml</code>文件，检查PHP-FPM配置中<code>links</code>选项是否连接了MySQL，如果没有则在此项中添加MySQL的容器名称，我这里是<code>mysql</code>，注意大小写。重新构建容器。 <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">`php-fpm:</span></span><br><span class="line"><span class="section">links:</span></span><br><span class="line">-mysql</span><br></pre></td></tr></table></figure>
-</li>
+<li>首先打开<code>docker-compose.yml</code>文件，检查PHP-FPM配置中<code>links</code>选项是否连接了MySQL，如果没有则在此项中添加MySQL的容器名称，我这里是<code>mysql</code>，注意大小写。重新构建容器。 <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">`php-fpm:</span></span><br><span class="line"><span class="section">links:</span></span><br><span class="line">-mysql</span><br></pre></td></tr></table></figure></li>
 <li>进入项目中，将数据库配置中的<code>host</code>改为<code>mysql</code>，这样就完成了项目连接MySQL的操作。</li>
 </ol>
 

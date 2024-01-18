@@ -240,13 +240,6 @@
 
           
           
-          <li>
-            <a href="/about/">
-              
-              
-            </a>
-          </li>
-          
           
           
           <li>
@@ -260,12 +253,10 @@
           
           
           
-          
-          
           <li>
-            <a href="/categories/">
+            <a href="/tags/">
               
-              分类
+              标签
               
               
             </a>
@@ -274,9 +265,9 @@
           
           
           <li>
-            <a href="/tags/">
+            <a href="/categories/">
               
-              标签
+              分类
               
               
             </a>
@@ -462,37 +453,31 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1>1. cookie和session区别</h1>
-<ul>
+        <h1 id="1-cookie和session区别"><a href="#1-cookie和session区别" class="headerlink" title="1. cookie和session区别"></a>1. cookie和session区别</h1><ul>
 <li>session存在服务器，cookie存在浏览器；</li>
 <li>session安全性比cookie高；</li>
 <li>session为会话服务，在使用时需要开启服务，cookie不需要开启，可以直接使用。</li>
 </ul>
-<h1>2. redis和memcached区别</h1>
-<ul>
+<h1 id="2-redis和memcached区别"><a href="#2-redis和memcached区别" class="headerlink" title="2. redis和memcached区别"></a>2. redis和memcached区别</h1><ul>
 <li>redis 系统库有个快照，即突然断电，数据还会存在，而memached 就没了；</li>
 <li>memcached 是简单的键值对，Key-Value, redis 支持的存储方式很多，应用场景很多</li>
 <li>redis 性能比memached 要高</li>
 </ul>
-<h1>3. myisam和innodb区别</h1>
-<ul>
+<h1 id="3-myisam和innodb区别"><a href="#3-myisam和innodb区别" class="headerlink" title="3. myisam和innodb区别"></a>3. myisam和innodb区别</h1><ul>
 <li>MyISAM 是非事务的存储引擎；适合用于频繁查询的应用；表锁，不会出现死锁；适合小数据，小并发。</li>
 <li>innodb是支持事务的存储引擎；合于插入和更新操作比较多的应用；设计合理的话是行锁（最大区别就在锁的级别上）；适合大数据，大并发。</li>
 </ul>
-<h1>4. require和include区别</h1>
-<ul>
+<h1 id="4-require和include区别"><a href="#4-require和include区别" class="headerlink" title="4. require和include区别"></a>4. require和include区别</h1><ul>
 <li>报错的时候，include报严重警告，还是会继续执行后面程序；</li>
 <li>require报致命错误，不会继续执行。</li>
 <li>require_once 和 include_once 可以避免重复包含同一文件。</li>
 </ul>
-<h1>5. char和varchar的区别</h1>
-<ul>
+<h1 id="5-char和varchar的区别"><a href="#5-char和varchar的区别" class="headerlink" title="5. char和varchar的区别"></a>5. char和varchar的区别</h1><ul>
 <li>char是一种固定长度的类型，varchar则是一种可变长度的类型，在检索操作中那些填补出来的空格字符将被去掉；</li>
 <li>char(M)类型的数据列里，每个值都占用M个字节，如果某个长度小于M，MySQL就会在它的右边用空格字符补足；</li>
 <li>在varchar(M)类型的数据列里，每个值只占用刚好够用的字节再加上一个用来记录其长度的字节（即总长度为L+1字节）。</li>
 </ul>
-<h1>6. print，echo，print_r区别</h1>
-<ul>
+<h1 id="6-print，echo，print-r区别"><a href="#6-print，echo，print-r区别" class="headerlink" title="6. print，echo，print_r区别"></a>6. print，echo，print_r区别</h1><ul>
 <li>echo和print都可输出；</li>
 <li>echo不是函数，没有返回值，而print是一个函数，有返回值；</li>
 <li>如果只是输出，echo会更快；</li>
@@ -500,26 +485,15 @@
 <li>print是打印字符串；</li>
 <li>prin_r打印复合类型，数组或者对象。</li>
 </ul>
-<h1>7. 构造函数和析构函数</h1>
-<ul>
-<li>
-<p>构造函数（方法）是对象创建完成后第一个被对象自动调用的方法；</p>
+<h1 id="7-构造函数和析构函数"><a href="#7-构造函数和析构函数" class="headerlink" title="7. 构造函数和析构函数"></a>7. 构造函数和析构函数</h1><ul>
+<li>构造函数（方法）是对象创建完成后第一个被对象自动调用的方法；</li>
+<li>它存在于每个声明的类中，是一个特殊的成员方法；</li>
+<li>作用是执行一些初始化的任务；</li>
+<li><p>PHP中使用__construct()声明构造方法，并且只能声明一个。</p>
 </li>
-<li>
-<p>它存在于每个声明的类中，是一个特殊的成员方法；</p>
+<li><p>析构函数（方法）作用和构造方法正好相反，是对象被销毁之前最后一个被对象自动调用的方法；</p>
 </li>
-<li>
-<p>作用是执行一些初始化的任务；</p>
-</li>
-<li>
-<p>PHP中使用__construct()声明构造方法，并且只能声明一个。</p>
-</li>
-<li>
-<p>析构函数（方法）作用和构造方法正好相反，是对象被销毁之前最后一个被对象自动调用的方法；</p>
-</li>
-<li>
-<p>是PHP5中新添加的内容作用是用于实现在销毁一个对象之前执行一些特定的操作，诸如关闭文件和释放内存等。</p>
-</li>
+<li>是PHP5中新添加的内容作用是用于实现在销毁一个对象之前执行一些特定的操作，诸如关闭文件和释放内存等。</li>
 </ul>
 
 

@@ -240,13 +240,6 @@
 
           
           
-          <li>
-            <a href="/about/">
-              
-              
-            </a>
-          </li>
-          
           
           
           <li>
@@ -260,12 +253,10 @@
           
           
           
-          
-          
           <li>
-            <a href="/categories/">
+            <a href="/tags/">
               
-              分类
+              标签
               
               
             </a>
@@ -274,9 +265,9 @@
           
           
           <li>
-            <a href="/tags/">
+            <a href="/categories/">
               
-              标签
+              分类
               
               
             </a>
@@ -474,8 +465,7 @@
       
     </h3>
     <div class="post-content-preview">
-      最近开始使用Laradock作为开发环境进行项目开发，按照教程将必备的软件都搭建好了，结果在项目中一直连接不上MySQL。网上查了好多资料后知道了问题原因：
-Docker中每个容器都是相对独立的，所以PHP-FPM和MySQL容器也是独立开的。在项目的配置文件中数据库host配置项一般是127.0.0.1，但这样写的话项目是去访问的PHP-FPM容器，这个容器中自然没有MySQL所以访问不到......
+      最近开始使用Laradock作为开发环境进行项目开发，按照教程将必备的软件都搭建好了，结果在项目中一直连接不上MySQL。网上查了好多资料后知道了问题原因：Docker中每个容器都是相对独立的，所以PHP-FPM和MySQL容器也是独立开的。在项目的配置文件中数据库host配置项一般是127.0.0.1，但这样写的话项目是去访问的PHP-FPM容器，这个容器中自然没有MySQL所以访问不到。......
     </div>
   </a>
   
@@ -518,15 +508,14 @@ Docker中每个容器都是相对独立的，所以PHP-FPM和MySQL容器也是�
       
     </h3>
     <div class="post-content-preview">
-      PHP中把以两个下划线开头的方法称为魔术方法（Magic Method），这些方法在PHP中有举足轻重的作用。
-魔术方法包括：
+      PHP中把以两个下划线开头的方法称为魔术方法（Magic Method），这些方法在PHP中有举足轻重的作用。魔术方法包括：
 
 __construct()  类的构造函数
 __destruct()  类的析构函数
 __call()  在对象中调用一个不可访问的方法时调用
 __callStatic()  在静态方式中调用一个不可访问的方法时调用
 __get()  获得一个类的成员变量时调用
-......
+_......
     </div>
   </a>
   
@@ -555,12 +544,9 @@ __get()  获得一个类的成员变量时调用
       
     </h3>
     <div class="post-content-preview">
-      我发现自己在开发中很容易将可变变量操作符$$和引用操作符&amp;搞混，所以特开此贴加以区分牢记。
-可变变量
-可变变量允许我们动态地改变一个变量的名称。这个特性的工作原理是用一个变量的值作为另一个变量的名称。
-1234567$a = &#x27;b&#x27;;$$a = 5;echo $b; //输出：5//相当于：$b = 5;
-引用操作符
-引用操作符&amp;可以在关联赋值中使用。通常......
+      我发现自己在开发中很容易将可变变量操作符$$$$和引用操作符&amp;搞混，所以特开此贴加以区分牢记。
+可变变量可变变量允许我们动态地改变一个变量的名称。这个特性的工作原理是用一个变量的值作为另一个变量的名称。1234567$a = &#x27;b&#x27;;$$a = 5;echo $b; //输出：5//相当于：$b = 5;
+引用操作符引用操作符&amp;可以在关联赋值中使用。通常在......
     </div>
   </a>
   
@@ -590,9 +576,7 @@ __get()  获得一个类的成员变量时调用
     </h3>
     <div class="post-content-preview">
       用PHP开发了这么多年，遇到需要使用循环的时候好像一般很少选择while循环或者do…while循环，时间久了感觉对它们有点不那么熟了，最近刚好在巩固PHP基础知识，于是单独拿出来复习一下。
-while循环
-PHP中最简单的循环就是while循环。就像if语句，它也依赖于一个条件。
-while循环语句和if循环语句的不同在于，if语句只有在条件为true的情况下才执行后续的代码一次，而whi......
+while循环PHP中最简单的循环就是while循环。就像if语句，它也依赖于一个条件。while循环语句和if循环语句的不同在于，if语句只有在条件为true的情况下才执行后续的代码一次，而while......
     </div>
   </a>
   
@@ -622,16 +606,13 @@ while循环语句和if循环语句的不同在于，if语句只有在条件为tr
     </h3>
     <div class="post-content-preview">
       刷机前的准备
-
 EXT格式的1G以上U盘一个，如果不知道怎么格式化，可以查看此文章附录。（可选）
 改版梅林安装包，下载地址，或直接到Coolshare论坛下载
 科学上网工具离线安装包，下载地址，或直接到GitHub上找到与你机器相匹配的
 
-正式开刷
-系统初始化
-
+正式开刷系统初始化
 拿到机器后，打开机器背后开关键，然后连上电源，开机。
-找到一根网线，一头接自己的电脑，另一头接路由器的LAN口，或者直接连接路由器......
+找到一根网线，一头接自己的电脑，另一头接路由器的LAN口，或者直接连接路由器的Wi......
     </div>
   </a>
   
@@ -663,10 +644,7 @@ EXT格式的1G以上U盘一个，如果不知道怎么格式化，可以查看�
     </h3>
     <div class="post-content-preview">
       Redis有5个基本数据结构，string、list、hash、set和zset。它们是日常开发中使用频率非常高应用最为广泛的数据结构，把这5个数据结构都吃透了，基本就掌握了Redis应用知识的一半了。
-string
-string表示的是一个可变的字节数组，我们初始化字符串的内容、可以拿到字符串的长度，可以获取string的子串，可以覆盖string的子串内容，可以追加子串。
-
-Redis的......
+stringstring表示的是一个可变的字节数组，我们初始化字符串的内容、可以拿到字符串的长度，可以获取string的子串，可以覆盖string的子串内容，可以追加子串。Redis的字符串......
     </div>
   </a>
   
@@ -698,15 +676,13 @@ Redis的......
     </h3>
     <div class="post-content-preview">
       1. cookie和session区别
-
 session存在服务器，cookie存在浏览器；
 session安全性比cookie高；
 session为会话服务，在使用时需要开启服务，cookie不需要开启，可以直接使用。
 
 2. redis和memcached区别
-
 redis 系统库有个快照，即突然断电，数据还会存在，而memached 就没了；
-memcached 是简单的键值对，Key......
+memcached 是简单的键值对，Key-V......
     </div>
   </a>
   
@@ -735,17 +711,11 @@ memcached 是简单的键值对，Key......
       
     </h3>
     <div class="post-content-preview">
-      以 Mac 电脑下操作为例
-插上U盘
+      以 Mac 电脑下操作为例插上U盘
 
+打开 Mac 终端，输入下面代码/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;按回车键后要求你按任意键执行输入 Mac 电脑密码，回车，会自动下载安装，过程需要稍等片刻。
 
-打开 Mac 终端，输入下面代码
-/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
-按回车键后要求你按任意键执行
-输入 Mac 电脑密码，回车，会自动下载安装，过程需要稍等片刻。
-
-
-......
+输入下面代码......
     </div>
   </a>
   
@@ -776,9 +746,7 @@ memcached 是简单的键值对，Key......
       
     </h3>
     <div class="post-content-preview">
-      按照微信小程序文档写了个scroll-view设置横向滚动scroll-x=&quot;true&quot;，可是怎么都不动。。。
-后来发现是要几个样式：
-123456&lt;scroll-view scroll-x=&quot;true&quot; style=&quot;background:black;height:110px; white-space: nowrap;&quot;&g......
+      按照微信小程序文档写了个scroll-view设置横向滚动scroll-x=&quot;true&quot;，可是怎么都不动。。。后来发现是要几个样式：123456&lt;scroll-view scroll-x=&quot;true&quot; style=&quot;background:black;height:110px; white-space: nowrap;&quot;&gt;......
     </div>
   </a>
   
@@ -809,12 +777,9 @@ memcached 是简单的键值对，Key......
       
     </h3>
     <div class="post-content-preview">
-      匿名函数
-匿名函数也叫闭包函数（closures），也就是没有定义名字的函数。
-匿名函数的定义：
+      匿名函数匿名函数也叫闭包函数（closures），也就是没有定义名字的函数。匿名函数的定义：
 123$closureFunc = function () &#123;	......&#125;;
-因为匿名函数没有名字，如果要使用它，需要将其赋值给一个变量，通过变量来调用。匿名函数也可以像普通函数一样声明参数，调用方法也相同：
-12345678$func = function ($para......
+因为匿名函数没有名字，如果要使用它，需要将其赋值给一个变量，通过变量来调用。匿名函数也可以像普通函数一样声明参数，调用方法也相同：12345678$func = function ($param) ......
     </div>
   </a>
   
@@ -928,19 +893,19 @@ memcached 是简单的键值对，Key......
     
     
     
-    <a href="/tags/#路由器" title="路由器" rel="1">路由器</a>
-    
-    
-    
-    <a href="/tags/#网络" title="网络" rel="1">网络</a>
-    
-    
-    
     <a href="/tags/#操作系统" title="操作系统" rel="1">操作系统</a>
     
     
     
     <a href="/tags/#MacOS" title="MacOS" rel="1">MacOS</a>
+    
+    
+    
+    <a href="/tags/#路由器" title="路由器" rel="1">路由器</a>
+    
+    
+    
+    <a href="/tags/#网络" title="网络" rel="1">网络</a>
     
     
     
@@ -1068,16 +1033,16 @@ memcached 是简单的键值对，Key......
       <li>缓存技术</li>
     </a>
     
-    <a href="/categories/#网络">
-      <li>网络</li>
-    </a>
-    
     <a href="/categories/#Docker">
       <li>Docker</li>
     </a>
     
     <a href="/categories/#操作系统">
       <li>操作系统</li>
+    </a>
+    
+    <a href="/categories/#网络">
+      <li>网络</li>
     </a>
     
     <a href="/categories/#解决问题">
