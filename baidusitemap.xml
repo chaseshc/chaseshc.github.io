@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite-url/python%E5%9F%BA%E7%A1%80-%E6%A8%A1%E5%9D%97%E5%92%8C%E5%BA%93/</loc>
+    <lastmod>2024-01-18</lastmod>
+  </url>
+  <url>
     <loc>http://yoursite-url/Laradock%E4%B8%ADMySQL%E8%BF%9E%E6%8E%A5%E7%9A%84%E5%9D%91/</loc>
     <lastmod>2020-12-09</lastmod>
   </url>
@@ -55,10 +59,6 @@
   <url>
     <loc>http://yoursite-url/Markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</loc>
     <lastmod>2020-08-16</lastmod>
-  </url>
-  <url>
-    <loc>http://yoursite-url/Hexo-Theme-LiveMyLife/</loc>
-    <lastmod>2020-04-16</lastmod>
   </url>
   <url>
     <loc>http://yoursite-url/Hexo-Theme-LiveMyLife/</loc>

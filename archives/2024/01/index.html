@@ -135,10 +135,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/微信小程序scroll-view横向滚动的坑/">
+  <link rel="canonical" href="http://yoursite-url/archives/2024/01/">
   <title>
     
-      微信小程序scroll-view横向滚动的坑 - Do or Die
+      Do or Die
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -345,9 +345,9 @@
     }
 
     header.intro-header {
-       /*post*/
-        background-image: var(--intro-header-background-image-url-post);
-        /* background-image: url(''); */
+       /*page*/
+        background-image: var(--intro-header-background-image-url-page);
+        /* background-image: url('/img/header_img/archive_bg.jpg'); */
       
     }
 
@@ -365,44 +365,10 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="post-heading">
-            <div class="tags">
-              
-              <a class="tag" href="/tags/#小程序" title="小程序">小程序</a>
-              
-              <a class="tag" href="/tags/#前端" title="前端">前端</a>
-              
-            </div>
-            <h1>微信小程序scroll-view横向滚动的坑</h1>
-            <h2 class="subheading"></h2>
-            <span class="meta">
-              Posted by Chase Shen on
-              2020-10-03
-            </span>
-
-
-            
-            <!-- WordCount start -->
-            <div class="blank_box"></div>
-            <span class="meta">
-              Estimated Reading Time <span class="post-count">1</span> Minutes
-            </span>
-            <div class="blank_box"></div>
-            <span class="meta">
-              Words <span class="post-count">333</span> In Total
-            </span>
-            <div class="blank_box"></div>
-            <!-- WordCount end -->
-            
-            
-            <!-- 不蒜子统计 start -->
-            <span class="meta" id="busuanzi_container_page_pv">
-              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
-            </span>
-            <!-- 不蒜子统计 end -->
-            
-
-
+          <div class="site-heading">
+            <h1>Chase&#39;s Blog</h1>
+            <!--<hr class="small">-->
+            <span class="subheading">GGMU</span>
           </div>
           
         </div>
@@ -443,274 +409,492 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-		<!-- Modify by Yu-Hsuan Yen -->
-<!-- Post Content -->
-<article>
-  <div class="container">
-    <div class="row">
-      <!-- Post Container -->
-      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+		<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    
 
-        <p>按照微信小程序文档写了个scroll-view设置横向滚动<code>scroll-x=&quot;true&quot;</code>，可是怎么都不动。。。<br>后来发现是要几个样式：<br><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;scroll-<span class="built_in">view</span> scroll-x=<span class="string">&quot;true&quot;</span> <span class="built_in">style</span>=<span class="string">&quot;background:black;height:110px; white-space: nowrap;&quot;</span>&gt;</span><br><span class="line">  &lt;<span class="built_in">view</span> <span class="built_in">style</span>=<span class="string">&quot;background: red; width: 200px; height: 100px; display: inline-block;&quot;</span>&gt;&lt;/<span class="built_in">view</span>&gt;</span><br><span class="line">  &lt;<span class="built_in">view</span> <span class="built_in">style</span>=<span class="string">&quot;background: green; width: 200px; height: 100px; display: inline-block;&quot;</span>&gt;&lt;/<span class="built_in">view</span>&gt;</span><br><span class="line">  &lt;<span class="built_in">view</span> <span class="built_in">style</span>=<span class="string">&quot;background: blue; width: 200px; height: 100px; display: inline-block;&quot;</span>&gt;&lt;/<span class="built_in">view</span>&gt;</span><br><span class="line">  &lt;<span class="built_in">view</span> <span class="built_in">style</span>=<span class="string">&quot;background: yellow; width: 200px; height: 100px; display: inline-block;&quot;</span>&gt;&lt;/<span class="built_in">view</span>&gt;</span><br><span class="line">&lt;/scroll-<span class="built_in">view</span>&gt;</span><br></pre></td></tr></table></figure></p>
-<ol>
-<li>内部的view必须要设置宽高;</li>
-<li>scroll-view容器要设置<code>white-space: nowrap;</code><br><code>white-space</code>属性设置如何处理元素内的空白：<ul>
-<li>normal 默认。规定段落中的文本不进行换行,空白会被浏览器忽略。 </li>
-<li>pre 空白会被浏览器保留。其行为方式类似 HTML 中的 pre 标签。 </li>
-<li>nowrap 文本不会换行，文本会在在同一行上继续，直到遇到br 标签为止。 </li>
-<li>pre-wrap 保留空白符序列，但是正常地进行换行。 </li>
-<li>pre-line 合并空白符序列，但是保留换行符。 </li>
-<li>inherit 规定应该从父元素继承 white-space 属性的值。</li>
-</ul>
-</li>
-<li>内部的view要设置<code>display: inline-block;</code>。应用此特性的元素呈现为内联对象，周围元素保持在同一行。</li>
-</ol>
+    <!-- USE SIDEBAR -->
+    <!-- Post Container -->
+    <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                post-container
+            ">
 
+      <!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-0 col-md-10 col-md-offset-1">
+      <!-- 归档列表 -->
 
-        <hr>
-        <!-- Pager -->
-        <ul class="pager">
+      
+
+      <!-- 归档列表 -->
+      
+      <div class="one-tag-list">
+        <span class="fa fa-calendar-times-o listing-seperator" id="2024">
+          <span class="tag-text">2024</span>
+        </span>
+        <ul>
           
-          <li class="previous">
-            <a href="/U盘如何格式化为ext3，ext4格式/" data-toggle="tooltip" data-placement="top" title="U盘如何格式化为ext3，ext4格式">&larr; Previous Post</a>
-          </li>
-          
-          
-          <li class="next">
-            <a href="/PHP中的匿名函数和闭包/" data-toggle="tooltip" data-placement="top" title="PHP中的匿名函数和闭包">Next Post &rarr;</a>
+          <li>
+            01-18
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/python基础-模块和库/" style="color: #0085a1">
+              <span>
+                [python基础] 模块和库
+              </span>
+            </a>
           </li>
           
         </ul>
-
-        
-        <!-- tip start -->
-        <!-- tip -->
-<!-- tip start -->
-<div class="tip">
-  <p>
-    
-      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
-    
-  </p>
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-calendar-times-o listing-seperator" id="2020">
+          <span class="tag-text">2020</span>
+        </span>
+        <ul>
+          
+          <li>
+            12-09
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/Laradock中MySQL连接的坑/" style="color: #0085a1">
+              <span>
+                Laradock中MySQL连接的坑
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            11-20
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/PHP基础回顾-PHP中十六个魔术方法详解/" style="color: #0085a1">
+              <span>
+                [PHP基础回顾]PHP中十六个魔术方法详解
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            11-20
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/PHP基础回顾-可变变量和引用操作符/" style="color: #0085a1">
+              <span>
+                [PHP基础回顾]可变变量和引用操作符
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            11-19
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/PHP基础回顾-while循环和do-while循环/" style="color: #0085a1">
+              <span>
+                [PHP基础回顾]while循环和do...while循环
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            11-17
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/华硕RT-AC86U刷梅林改版系统/" style="color: #0085a1">
+              <span>
+                华硕RT-AC86U刷梅林改版系统
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            11-05
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/Redis中的数据结构/" style="color: #0085a1">
+              <span>
+                Redis中的数据结构
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            10-25
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/PHP开发中需要区别的几组概念/" style="color: #0085a1">
+              <span>
+                PHP开发中需要区别的几组概念
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            10-15
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/U盘如何格式化为ext3，ext4格式/" style="color: #0085a1">
+              <span>
+                U盘如何格式化为ext3，ext4格式
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            10-03
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/微信小程序scroll-view横向滚动的坑/" style="color: #0085a1">
+              <span>
+                微信小程序scroll-view横向滚动的坑
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            09-26
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/PHP中的匿名函数和闭包/" style="color: #0085a1">
+              <span>
+                PHP中的匿名函数和闭包
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            09-10
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/基于LaraDock在Docker构建Laravel应用/" style="color: #0085a1">
+              <span>
+                基于Laradock在Docker构建Laravel应用
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            09-09
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/Docker实例/" style="color: #0085a1">
+              <span>
+                Docker实例
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            09-07
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/Docker入门/" style="color: #0085a1">
+              <span>
+                Docker入门
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            08-16
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/Markdown基本语法/" style="color: #0085a1">
+              <span>
+                Markdown基本语法
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            04-17
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/Hexo-Theme-LiveMyLife/" style="color: #0085a1">
+              <span>
+                Hexo-Theme-LiveMyLife
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            01-04
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/A-New-Beginning/" style="color: #0085a1">
+              <span>
+                A New Beginning
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      
+    </div>
+  </div>
 </div>
-<!-- tip end -->
 
-        <!-- tip end -->
-        
 
-        
-        <!-- Sharing Srtart -->
-        <!-- Social Social Share Post -->
-<!-- Docs:https://github.com/overtrue/share.js -->
+      <!-- 如果开启评论功能 -->
+      
+    </div>
 
-<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
-  <ul class="list-inline text-center social-share-ul">
-    <li class="social-share-li">
-      <a target="_blank" class="social-share-icon icon-twitter">
-        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
-      </a>
-    </li>
-    <li class="social-share-li">
-      <a class="social-share-icon icon-wechat">
-        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
-      </a>
-    </li>
-    <li class="social-share-li">
-      <a target="_blank" class="social-share-icon icon-weibo">
-        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
-      </a>
-    </li>
-    <li class="social-share-li">
-      <a target="_blank" class="social-share-icon icon-qq">
-        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
-      </a>
-    </li>
-    <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=微信小程序scroll-view横向滚动的坑&body=Hi,I found this website and thought you might like it http://yoursite-url/微信小程序scroll-view横向滚动的坑/">
-        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
-      </a>
-    </li>
+    <!-- Sidebar Container -->
+<div class="
+    col-lg-3 col-lg-offset-0
+    col-md-3 col-md-offset-0
+    col-sm-12
+    col-xs-12
+    sidebar-container
+">
+    
+        <!-- Visitors -->
+<h5><a href="/">来访者</a></h5>
+
+<div class="widget">
+  <span>
+    Viewed <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Times
+  </span>
+  <br />
+  <span>
+    <b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Visitors In Total
+  </span>
+</div>
+
+
+        <hr>
+    
+        <!-- Featured Tags -->
+
+<section>
+  <h5><a href="/tags/">特色标签</a></h5>
+  <div class="tags">
+    
+    
+    <a href="/tags/#Docker" title="Docker" rel="4">Docker</a>
+    
+    
+    
+    <a href="/tags/#本地开发" title="本地开发" rel="4">本地开发</a>
+    
+    
+    
+    <a href="/tags/#环境搭建" title="环境搭建" rel="4">环境搭建</a>
+    
+    
+    
+    <a href="/tags/#环境配置" title="环境配置" rel="4">环境配置</a>
+    
+    
+    
+    <a href="/tags/#Hexo-Theme" title="Hexo-Theme" rel="1">Hexo-Theme</a>
+    
+    
+    
+    <a href="/tags/#PHP" title="PHP" rel="7">PHP</a>
+    
+    
+    
+    <a href="/tags/#Laravel" title="Laravel" rel="2">Laravel</a>
+    
+    
+    
+    <a href="/tags/#LaraDock" title="LaraDock" rel="2">LaraDock</a>
+    
+    
+    
+    <a href="/tags/#MySQL" title="MySQL" rel="1">MySQL</a>
+    
+    
+    
+    <a href="/tags/#Markdown" title="Markdown" rel="1">Markdown</a>
+    
+    
+    
+    <a href="/tags/#Redis" title="Redis" rel="1">Redis</a>
+    
+    
+    
+    <a href="/tags/#缓存技术" title="缓存技术" rel="1">缓存技术</a>
+    
+    
+    
+    <a href="/tags/#操作系统" title="操作系统" rel="1">操作系统</a>
+    
+    
+    
+    <a href="/tags/#MacOS" title="MacOS" rel="1">MacOS</a>
+    
+    
+    
+    <a href="/tags/#路由器" title="路由器" rel="1">路由器</a>
+    
+    
+    
+    <a href="/tags/#网络" title="网络" rel="1">网络</a>
+    
+    
+    
+    <a href="/tags/#小程序" title="小程序" rel="1">小程序</a>
+    
+    
+    
+    <a href="/tags/#前端" title="前端" rel="1">前端</a>
+    
+    
+  </div>
+</section>
+
+
+        <hr>
+    
+        <!-- Short About -->
+<section class="visible-md visible-lg">
+  <h5><a href="/about/">关于自己</a></h5>
+  <div class="short-about">
+
+    
+    <img id="avatar_pic" src="/img/avatar/avatar.jpeg" alt="avatar_pic" style="box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);" />
+    
+
+    
+    <p>Do or die</p>
+    
+
+    <!-- SNS Link -->
+    <ul class="list-inline">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+    </ul>
+  </div>
+</section>
+
+        <hr>
+    
+        <!-- RECENT POSTS -->
+
+<h5><a href="/">最近博文</a></h5>
+<div class="widget">
+  <ul>
+    
+    <a href="../../../python%E5%9F%BA%E7%A1%80-%E6%A8%A1%E5%9D%97%E5%92%8C%E5%BA%93/">
+      <li>[python基础] 模块和库</li>
+    </a>
+    
+    <a href="../../../Laradock%E4%B8%ADMySQL%E8%BF%9E%E6%8E%A5%E7%9A%84%E5%9D%91/">
+      <li>Laradock中MySQL连接的坑</li>
+    </a>
+    
+    <a href="../../../PHP%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE-PHP%E4%B8%AD%E5%8D%81%E5%85%AD%E4%B8%AA%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3/">
+      <li>[PHP基础回顾]PHP中十六个魔术方法详解</li>
+    </a>
+    
+    <a href="../../../PHP%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE-%E5%8F%AF%E5%8F%98%E5%8F%98%E9%87%8F%E5%92%8C%E5%BC%95%E7%94%A8%E6%93%8D%E4%BD%9C%E7%AC%A6/">
+      <li>[PHP基础回顾]可变变量和引用操作符</li>
+    </a>
+    
+    <a href="../../../PHP%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE-while%E5%BE%AA%E7%8E%AF%E5%92%8Cdo-while%E5%BE%AA%E7%8E%AF/">
+      <li>[PHP基础回顾]while循环和do...while循环</li>
+    </a>
+    
   </ul>
 </div>
 
-<!-- css & js -->
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
-<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
 
-        <!-- Sharing End -->
-        
         <hr>
+    
+        <!-- Archives -->
 
-        <!-- comments start -->
-        <!-- 1. gitalk comment -->
-
-  <!-- gitalk start -->
-  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
-
-  <div id="gitalk-container"></div>
-
-  
-    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
-    <script src="/js/comment/gitalk.js"></script>
-  
-
-  <script>
-    var gitalk = new Gitalk({
-      clientID: '',
-      clientSecret: '',
-      repo: '',
-      owner: '',
-      admin: '',
-      id: 'Sat Oct 03 2020 23:23:02 GMT+0800', // Ensure uniqueness and length less than 50
-      distractionFreeMode: false, // Facebook-like distraction free mode
-      perPage: 10,
-      pagerDirection: 'last',
-      createIssueManually: false,
-      language: 'en',
-      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
-    });
-    gitalk.render('gitalk-container');
-
-    var gtFolded = () => {
-      setTimeout(function () {
-        let markdownBody = document.getElementsByClassName("markdown-body");
-        let list = Array.from(markdownBody);
-        list.forEach(item => {
-          if (item.clientHeight > 250) {
-            item.classList.add('gt-comment-body-folded');
-            item.style.maxHeight = '250px';
-            item.title = 'Click to Expand';
-            item.onclick = function () {
-              item.classList.remove('gt-comment-body-folded');
-              item.style.maxHeight = '';
-              item.title = '';
-              item.onclick = null;
-            };
-          }
-        })
-      }, 800);
-    }
-  </script>
-
-  <!-- gitalk end -->
+<h5><a href="/archives/">archives</a></h5>
+<div class="widget">
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="">January 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2020/12/">December 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2020/11/">November 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2020/10/">October 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2020/09/">September 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2020/08/">August 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2020/04/">April 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2020/01/">January 2020</a><span class="archive-list-count">1</span></li></ul>
+</div>
 
 
-<!-- 2. gitment comment -->
-
-
-<!-- 3. disqus comment -->
-
-
-        <!-- comments end -->
         <hr>
+    
+        <!-- Categories -->
 
-      </div>
+<h5><a href="/categories/">categories</a></h5>
+<div class="widget">
+  <ul>
+    
+    <a href="/categories/#环境搭建">
+      <li>环境搭建</li>
+    </a>
+    
+    <a href="/categories/#Hexo-Theme">
+      <li>Hexo-Theme</li>
+    </a>
+    
+    <a href="/categories/#Docker">
+      <li>Docker</li>
+    </a>
+    
+    <a href="/categories/#Markdown">
+      <li>Markdown</li>
+    </a>
+    
+    <a href="/categories/#PHP">
+      <li>PHP</li>
+    </a>
+    
+    <a href="/categories/#缓存技术">
+      <li>缓存技术</li>
+    </a>
+    
+    <a href="/categories/#Docker">
+      <li>Docker</li>
+    </a>
+    
+    <a href="/categories/#操作系统">
+      <li>操作系统</li>
+    </a>
+    
+    <a href="/categories/#网络">
+      <li>网络</li>
+    </a>
+    
+    <a href="/categories/#解决问题">
+      <li>解决问题</li>
+    </a>
+    
+    <a href="/categories/#PHP基础">
+      <li>PHP基础</li>
+    </a>
+    
+    <a href="/categories/#Redis">
+      <li>Redis</li>
+    </a>
+    
+    <a href="/categories/#LaraDock">
+      <li>LaraDock</li>
+    </a>
+    
+    <a href="/categories/#MacOS">
+      <li>MacOS</li>
+    </a>
+    
+  </ul>
+</div>
 
-      <!-- Catalog: Tabe of Content -->
-      <!-- Table of Contents -->
 
-
-
-      <!-- Sidebar Container -->
-      <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-10 col-md-offset-1
-                sidebar-container">
-
-        <!-- Featured Tags -->
-        
-        <section>
-          <!-- no hr -->
-          <h5>
-            <a href="/tags/">特色标签</a>
-          </h5>
-          <div class="tags">
-            
-            <a class="tag" href="/tags/#小程序" title="小程序">小程序</a>
-            
-            <a class="tag" href="/tags/#前端" title="前端">前端</a>
-            
-          </div>
-        </section>
-        
-
-        <!-- Friends Blog -->
-        
         <hr>
-        <h5>链友</h5>
-        <ul class="list-inline">
+    
+</div>
 
-          
-          <li>
-            <a href="https://v-vincen.life/" target="_blank">V_Vincen</a>
-          </li>
-          
-          <li>
-            <a href="http://beantech.org" target="_blank">Bean Tech</a>
-          </li>
-          
-          <li>
-            <a href="http://huangxuan.me" target="_blank">Hux Blog</a>
-          </li>
-          
-          <li>
-            <a href="https://hexo.io/" target="_blank">Hexo</a>
-          </li>
-          
-        </ul>
-        
-      </div>
-    </div>
+
+    
   </div>
-</article>
-
-
-
-<!-- anchorjs start -->
-<!-- async load function -->
-<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
-<script type="text/javascript">
-  // async load function
-  function async (u, c) {
-    var d = document,
-      t = 'script',
-      o = d.createElement(t),
-      s = d.getElementsByTagName(t)[0];
-    o.src = u;
-    if (c) {
-      o.addEventListener('load', function(e) {
-        c(null, e);
-      }, false);
-    }
-    s.parentNode.insertBefore(o, s);
-  };
-</script>
-<script type="text/javascript">
-  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
-  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
-    anchors.options = {
-      visible: 'hover',
-      placement: 'left',
-      // icon: 'ℬ'
-      icon: '❡'
-    };
-    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
-  });
-</script>
-<style>
-  /* place left on bigger screen */
-  @media all and (min-width: 800px) {
-    .anchorjs-link {
-      position: absolute;
-      left: -0.75em;
-      font-size: 1.1em;
-      margin-top: -0.1em;
-    }
-  }
-</style>
-
-<!-- anchorjs end -->
-
+</div>
 
 
 		<!-- Footer (contains ThemeColor、viewer) -->

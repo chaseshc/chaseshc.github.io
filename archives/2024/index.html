@@ -135,7 +135,7 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/cn/archives/2/">
+  <link rel="canonical" href="http://yoursite-url/archives/2024/">
   <title>
     
       Do or Die
@@ -284,32 +284,6 @@
 
           <!-- LangSelect -->
           
-          
-          <!-- LangSelect start -->
-          <!-- LangSelect -->
-<li>
-  <a id="lang-select-label"><i class="fa fa-globe"></i>
-    <span>
-      简体中文
-    </span>
-    <select id="lang-select" data-canonical="cn/archives/2/index.html">
-      
-      
-      <option value="cn"  selected >
-        简体中文
-      </option>
-      
-      <option value="en" >
-        English
-      </option>
-      
-    </select>
-  </a>
-</li>
-
-          <!-- LangSelect end -->
-          
-          
         </ul>
       </div>
     </div>
@@ -371,9 +345,9 @@
     }
 
     header.intro-header {
-       /*config*/
-        background-image: var(--intro-header-background-image-url-home);
-        /* background-image: url('/img/header_img/home_bg.jpg'); */
+       /*page*/
+        background-image: var(--intro-header-background-image-url-page);
+        /* background-image: url('/img/header_img/archive_bg.jpg'); */
       
     }
 
@@ -451,235 +425,206 @@
             ">
 
       <!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-0 col-md-10 col-md-offset-1">
+      <!-- 归档列表 -->
 
-
-
-<div class="post-preview">
-  
-
-  <a href="/基于LaraDock在Docker构建Laravel应用/">
-    <h2 class="post-title">
-      基于Laradock在Docker构建Laravel应用
-    </h2>
-    <h3 class="post-subtitle">
       
-    </h3>
-    <div class="post-content-preview">
-      Laradock 是为 Docker 提供的完整 PHP 本地开发环境，和 Homestead 一样提供了一系列打包好（包括配置）的 Docker Image。Laradock 早期专注为 Laravel 打造 Docker 开发环境，因而最早在 Laravel 社区中出名，后来随着影响力的扩大，逐渐被 PHP 社区接纳和采用，目前支持的 PHP 项目除了 Laravel 之外，还有 Sym......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Chase Shen on
-    2020-09-10
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Docker" title="Docker">Docker</a>
-    
-    <a href="/tags/#本地开发" title="本地开发">本地开发</a>
-    
-    <a href="/tags/#环境搭建" title="环境搭建">环境搭建</a>
-    
-    <a href="/tags/#环境配置" title="环境配置">环境配置</a>
-    
-    <a href="/tags/#PHP" title="PHP">PHP</a>
-    
-    <a href="/tags/#Laravel" title="Laravel">Laravel</a>
-    
-    <a href="/tags/#LaraDock" title="LaraDock">LaraDock</a>
-    
-  </div>
-  
 
-</div>
-<hr>
-
-<div class="post-preview">
-  
-
-  <a href="/Docker实例/">
-    <h2 class="post-title">
-      Docker实例
-    </h2>
-    <h3 class="post-subtitle">
+      <!-- 归档列表 -->
       
-    </h3>
-    <div class="post-content-preview">
-       了解完Docker的基本概念后，本来应该是安装教程，因为我用的MacOS，直接下载安装就可以了，这里我就不赘述了。接下来用最简单的“Hello World” image体验一下Docker。
-首先需要将image文件从仓库拉取到本地：
-1$ docker image pull library/hello-world
-$ docker image pull是抓取image文件的命令。
-lib......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Chase Shen on
-    2020-09-09
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Docker" title="Docker">Docker</a>
-    
-    <a href="/tags/#本地开发" title="本地开发">本地开发</a>
-    
-    <a href="/tags/#环境搭建" title="环境搭建">环境搭建</a>
-    
-    <a href="/tags/#环境配置" title="环境配置">环境配置</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-
-  <a href="/Docker入门/">
-    <h2 class="post-title">
-      Docker入门
-    </h2>
-    <h3 class="post-subtitle">
+      <div class="one-tag-list">
+        <span class="fa fa-calendar-times-o listing-seperator" id="2024">
+          <span class="tag-text">2024</span>
+        </span>
+        <ul>
+          
+          <li>
+            01-18
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/python基础-模块和库/" style="color: #0085a1">
+              <span>
+                [python基础] 模块和库
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
       
-    </h3>
-    <div class="post-content-preview">
-      写在前面
- 在进行后端开发之前，首先需要在本地搭建一套PHP环境，需要安装PHP、PHP-FPM、WEB服务器、MySQL，有时候还需要Redis和Memcached等NoSQL服务。每个服务又有很多版本，有时候后端开发人员在自己本地安装的版本和运维部署到服务器上的版本会不一样，这样会造成代码不兼容的问题，这种情况在我工作过的公司中是普遍存在的，不仅会浪费时间排斥问题，还造成了很多的沟通成本......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Chase Shen on
-    2020-09-07
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Docker" title="Docker">Docker</a>
-    
-    <a href="/tags/#本地开发" title="本地开发">本地开发</a>
-    
-    <a href="/tags/#环境搭建" title="环境搭建">环境搭建</a>
-    
-    <a href="/tags/#环境配置" title="环境配置">环境配置</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-
-  <a href="/Markdown基本语法/">
-    <h2 class="post-title">
-      Markdown基本语法
-    </h2>
-    <h3 class="post-subtitle">
+      <div class="one-tag-list">
+        <span class="fa fa-calendar-times-o listing-seperator" id="2020">
+          <span class="tag-text">2020</span>
+        </span>
+        <ul>
+          
+          <li>
+            12-09
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/Laradock中MySQL连接的坑/" style="color: #0085a1">
+              <span>
+                Laradock中MySQL连接的坑
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            11-20
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/PHP基础回顾-PHP中十六个魔术方法详解/" style="color: #0085a1">
+              <span>
+                [PHP基础回顾]PHP中十六个魔术方法详解
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            11-20
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/PHP基础回顾-可变变量和引用操作符/" style="color: #0085a1">
+              <span>
+                [PHP基础回顾]可变变量和引用操作符
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            11-19
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/PHP基础回顾-while循环和do-while循环/" style="color: #0085a1">
+              <span>
+                [PHP基础回顾]while循环和do...while循环
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            11-17
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/华硕RT-AC86U刷梅林改版系统/" style="color: #0085a1">
+              <span>
+                华硕RT-AC86U刷梅林改版系统
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            11-05
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/Redis中的数据结构/" style="color: #0085a1">
+              <span>
+                Redis中的数据结构
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            10-25
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/PHP开发中需要区别的几组概念/" style="color: #0085a1">
+              <span>
+                PHP开发中需要区别的几组概念
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            10-15
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/U盘如何格式化为ext3，ext4格式/" style="color: #0085a1">
+              <span>
+                U盘如何格式化为ext3，ext4格式
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            10-03
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/微信小程序scroll-view横向滚动的坑/" style="color: #0085a1">
+              <span>
+                微信小程序scroll-view横向滚动的坑
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            09-26
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/PHP中的匿名函数和闭包/" style="color: #0085a1">
+              <span>
+                PHP中的匿名函数和闭包
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            09-10
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/基于LaraDock在Docker构建Laravel应用/" style="color: #0085a1">
+              <span>
+                基于Laradock在Docker构建Laravel应用
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            09-09
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/Docker实例/" style="color: #0085a1">
+              <span>
+                Docker实例
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            09-07
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/Docker入门/" style="color: #0085a1">
+              <span>
+                Docker入门
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            08-16
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/Markdown基本语法/" style="color: #0085a1">
+              <span>
+                Markdown基本语法
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            04-17
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/Hexo-Theme-LiveMyLife/" style="color: #0085a1">
+              <span>
+                Hexo-Theme-LiveMyLife
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            01-04
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/A-New-Beginning/" style="color: #0085a1">
+              <span>
+                A New Beginning
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
       
-    </h3>
-    <div class="post-content-preview">
-      Markdown是一种纯文本格式的标记语言。通过简单的标记语法，就可以使普通文本内容具有一定的格式。使用Markdown的好处是可以让文章编辑者专注于写作本身。
-标题
-在想要设置为标题的文字前面加#就可以完成标题设置
-一个#是一级标题，两个#代表二级标题，以此类推，最多支持六级标题。
-注：标准语法一般在#后跟一个空格再写文字
-
-	# 这是一级标题
-	## 这是二级标题
-	### 这是三级标题......
     </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Chase Shen on
-    2020-08-16
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Markdown" title="Markdown">Markdown</a>
-    
   </div>
-  
-
 </div>
-<hr>
-
-<div class="post-preview">
-  
-
-  <a href="/Hexo-Theme-LiveMyLife/">
-    <h2 class="post-title">
-      Hexo-Theme-LiveMyLife
-    </h2>
-    <h3 class="post-subtitle">
-      A succinct hexo theme...
-    </h3>
-    <div class="post-content-preview">
-      
-移植 Hux Blog 的主题，感谢 Huxpro 设计了如此完美的主题。
-由 Vincent 创建的 LiveMyLife 的主题修改来源 YenYuHsuan，参考主题 dusign、Utone，感谢 dusign、Utone。
-
-仓库
-Github 仓库地址：https://github.com/V-Vincen/hexo-theme-livemylife
-Gitee 仓库地址：ht......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Chase Shen on
-    2020-04-17
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Hexo-Theme" title="Hexo-Theme">Hexo-Theme</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-
-  <a href="/A-New-Beginning/">
-    <h2 class="post-title">
-      A New Beginning
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      搭建这个博客的初衷是想利用最近多余的时间记录总结学习过的知识。
-作为程序员，记录的习惯是很重要的，平时工作学习中经常会遇到各种疑难杂症，每次没办法解决的时候都会去Google一下，而且有时候同一个问题过一段时间又会遇到，如果忘记解决方案的话又得去搜索一番，这样很容易浪费时间，所以需要有个地方记录下来。使用各种笔记应用记录很方便，但没办法在网络上分享给遇到同样问题的人。另外，学习新知识做做笔记......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Chase Shen on
-    2020-01-04
-  </p>
-  <div class="tags">
-    
-  </div>
-  
-
-</div>
-<hr>
-
-
-  <!-- Pager -->
-  <ul class="pager">
-    
-    <li class="previous">
-      <a href="/cn/">&larr; 上一页</a>
-    </li>
-    
-    
-  </ul>
 
 
       <!-- 如果开启评论功能 -->
@@ -734,7 +679,7 @@ Gitee 仓库地址：ht......
     
     
     
-    <a href="/tags/#Hexo-Theme" title="Hexo-Theme" rel="2">Hexo-Theme</a>
+    <a href="/tags/#Hexo-Theme" title="Hexo-Theme" rel="1">Hexo-Theme</a>
     
     
     
@@ -840,24 +785,24 @@ Gitee 仓库地址：ht......
 <div class="widget">
   <ul>
     
-    <a href="../../../Laradock%E4%B8%ADMySQL%E8%BF%9E%E6%8E%A5%E7%9A%84%E5%9D%91/">
+    <a href="../../python%E5%9F%BA%E7%A1%80-%E6%A8%A1%E5%9D%97%E5%92%8C%E5%BA%93/">
+      <li>[python基础] 模块和库</li>
+    </a>
+    
+    <a href="../../Laradock%E4%B8%ADMySQL%E8%BF%9E%E6%8E%A5%E7%9A%84%E5%9D%91/">
       <li>Laradock中MySQL连接的坑</li>
     </a>
     
-    <a href="../../../PHP%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE-PHP%E4%B8%AD%E5%8D%81%E5%85%AD%E4%B8%AA%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3/">
+    <a href="../../PHP%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE-PHP%E4%B8%AD%E5%8D%81%E5%85%AD%E4%B8%AA%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3/">
       <li>[PHP基础回顾]PHP中十六个魔术方法详解</li>
     </a>
     
-    <a href="../../../PHP%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE-%E5%8F%AF%E5%8F%98%E5%8F%98%E9%87%8F%E5%92%8C%E5%BC%95%E7%94%A8%E6%93%8D%E4%BD%9C%E7%AC%A6/">
+    <a href="../../PHP%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE-%E5%8F%AF%E5%8F%98%E5%8F%98%E9%87%8F%E5%92%8C%E5%BC%95%E7%94%A8%E6%93%8D%E4%BD%9C%E7%AC%A6/">
       <li>[PHP基础回顾]可变变量和引用操作符</li>
     </a>
     
-    <a href="../../../PHP%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE-while%E5%BE%AA%E7%8E%AF%E5%92%8Cdo-while%E5%BE%AA%E7%8E%AF/">
+    <a href="../../PHP%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE-while%E5%BE%AA%E7%8E%AF%E5%92%8Cdo-while%E5%BE%AA%E7%8E%AF/">
       <li>[PHP基础回顾]while循环和do...while循环</li>
-    </a>
-    
-    <a href="../../../%E5%8D%8E%E7%A1%95RT-AC86U%E5%88%B7%E6%A2%85%E6%9E%97%E6%94%B9%E7%89%88%E7%B3%BB%E7%BB%9F/">
-      <li>华硕RT-AC86U刷梅林改版系统</li>
     </a>
     
   </ul>
@@ -870,7 +815,7 @@ Gitee 仓库地址：ht......
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/11/">November 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/10/">October 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/09/">September 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/08/">August 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/04/">April 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/01/">January 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="01/">January 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/11/">November 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/10/">October 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/09/">September 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/04/">April 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/01/">January 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -906,6 +851,10 @@ Gitee 仓库地址：ht......
       <li>缓存技术</li>
     </a>
     
+    <a href="/categories/#Docker">
+      <li>Docker</li>
+    </a>
+    
     <a href="/categories/#操作系统">
       <li>操作系统</li>
     </a>
@@ -914,8 +863,8 @@ Gitee 仓库地址：ht......
       <li>网络</li>
     </a>
     
-    <a href="/categories/#Docker">
-      <li>Docker</li>
+    <a href="/categories/#解决问题">
+      <li>解决问题</li>
     </a>
     
     <a href="/categories/#PHP基础">
@@ -926,16 +875,12 @@ Gitee 仓库地址：ht......
       <li>Redis</li>
     </a>
     
-    <a href="/categories/#MacOS">
-      <li>MacOS</li>
-    </a>
-    
     <a href="/categories/#LaraDock">
       <li>LaraDock</li>
     </a>
     
-    <a href="/categories/#解决问题">
-      <li>解决问题</li>
+    <a href="/categories/#MacOS">
+      <li>MacOS</li>
     </a>
     
   </ul>
@@ -1011,10 +956,6 @@ Gitee 仓库地址：ht......
     <!-- Scroll end -->
   
 
-  
-    <!-- LangSelect start -->
-    <script type="text/javascript" src="/js/langselect.js"></script>
-    <!-- LangSelect end -->
   
 
   

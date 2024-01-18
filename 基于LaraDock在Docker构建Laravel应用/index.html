@@ -284,10 +284,6 @@
 
           <!-- LangSelect -->
           
-          
-          
-          
-          
         </ul>
       </div>
     </div>
@@ -403,7 +399,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">656</span> In Total
+              Words <span class="post-count">654</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -466,81 +462,50 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <p>Laradock 是为 Docker 提供的完整 PHP 本地开发环境，和 Homestead 一样提供了一系列打包好（包括配置）的 Docker Image。Laradock 早期专注为 Laravel 打造 Docker 开发环境，因而最早在 Laravel 社区中出名，后来随着影响力的扩大，逐渐被 PHP 社区接纳和采用，目前支持的 PHP 项目除了 Laravel 之外，还有 Symfony、CodeIgniter、WordPress、Drupal 等等。</p>
-<h1>环境搭建</h1>
-<p>下面我们进入实战，开始基于Laradock在本地安装开发环境。</p>
-<h2 id="依赖">依赖</h2>
-<ul>
+<h1 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h1><p>下面我们进入实战，开始基于Laradock在本地安装开发环境。</p>
+<h2 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h2><ul>
 <li>Git</li>
 <li>Docker</li>
 </ul>
-<h2 id="安装Laradock">安装Laradock</h2>
-<p>克隆Github仓库到本地：</p>
+<h2 id="安装Laradock"><a href="#安装Laradock" class="headerlink" title="安装Laradock"></a>安装Laradock</h2><p>克隆Github仓库到本地：</p>
 <p><code>git clone https://github.com/LaraDock/laradock.git</code></p>
-<h2 id="配置文件">配置文件</h2>
-<p>进入Laradock目录，将原始配置文件env-example复制一份并命名为.env：</p>
+<h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><p>进入Laradock目录，将原始配置文件env-example复制一份并命名为.env：</p>
 <p><code>cp env-example .env</code></p>
 <p><code>APP_CODE_PATH_HOST</code>参数对应主机上的项目目录，其他需要注意的参数比如<code>PHP_VERSION</code>PHP版本设置等。</p>
-<h2 id="运行容器">运行容器</h2>
-<p><code>docker-compose up -d nginx mysql</code><br>
-可以从以下列表选择你自己的容器组合：<br>
-<code>nginx, hhvm, php-fpm, mysql, redis, postgres, mariadb, neo4j, mongo, apache2, caddy, memcached, beanstalkd, beanstalkd-console, workspace</code></p>
+<h2 id="运行容器"><a href="#运行容器" class="headerlink" title="运行容器"></a>运行容器</h2><p><code>docker-compose up -d nginx mysql</code><br>可以从以下列表选择你自己的容器组合：<br><code>nginx, hhvm, php-fpm, mysql, redis, postgres, mariadb, neo4j, mongo, apache2, caddy, memcached, beanstalkd, beanstalkd-console, workspace</code></p>
 <blockquote>
 <p>注：workspace 和 php-fpm 将运行在大部分实例中, 所以不需要在 up 命令中加上它们。</p>
 </blockquote>
-<h2 id="测试是否安装完成">测试是否安装完成</h2>
-<p>打开浏览器输入localhost</p>
+<h2 id="测试是否安装完成"><a href="#测试是否安装完成" class="headerlink" title="测试是否安装完成"></a>测试是否安装完成</h2><p>打开浏览器输入localhost</p>
 <p><code>http://localhost</code></p>
-<h2 id="多个项目设置">多个项目设置</h2>
-<p>完成上述步骤安装成功后，我们来设置项目。<br>
-您的文件夹结构应如下所示：</p>
+<h2 id="多个项目设置"><a href="#多个项目设置" class="headerlink" title="多个项目设置"></a>多个项目设置</h2><p>完成上述步骤安装成功后，我们来设置项目。<br>您的文件夹结构应如下所示：</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">+</span> laradock</span><br><span class="line"><span class="bullet">+</span> project-1</span><br><span class="line"><span class="bullet">+</span> project-2</span><br></pre></td></tr></table></figure>
 <ol>
-<li>
-<p>进入nginx/sites目录<br>
-在访问不同的域时，转到laradock/nginx/sites 并创建配置文件以指向不同的项目目录。Laradock默认包含app.conf.example，laravel.conf.example 和symfony.conf.example 作为工作示例。</p>
+<li><p>进入nginx/sites目录<br>在访问不同的域时，转到laradock/nginx/sites 并创建配置文件以指向不同的项目目录。Laradock默认包含app.conf.example，laravel.conf.example 和symfony.conf.example 作为工作示例。</p>
 </li>
-<li>
-<p>更改默认名称 *.conf<br>
-您可以根据需要重命名配置文件，项目文件夹和域，只需确保配置文件中的 root 指向正确的项目文件夹名称即可。</p>
+<li><p>更改默认名称 *.conf<br>您可以根据需要重命名配置文件，项目文件夹和域，只需确保配置文件中的 root 指向正确的项目文件夹名称即可。</p>
 </li>
-<li>
-<p>将域添加到 hosts 文件</p>
-</li>
-</ol>
+<li><p>将域添加到 hosts 文件</p>
 <figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0.0.1</span>  project-<span class="number">1</span>.test</span><br><span class="line"><span class="number">127.0.0.1</span>  project-<span class="number">2</span>.test</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-<h1>进入容器（在正在运行的容器中运行命令）</h1>
+</li>
+</ol>
+<h1 id="进入容器（在正在运行的容器中运行命令）"><a href="#进入容器（在正在运行的容器中运行命令）" class="headerlink" title="进入容器（在正在运行的容器中运行命令）"></a>进入容器（在正在运行的容器中运行命令）</h1><ol>
+<li><p>首先<code>docker ps</code>查看正在运行的容器；</p>
+</li>
+<li><p>进入任何容器：<br><code>docker-compose exec &#123;container-name&#125; bash</code></p>
+</li>
+</ol>
+<p>例如，进入mysql容器：<br><code>docker-compose exec mysql bash</code></p>
 <ol>
-<li>
-<p>首先<code>docker ps</code>查看正在运行的容器；</p>
+<li>退出容器<br>输入<code>exit</code></li>
+</ol>
+<h1 id="从Docker容器安装Laravel"><a href="#从Docker容器安装Laravel" class="headerlink" title="从Docker容器安装Laravel"></a>从Docker容器安装Laravel</h1><ol>
+<li><p>首先，您需要进入工作区容器<br>以laradock用户身份进入workspace容器：<br><code>docker-compose exec -u laradock workspace bash</code></p>
 </li>
-<li>
-<p>进入任何容器：<br>
-<code>docker-compose exec &#123;container-name&#125; bash</code></p>
+<li><p>安装 Laravel<br>进入容器后，执行以下命令安装Laravel：<br><code>composer create-project laravel/laravel project-name &quot;5.5.*&quot;</code><br>后两个参数分别是自己的项目名称和laravel版本号。</p>
 </li>
 </ol>
-<p>例如，进入mysql容器：<br>
-<code>docker-compose exec mysql bash</code></p>
-<ol start="3">
-<li>退出容器<br>
-输入<code>exit</code></li>
-</ol>
-<h1>从Docker容器安装Laravel</h1>
-<ol>
-<li>
-<p>首先，您需要进入工作区容器<br>
-以laradock用户身份进入workspace容器：<br>
-<code>docker-compose exec -u laradock workspace bash</code></p>
-</li>
-<li>
-<p>安装 Laravel<br>
-进入容器后，执行以下命令安装Laravel：<br>
-<code>composer create-project laravel/laravel project-name &quot;5.5.*&quot;</code><br>
-后两个参数分别是自己的项目名称和laravel版本号。</p>
-</li>
-</ol>
-<h1>重启容器</h1>
-<p>当我们修改了容器的配置，比如修改了nginx的.conf文件，需要重启nginx<br>
-<code>docker-compose restart nginx</code></p>
+<h1 id="重启容器"><a href="#重启容器" class="headerlink" title="重启容器"></a>重启容器</h1><p>当我们修改了容器的配置，比如修改了nginx的.conf文件，需要重启nginx<br><code>docker-compose restart nginx</code></p>
 
 
         <hr>
@@ -858,10 +823,6 @@
     <!-- Scroll end -->
   
 
-  
-    <!-- LangSelect start -->
-    <script type="text/javascript" src="/js/langselect.js"></script>
-    <!-- LangSelect end -->
   
 
   

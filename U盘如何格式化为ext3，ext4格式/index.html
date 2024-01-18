@@ -284,10 +284,6 @@
 
           <!-- LangSelect -->
           
-          
-          
-          
-          
         </ul>
       </div>
     </div>
@@ -393,7 +389,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">251</span> In Total
+              Words <span class="post-count">250</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -455,31 +451,17 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <p>以 Mac 电脑下操作为例<br>
-插上U盘</p>
+        <p>以 Mac 电脑下操作为例<br>插上U盘</p>
 <ol>
-<li>
-<p>打开 Mac 终端，输入下面代码<br>
-<code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code><br>
-按回车键后要求你按任意键执行<br>
-输入 Mac 电脑密码，回车，会自动下载安装，过程需要稍等片刻。</p>
+<li><p>打开 Mac 终端，输入下面代码<br><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code><br>按回车键后要求你按任意键执行<br>输入 Mac 电脑密码，回车，会自动下载安装，过程需要稍等片刻。</p>
 </li>
-<li>
-<p>输入下面代码-安装e2fsprogs<br>
-<code>brew install e2fsprogs</code></p>
+<li><p>输入下面代码-安装e2fsprogs<br><code>brew install e2fsprogs</code></p>
 </li>
-<li>
-<p>输入下面代码-找到盘符<br>
-<code>diskutil list</code></p>
+<li><p>输入下面代码-找到盘符<br><code>diskutil list</code></p>
 </li>
-<li>
-<p>输入下面代码，在执行结果中找到 U盘盘符，我这里是 /dev/disk3，此时U盘会消失。<br>
-<code>diskutil unmountdisk /dev/disk3</code></p>
+<li><p>输入下面代码，在执行结果中找到 U盘盘符，我这里是 /dev/disk3，此时U盘会消失。<br><code>diskutil unmountdisk /dev/disk3</code></p>
 </li>
-<li>
-<p>输入下面代码（4代表ext4格式，也可以是3即ext3格式，后面的disk3是盘符）<br>
-<code>sudo $(brew --prefix e2fsprogs)/sbin/mkfs.ext4 /dev/disk3</code><br>
-回车，输入Mac电脑密码再回车，过程需要稍等片刻，等待完成即可拔掉 U盘，这时候 U盘格式已经为 ext4 了。</p>
+<li><p>输入下面代码（4代表ext4格式，也可以是3即ext3格式，后面的disk3是盘符）<br><code>sudo $(brew --prefix e2fsprogs)/sbin/mkfs.ext4 /dev/disk3</code><br>回车，输入Mac电脑密码再回车，过程需要稍等片刻，等待完成即可拔掉 U盘，这时候 U盘格式已经为 ext4 了。</p>
 </li>
 </ol>
 <p>注：如果是 Win 系统，请安装 MiniTool 软件来为 U盘格式化为 ext3或4，不需要输入任何代码，操作很简单。</p>
@@ -790,10 +772,6 @@
     <!-- Scroll end -->
   
 
-  
-    <!-- LangSelect start -->
-    <script type="text/javascript" src="/js/langselect.js"></script>
-    <!-- LangSelect end -->
   
 
   
