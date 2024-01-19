@@ -984,29 +984,6 @@
 
 
 
-  <!-- CDN: jsdelivr start -->
-  <script async="async" type="text/javascript">
-    let imgsUrl = document.getElementsByTagName("img");
-    let imgUrl = Array.from(imgsUrl);
-
-
-
-    let jsdelivr_cdn_url_prefix = "https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr";
-    let pagePath = "archive/index.html";
-    let jsdelivrurl;
-    if (pagePath.indexOf("index.html") != -1) {
-      jsdelivrurl = jsdelivr_cdn_url_prefix;
-    } else {
-      jsdelivrurl = jsdelivr_cdn_url_prefix + "/" + pagePath;
-    }
-    imgUrl.forEach(item => {
-      let oldUrl = item.getAttribute("src");
-      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
-      item.setAttribute("src", newUrl);
-    });
-  </script>
-  <!-- CDN: jsdelivr end -->
-
 
 
   <!-- viewer start -->
