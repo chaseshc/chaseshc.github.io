@@ -2,21 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite-url/python%E5%9F%BA%E7%A1%80-%E6%A8%A1%E5%9D%97%E5%92%8C%E5%BA%93/</loc>
+    <loc>http://yoursite-url/categories/index.html</loc>
     
-    <lastmod>2024-01-18</lastmod>
+    <lastmod>2024-01-19</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/index.html</loc>
     
-    <lastmod>2024-01-18</lastmod>
+    <lastmod>2024-01-19</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite-url/categories/index.html</loc>
+    <loc>http://yoursite-url/python%E5%9F%BA%E7%A1%80-%E6%A8%A1%E5%9D%97%E5%92%8C%E5%BA%93/</loc>
     
     <lastmod>2024-01-18</lastmod>
     
@@ -186,13 +186,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite-url/tags/Hexo-Theme/</loc>
-    <lastmod>2024-01-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://yoursite-url/tags/PHP/</loc>
     <lastmod>2024-01-19</lastmod>
     <changefreq>daily</changefreq>
@@ -221,21 +214,14 @@
   </url>
   
   <url>
+    <loc>http://yoursite-url/tags/Hexo-Theme/</loc>
+    <lastmod>2024-01-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://yoursite-url/tags/Markdown/</loc>
-    <lastmod>2024-01-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://yoursite-url/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2024-01-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://yoursite-url/tags/MacOS/</loc>
     <lastmod>2024-01-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -256,14 +242,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite-url/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/</loc>
+    <loc>http://yoursite-url/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2024-01-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite-url/tags/%E7%BD%91%E7%BB%9C/</loc>
+    <loc>http://yoursite-url/tags/MacOS/</loc>
     <lastmod>2024-01-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -278,6 +264,20 @@
   
   <url>
     <loc>http://yoursite-url/tags/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2024-01-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/</loc>
+    <lastmod>2024-01-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/tags/%E7%BD%91%E7%BB%9C/</loc>
     <lastmod>2024-01-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -321,6 +321,13 @@
   </url>
   
   <url>
+    <loc>http://yoursite-url/categories/%E7%BC%93%E5%AD%98%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2024-01-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://yoursite-url/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2024-01-19</lastmod>
     <changefreq>daily</changefreq>
@@ -329,20 +336,6 @@
   
   <url>
     <loc>http://yoursite-url/categories/Docker/</loc>
-    <lastmod>2024-01-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://yoursite-url/categories/%E7%BC%93%E5%AD%98%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2024-01-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://yoursite-url/categories/%E7%BD%91%E7%BB%9C/</loc>
     <lastmod>2024-01-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -363,6 +356,13 @@
   </url>
   
   <url>
+    <loc>http://yoursite-url/categories/%E7%BC%93%E5%AD%98%E6%8A%80%E6%9C%AF/Redis/</loc>
+    <lastmod>2024-01-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://yoursite-url/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/MacOS/</loc>
     <lastmod>2024-01-19</lastmod>
     <changefreq>daily</changefreq>
@@ -377,7 +377,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite-url/categories/%E7%BC%93%E5%AD%98%E6%8A%80%E6%9C%AF/Redis/</loc>
+    <loc>http://yoursite-url/categories/%E7%BD%91%E7%BB%9C/</loc>
     <lastmod>2024-01-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

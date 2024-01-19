@@ -443,7 +443,9 @@
 移植 Hux Blog 的主题，感谢 Huxpro 设计了如此完美的主题。
 由 Vincent 创建的 LiveMyLife 的主题修改来源 YenYuHsuan，参考主题 dusign、Utone，感谢 dusign、Utone。
 
-仓库Github 仓库地址：https://github.com/V-Vincen/hexo-theme-livemylifeGitee 仓库地址：http......
+仓库
+Github 仓库地址：https://github.com/V-Vincen/hexo-theme-livemylife
+Gitee 仓库地址：ht......
     </div>
   </a>
   
@@ -521,10 +523,6 @@
     
     
     
-    <a href="/tags/#Hexo-Theme" title="Hexo-Theme" rel="1">Hexo-Theme</a>
-    
-    
-    
     <a href="/tags/#PHP" title="PHP" rel="7">PHP</a>
     
     
@@ -541,15 +539,11 @@
     
     
     
+    <a href="/tags/#Hexo-Theme" title="Hexo-Theme" rel="1">Hexo-Theme</a>
+    
+    
+    
     <a href="/tags/#Markdown" title="Markdown" rel="1">Markdown</a>
-    
-    
-    
-    <a href="/tags/#操作系统" title="操作系统" rel="1">操作系统</a>
-    
-    
-    
-    <a href="/tags/#MacOS" title="MacOS" rel="1">MacOS</a>
     
     
     
@@ -561,11 +555,11 @@
     
     
     
-    <a href="/tags/#路由器" title="路由器" rel="1">路由器</a>
+    <a href="/tags/#操作系统" title="操作系统" rel="1">操作系统</a>
     
     
     
-    <a href="/tags/#网络" title="网络" rel="1">网络</a>
+    <a href="/tags/#MacOS" title="MacOS" rel="1">MacOS</a>
     
     
     
@@ -574,6 +568,14 @@
     
     
     <a href="/tags/#前端" title="前端" rel="1">前端</a>
+    
+    
+    
+    <a href="/tags/#路由器" title="路由器" rel="1">路由器</a>
+    
+    
+    
+    <a href="/tags/#网络" title="网络" rel="1">网络</a>
     
     
   </div>
@@ -689,20 +691,16 @@
       <li>PHP</li>
     </a>
     
+    <a href="/categories/#缓存技术">
+      <li>缓存技术</li>
+    </a>
+    
     <a href="/categories/#操作系统">
       <li>操作系统</li>
     </a>
     
     <a href="/categories/#Docker">
       <li>Docker</li>
-    </a>
-    
-    <a href="/categories/#缓存技术">
-      <li>缓存技术</li>
-    </a>
-    
-    <a href="/categories/#网络">
-      <li>网络</li>
     </a>
     
     <a href="/categories/#解决问题">
@@ -713,6 +711,10 @@
       <li>PHP基础</li>
     </a>
     
+    <a href="/categories/#Redis">
+      <li>Redis</li>
+    </a>
+    
     <a href="/categories/#MacOS">
       <li>MacOS</li>
     </a>
@@ -721,8 +723,8 @@
       <li>LaraDock</li>
     </a>
     
-    <a href="/categories/#Redis">
-      <li>Redis</li>
+    <a href="/categories/#网络">
+      <li>网络</li>
     </a>
     
   </ul>
@@ -1123,7 +1125,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
               slicesOfContent.forEach(function (slice) {
                 resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
               });
-              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+              resultItem += "</div></a>";
 
               resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
             }

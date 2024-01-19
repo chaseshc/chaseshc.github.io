@@ -336,17 +336,17 @@
       /* intro-header */
       --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr/assets/img/header_img/home_bg.jpg');
       --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr/assets/img/header_img/post_bg.jpg');
-      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr/img/header_img/categories_bg.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr/assets/img/header_img/categories_bg.jpg');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr/assets/img/header_img/home_bg.jpg');
       --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr/assets/img/header_img/post_bg.jpg');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr/img/header_img/categories_bg.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr/assets/img/header_img/categories_bg.jpg');
     }
     header.intro-header {
        /*page*/
         background-image: var(--intro-header-background-image-url-page);
-        /* background-image: url('https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr/img/header_img/categories_bg.jpg'); */
+        /* background-image: url('https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr/assets/img/header_img/categories_bg.jpg'); */
       
     }
 
@@ -430,23 +430,23 @@
         
         <a href="#PHP" title="PHP" rel="5">PHP</a>
         
+        <a href="#缓存技术" title="缓存技术" rel="1">缓存技术</a>
+        
         <a href="#操作系统" title="操作系统" rel="1">操作系统</a>
         
         <a href="#Docker" title="Docker" rel="2">Docker</a>
-        
-        <a href="#缓存技术" title="缓存技术" rel="1">缓存技术</a>
-        
-        <a href="#网络" title="网络" rel="1">网络</a>
         
         <a href="#解决问题" title="解决问题" rel="1">解决问题</a>
         
         <a href="#PHP基础" title="PHP基础" rel="5">PHP基础</a>
         
+        <a href="#Redis" title="Redis" rel="1">Redis</a>
+        
         <a href="#MacOS" title="MacOS" rel="1">MacOS</a>
         
         <a href="#LaraDock" title="LaraDock" rel="2">LaraDock</a>
         
-        <a href="#Redis" title="Redis" rel="1">Redis</a>
+        <a href="#网络" title="网络" rel="1">网络</a>
         
       </div>
 
@@ -462,9 +462,9 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/Docker实例/">
+          <a href="/Docker入门/">
             <h2 class="post-title">
-              Docker实例
+              Docker入门
             </h2>
             
           </a>
@@ -477,9 +477,9 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/Docker入门/">
+          <a href="/Docker实例/">
             <h2 class="post-title">
-              Docker入门
+              Docker实例
             </h2>
             
           </a>
@@ -555,9 +555,9 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/Docker实例/">
+          <a href="/Docker入门/">
             <h2 class="post-title">
-              Docker实例
+              Docker入门
             </h2>
             
           </a>
@@ -570,9 +570,9 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/Docker入门/">
+          <a href="/Docker实例/">
             <h2 class="post-title">
-              Docker入门
+              Docker实例
             </h2>
             
           </a>
@@ -659,21 +659,6 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/PHP基础回顾-PHP中十六个魔术方法详解/">
-            <h2 class="post-title">
-              [PHP基础回顾]PHP中十六个魔术方法详解
-            </h2>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
           <a href="/PHP基础回顾-while循环和do-while循环/">
             <h2 class="post-title">
               [PHP基础回顾]while循环和do...while循环
@@ -704,9 +689,46 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
+          <a href="/PHP基础回顾-PHP中十六个魔术方法详解/">
+            <h2 class="post-title">
+              [PHP基础回顾]PHP中十六个魔术方法详解
+            </h2>
+            
+          </a>
+          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+        <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+        <div class="post-preview">
           <a href="/PHP开发中需要区别的几组概念/">
             <h2 class="post-title">
               PHP开发中需要区别的几组概念
+            </h2>
+            
+          </a>
+          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="缓存技术">
+          <span class="tag-text">缓存技术</span>
+        </span>
+        
+        <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+        <div class="post-preview">
+          <a href="/Redis中的数据结构/">
+            <h2 class="post-title">
+              Redis中的数据结构
             </h2>
             
           </a>
@@ -776,50 +798,6 @@
       </div>
       
       <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="缓存技术">
-          <span class="tag-text">缓存技术</span>
-        </span>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/Redis中的数据结构/">
-            <h2 class="post-title">
-              Redis中的数据结构
-            </h2>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="网络">
-          <span class="tag-text">网络</span>
-        </span>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/华硕RT-AC86U刷梅林改版系统/">
-            <h2 class="post-title">
-              华硕RT-AC86U刷梅林改版系统
-            </h2>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
         <span class="fa fa-tag listing-seperator" id="解决问题">
           <span class="tag-text">解决问题</span>
         </span>
@@ -866,21 +844,6 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/PHP基础回顾-PHP中十六个魔术方法详解/">
-            <h2 class="post-title">
-              [PHP基础回顾]PHP中十六个魔术方法详解
-            </h2>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
           <a href="/PHP基础回顾-while循环和do-while循环/">
             <h2 class="post-title">
               [PHP基础回顾]while循环和do...while循环
@@ -911,9 +874,46 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
+          <a href="/PHP基础回顾-PHP中十六个魔术方法详解/">
+            <h2 class="post-title">
+              [PHP基础回顾]PHP中十六个魔术方法详解
+            </h2>
+            
+          </a>
+          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+        <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+        <div class="post-preview">
           <a href="/PHP开发中需要区别的几组概念/">
             <h2 class="post-title">
               PHP开发中需要区别的几组概念
+            </h2>
+            
+          </a>
+          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Redis">
+          <span class="tag-text">Redis</span>
+        </span>
+        
+        <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+        <div class="post-preview">
+          <a href="/Redis中的数据结构/">
+            <h2 class="post-title">
+              Redis中的数据结构
             </h2>
             
           </a>
@@ -983,8 +983,8 @@
       </div>
       
       <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="Redis">
-          <span class="tag-text">Redis</span>
+        <span class="fa fa-tag listing-seperator" id="网络">
+          <span class="tag-text">网络</span>
         </span>
         
         <!-- <li class="listing-item">
@@ -992,9 +992,9 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/Redis中的数据结构/">
+          <a href="/华硕RT-AC86U刷梅林改版系统/">
             <h2 class="post-title">
-              Redis中的数据结构
+              华硕RT-AC86U刷梅林改版系统
             </h2>
             
           </a>
@@ -1394,7 +1394,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
               slicesOfContent.forEach(function (slice) {
                 resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
               });
-              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+              resultItem += "</div></a>";
 
               resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
             }
