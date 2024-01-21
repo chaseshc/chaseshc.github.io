@@ -193,13 +193,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite-url/tags/Markdown/</loc>
-    <lastmod>2024-01-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://yoursite-url/tags/Hexo-Theme/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>daily</changefreq>
@@ -229,6 +222,13 @@
   
   <url>
     <loc>http://yoursite-url/tags/MySQL/</loc>
+    <lastmod>2024-01-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/tags/Markdown/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -307,13 +307,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite-url/categories/Markdown/</loc>
-    <lastmod>2024-01-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://yoursite-url/categories/Hexo-Theme/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>daily</changefreq>
@@ -335,7 +328,21 @@
   </url>
   
   <url>
+    <loc>http://yoursite-url/categories/Markdown/</loc>
+    <lastmod>2024-01-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://yoursite-url/categories/Python/</loc>
+    <lastmod>2024-01-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/categories/Docker/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -363,7 +370,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite-url/categories/Docker/</loc>
+    <loc>http://yoursite-url/categories/PHP/PHP%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -377,14 +384,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite-url/categories/PHP/PHP%E5%9F%BA%E7%A1%80/</loc>
+    <loc>http://yoursite-url/categories/Python/Python%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite-url/categories/Python/Python%E5%9F%BA%E7%A1%80/</loc>
+    <loc>http://yoursite-url/categories/Docker/LaraDock/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -399,13 +406,6 @@
   
   <url>
     <loc>http://yoursite-url/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/MacOS/</loc>
-    <lastmod>2024-01-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://yoursite-url/categories/Docker/LaraDock/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
