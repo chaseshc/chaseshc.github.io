@@ -244,9 +244,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              分类
+              归档
               
               
             </a>
@@ -255,9 +255,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              归档
+              分类
               
               
             </a>
@@ -393,7 +393,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">392</span> In Total
+              Words <span class="post-count">391</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -455,24 +455,13 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <p> 了解完Docker的基本概念后，本来应该是安装教程，因为我用的MacOS，直接下载安装就可以了，这里我就不赘述了。接下来用最简单的“Hello World” image体验一下Docker。</p>
+        <p>&ensp;了解完Docker的基本概念后，本来应该是安装教程，因为我用的MacOS，直接下载安装就可以了，这里我就不赘述了。接下来用最简单的“Hello World” image体验一下Docker。</p>
 <p>首先需要将image文件从仓库拉取到本地：</p>
 <figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker image pull library/hello-world</span><br></pre></td></tr></table></figure>
-<p><code>$ docker image pull</code>是抓取image文件的命令。<br>
-<code>library/hello-world</code>是image文件在仓库里面的位置，其中<code>library</code>是image文件所在的租，<code>hello-world</code>是image文件的名称。<br>
-由于 Docker 官方提供的 image 文件，都放在<code>library</code>组里面，所以它的是默认组，可以省略。</p>
-<p>通过以下命令浏览本地的镜像</p>
-<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker <span class="keyword">image</span> <span class="keyword">ls</span></span><br></pre></td></tr></table></figure>
-<p>接着运行这个image文件</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker container <span class="builtin-name">run</span> hello-world</span><br></pre></td></tr></table></figure>
-<p><code>docker container run</code>命令会从image文件中生成一个正在运行的容器实例。<br>
-注意，<code>docker container run</code>命令具有自动抓取 image 文件的功能。如果发现本地没有指定的 image 文件，就会从仓库自动抓取。因此，前面的<code>docker image pull</code>命令并不是必需的步骤。<br>
-运行成功后就会在终端中读到一些输出</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Hello <span class="keyword">from</span> Docker!</span><br><span class="line">This message shows <span class="keyword">that</span> your installation appears <span class="keyword">to</span> be working correctly.</span><br><span class="line">......</span><br></pre></td></tr></table></figure>
-<p>输出这段提示以后，<code>hello world</code>就会停止运行，容器自动终止。<br>
-有些容器不会自动终止，因为提供的是服务。比如，安装运行 Ubuntu 的 image，就可以在命令行体验 Ubuntu 系统。</p>
-<p>对于那些不会自动终止的容器，必须使用<code>docker container kill</code>命令手动终止。</p>
-<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker <span class="keyword">container</span> kill <span class="comment">[containID]</span></span><br></pre></td></tr></table></figure>
+<p><code>$ docker image pull</code>是抓取image文件的命令。<br><code>library/hello-world</code>是image文件在仓库里面的位置，其中<code>library</code>是image文件所在的租，<code>hello-world</code>是image文件的名称。<br>由于 Docker 官方提供的 image 文件，都放在<code>library</code>组里面，所以它的是默认组，可以省略。</p>
+<p>通过以下命令浏览本地的镜像<br><figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker <span class="keyword">image</span> <span class="keyword">ls</span></span><br></pre></td></tr></table></figure></p>
+<p>接着运行这个image文件<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker container <span class="builtin-name">run</span> hello-world</span><br></pre></td></tr></table></figure><br><code>docker container run</code>命令会从image文件中生成一个正在运行的容器实例。<br>注意，<code>docker container run</code>命令具有自动抓取 image 文件的功能。如果发现本地没有指定的 image 文件，就会从仓库自动抓取。因此，前面的<code>docker image pull</code>命令并不是必需的步骤。<br>运行成功后就会在终端中读到一些输出<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Hello <span class="keyword">from</span> Docker!</span><br><span class="line">This message shows <span class="keyword">that</span> your installation appears <span class="keyword">to</span> be working correctly.</span><br><span class="line">......</span><br></pre></td></tr></table></figure><br>输出这段提示以后，<code>hello world</code>就会停止运行，容器自动终止。<br>有些容器不会自动终止，因为提供的是服务。比如，安装运行 Ubuntu 的 image，就可以在命令行体验 Ubuntu 系统。</p>
+<p>对于那些不会自动终止的容器，必须使用<code>docker container kill</code>命令手动终止。<br><figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker <span class="keyword">container</span> kill <span class="comment">[containID]</span></span><br></pre></td></tr></table></figure></p>
 
 
         <hr>

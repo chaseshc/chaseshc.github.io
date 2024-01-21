@@ -244,9 +244,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              分类
+              归档
               
               
             </a>
@@ -255,9 +255,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              归档
+              分类
               
               
             </a>
@@ -451,42 +451,34 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1>刷机前的准备</h1>
-<ul>
+        <h1 id="刷机前的准备"><a href="#刷机前的准备" class="headerlink" title="刷机前的准备"></a>刷机前的准备</h1><ul>
 <li>EXT格式的1G以上U盘一个，如果不知道怎么格式化，可以查看此文章附录。（可选）</li>
 <li>改版梅林安装包，<a target="_blank" rel="noopener" href="https://1drv.ms/u/s!ArS0nJ_RMzVYgtwvUNgsl7Q1Z9W75Q">下载地址</a>，或直接到<a target="_blank" rel="noopener" href="http://koolshare.cn/thread-127878-1-1.html">Coolshare论坛下载</a></li>
 <li>科学上网工具离线安装包，<a target="_blank" rel="noopener" href="https://1drv.ms/u/s!ArS0nJ_RMzVYgtwuoBmaqxYUM2UrxA">下载地址</a>，或直接到<a target="_blank" rel="noopener" href="https://github.com/hq450/fancyss">GitHub</a>上找到与你机器相匹配的</li>
 </ul>
-<h1>正式开刷</h1>
-<h2 id="系统初始化">系统初始化</h2>
-<ol>
+<h1 id="正式开刷"><a href="#正式开刷" class="headerlink" title="正式开刷"></a>正式开刷</h1><h2 id="系统初始化"><a href="#系统初始化" class="headerlink" title="系统初始化"></a>系统初始化</h2><ol>
 <li>拿到机器后，打开机器背后开关键，然后连上电源，开机。</li>
 <li>找到一根网线，一头接自己的电脑，另一头接路由器的LAN口，或者直接连接路由器的Wi-Fi信号。</li>
 <li>在浏览器地址栏中输入<a target="_blank" rel="noopener" href="http://router.asus.com/">router.asus.com</a>进入管理后台。</li>
 <li>依次设置自己的PPPoE、无线WIFI、管理后台账号，设置完之后会进入到官方原版的后台界面。</li>
 </ol>
-<h2 id="刷改版梅林固件">刷改版梅林固件</h2>
-<ol>
+<h2 id="刷改版梅林固件"><a href="#刷改版梅林固件" class="headerlink" title="刷改版梅林固件"></a>刷改版梅林固件</h2><ol>
 <li>在后台管理界面中找到<code>高级设置</code>-<code>系统管理</code>-<code>固件升级</code>，选择刚才将已准备好的梅林固件（格式为.w），然后点击上传，等待两三分钟即可，当重启后重新进入后台时有一个<code>Powered by Asuswrt-Merlin &amp; Coolshare</code>代表成功。</li>
 <li>双清路由器。进入<code>高级设置</code>-<code>系统设置</code>，找到<code>Presistent JFFS2 parttition</code>，将<code>Format JFFS partition at next boot</code>和<code>Enable JFFS custom scripts and configs</code>两项都设置为是，并点击应用本页面设置按钮，然后重启路由器即可。</li>
 </ol>
-<h2 id="安装科学上网工具">安装科学上网工具</h2>
-<ol>
+<h2 id="安装科学上网工具"><a href="#安装科学上网工具" class="headerlink" title="安装科学上网工具"></a>安装科学上网工具</h2><ol>
 <li>由于梅林已经取消软件中心的科学上网工具在线安装，所以可采取离线安装的方式。</li>
 <li>从<a target="_blank" rel="noopener" href="https://1drv.ms/u/s!ArS0nJ_RMzVYgtwuoBmaqxYUM2UrxA">这里</a>上下载离线安装包，打开软件中心，先点击更新将软件中心升级到最新版本，然后点击离线安装，上传刚才下载的安装包，注意格式需要为.tar.gz，如果不对，手动将其补全后再上传。</li>
 <li>等待安装成功后，再打开科学上网，再配置自己的节点即可。</li>
 </ol>
-<h2 id="挂载虚拟内存（可选）">挂载虚拟内存（可选）</h2>
-<ol>
+<h2 id="挂载虚拟内存（可选）"><a href="#挂载虚拟内存（可选）" class="headerlink" title="挂载虚拟内存（可选）"></a>挂载虚拟内存（可选）</h2><ol>
 <li>将已准备好的EXT格式U盘插入路由器背部接口（2.0或3.0都可以）</li>
 <li>打开软件中心，将<code>虚拟内存</code>这个软件安装上</li>
 <li>打开该软件，选择这个磁盘，我这里叫做<code>sda</code>，选择虚拟内存大小为512M或1G，然后点创建虚拟内存，等待一段时间即可。</li>
 <li>再次打开<code>软件中心</code>-<code>虚拟内存</code>，确保状态显示为在<code>/mnt/sda</code>下找到<code>swapfile</code>，且已成功挂载！，表明已挂载成功。</li>
 </ol>
-<h1>附录：U盘格式化为EXT格式</h1>
-<p>准备好一个1G以上的U盘（随便的都行，利用率不高），并格式化为EXT2,3,4任意的格式，我这边用的是EXT3。</p>
-<h2 id="Windows系统">Windows系统</h2>
-<ol>
+<h1 id="附录：U盘格式化为EXT格式"><a href="#附录：U盘格式化为EXT格式" class="headerlink" title="附录：U盘格式化为EXT格式"></a>附录：U盘格式化为EXT格式</h1><p>准备好一个1G以上的U盘（随便的都行，利用率不高），并格式化为EXT2,3,4任意的格式，我这边用的是EXT3。</p>
+<h2 id="Windows系统"><a href="#Windows系统" class="headerlink" title="Windows系统"></a>Windows系统</h2><ol>
 <li>如果没有Linux基础，可使用软件进行操作，可参考百度经验：<a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/fea4511a142846f7bb912522.html">如何在windows下把硬盘格式化成EXT3格式？</a></li>
 <li>如果有一定Linux基础，可使用SSH连接到路由器通过路由器进行操作，具体步骤如下：</li>
 </ol>
@@ -494,21 +486,14 @@
 <li>打开路由器后台<code>高级设置</code>-<code>系统设置</code>，找到<code>服务</code>中的启用<code>SSH</code>，选择打开<code>LAN+WAN</code>，然后保存设置。</li>
 <li>下载一个叫PuTTY的软件，hostname填<code>192.168.50.1</code>（路由器后台地址，可能不一样，自己查看下） 然后选择<code>SSH</code>。port端口号为<code>22</code>，然后点open。</li>
 <li>用自己前面设置的路由器账号密码登录即可，然后出现命令行界面。</li>
-<li>在U盘插入路由器后面的情况下，依次输入以下命令（两横杠后的是解释说明，不用输入），然后等待显示完成即可。</li>
+<li>在U盘插入路由器后面的情况下，依次输入以下命令（两横杠后的是解释说明，不用输入），然后等待显示完成即可。<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">df -h <span class="regexp">//</span> 找到你的盘符,如：sda1</span><br><span class="line">umount <span class="regexp">/dev/</span>sda1 <span class="regexp">//</span> 解除进程的占用</span><br><span class="line"><span class="regexp">/bin/m</span>kntfs <span class="regexp">/dev/</span>sda1 <span class="regexp">//</span> 格式化硬盘为ntfs格式</span><br><span class="line">mkfs.ext4 -T largefile <span class="regexp">/dev/</span>sda1 <span class="regexp">//</span> 格式化硬盘为ext4格式</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">df -h <span class="regexp">//</span> 找到你的盘符,如：sda1</span><br><span class="line">umount <span class="regexp">/dev/</span>sda1 <span class="regexp">//</span> 解除进程的占用</span><br><span class="line"><span class="regexp">/bin/m</span>kntfs <span class="regexp">/dev/</span>sda1 <span class="regexp">//</span> 格式化硬盘为ntfs格式</span><br><span class="line">mkfs.ext4 -T largefile <span class="regexp">/dev/</span>sda1 <span class="regexp">//</span> 格式化硬盘为ext4格式</span><br></pre></td></tr></table></figure>
-<h2 id="macOS系统">macOS系统</h2>
-<ol>
-<li>确保已经安装了Mac下的包管理软件Homebrew，如果没有，可以用以下命令安装<br>
-<code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></li>
-<li>安装 e2fsprogs<br>
-<code>brew install e2fsprogs</code></li>
-<li>插上U盘，执行以下命令在执行结果中找到U盘盘符，我这里是<code>/dev/disk2s1</code><br>
-<code>diskutil list</code></li>
-<li>卸载U盘并将其格式化为<code>ext2/3/4</code>格式，这里以<code>ext3</code>为例</li>
-</ol>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">diskutil</span> unmountdisk /dev/disk<span class="number">2</span>s<span class="number">1</span></span><br><span class="line"><span class="attribute">sudo</span> $(brew --prefix e<span class="number">2</span>fsprogs)/sbin/mkfs.ext<span class="number">3</span> /dev/disk<span class="number">2</span>s<span class="number">1</span></span><br></pre></td></tr></table></figure>
-<ol start="5">
+<h2 id="macOS系统"><a href="#macOS系统" class="headerlink" title="macOS系统"></a>macOS系统</h2><ol>
+<li>确保已经安装了Mac下的包管理软件Homebrew，如果没有，可以用以下命令安装<br><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></li>
+<li>安装 e2fsprogs<br><code>brew install e2fsprogs</code></li>
+<li>插上U盘，执行以下命令在执行结果中找到U盘盘符，我这里是<code>/dev/disk2s1</code><br><code>diskutil list</code></li>
+<li>卸载U盘并将其格式化为<code>ext2/3/4</code>格式，这里以<code>ext3</code>为例<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">diskutil</span> unmountdisk /dev/disk<span class="number">2</span>s<span class="number">1</span></span><br><span class="line"><span class="attribute">sudo</span> $(brew --prefix e<span class="number">2</span>fsprogs)/sbin/mkfs.ext<span class="number">3</span> /dev/disk<span class="number">2</span>s<span class="number">1</span></span><br></pre></td></tr></table></figure></li>
 <li>中间可能会有确认提示，按提示操作即可。格式化完成就能直接拔掉U盘了。</li>
 </ol>
 
