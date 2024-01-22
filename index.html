@@ -472,9 +472,8 @@
     <div class="post-content-preview">
       装饰器（Decorator）是Python中一个非常有用的功能，它允许您修改或增强函数或方法的行为，而不需要改变其本身的代码。装饰器本质上是一个函数，它接受一个函数作为参数，并返回一个新的函数。
 装饰器的作用：
-
 增强功能： 装饰器可以在不修改原函数或方法代码的情况下，给它们添加额外的功能。这符合开闭原则（对扩展开放，对修改封闭）。
-代码复用： 装饰器可以在多个函数或类方法之间共享，从而避免......
+代码复用： 装饰器可以在多个函数或类方法之间共享，从而避免代......
     </div>
   </a>
   
@@ -503,12 +502,10 @@
       
     </h3>
     <div class="post-content-preview">
-      关键字参数
-在Python中，关键字参数（Keyword Arguments）是在函数调用时指定的，包括参数名称和值。这与位置参数不同，位置参数只根据其在函数定义中的位置来识别。关键字参数的主要优点是它们可以让函数调用更清晰、更易读，并且不依赖于参数的顺序。
+      关键字参数在Python中，关键字参数（Keyword Arguments）是在函数调用时指定的，包括参数名称和值。这与位置参数不同，位置参数只根据其在函数定义中的位置来识别。关键字参数的主要优点是它们可以让函数调用更清晰、更易读，并且不依赖于参数的顺序。
 关键字参数的特点：
-
 明确性：每个参数的名称都明确指出，这使得函数调用更易于理解。
-顺序灵活性：调用函数时，关键字参数的顺序不必与函数......
+顺序灵活性：调用函数时，关键字参数的顺序不必与函数定义......
     </div>
   </a>
   
@@ -537,12 +534,9 @@
       
     </h3>
     <div class="post-content-preview">
-      类的属性是用来存储对象的状态。
-在Python中，类的属性不必一定定义在__init__方法中，但这是一种常见的做法。类属性可以根据它们如何使用和需要的范围来以不同的方式定义。以下是一些不同类型的属性和它们定义方式的示例：
-1. 实例属性
-定义在__init__方法中：
-这些属性是针对每个类的实例的，每个实例都有自己的一套数据。
-通常在__init__方法中定义，以便在创建类的新实例时初始化......
+      类的属性是用来存储对象的状态。在Python中，类的属性不必一定定义在__init__方法中，但这是一种常见的做法。类属性可以根据它们如何使用和需要的范围来以不同的方式定义。以下是一些不同类型的属性和它们定义方式的示例：
+1. 实例属性定义在init方法中：这些属性是针对每个类的实例的，每个实例都有自己的一套数据。通常在__init__方法中定义，以便在创建类的新实例时初始化这些属性。
+在_......
     </div>
   </a>
   
@@ -574,12 +568,9 @@
     </h3>
     <div class="post-content-preview">
       在Python中，模块是一个包含Python定义和声明的文件。库是一组相关模块的集合。使用模块和库可以显著提高编程效率和代码质量。
-模块
-在Python中，一个模块通常是一个包含Python代码的文件（通常是以.py结尾）。模块可以包含函数、类和变量，以及可运行的代码。
-使用模块
-使用import语句来导入模块。一旦导入，你就可以使用该模块中定义的函数和变量。
-语法：
-import modu......
+模块在Python中，一个模块通常是一个包含Python代码的文件（通常是以.py结尾）。模块可以包含函数、类和变量，以及可运行的代码。
+使用模块使用import语句来导入模块。一旦导入，你就可以使用该模块中定义的函数和变量。
+语法：import module_......
     </div>
   </a>
   
@@ -610,14 +601,13 @@ import modu......
     <div class="post-content-preview">
       在编程中，错误处理是非常重要的一环。它可以帮助你的程序在遇到问题时继续运行，而不是直接崩溃。Python使用try和except语句来处理错误。
 try和except
-
 try块让你测试一段代码是否有错误。
 except块让你处理错误。
 可以有多个不同的except块来捕获不同类型的错误。
 
 示例
 
-假设你有一个除法函数，它接受两个参数。如果第二个参数是0，除法就会出错。我们可以使用try和......
+假设你有一个除法函数，它接受两个参数。如果第二个参数是0，除法就会出错。我们可以使用try和e......
     </div>
   </a>
   
@@ -646,8 +636,7 @@ except块让你处理错误。
       
     </h3>
     <div class="post-content-preview">
-      最近开始使用Laradock作为开发环境进行项目开发，按照教程将必备的软件都搭建好了，结果在项目中一直连接不上MySQL。网上查了好多资料后知道了问题原因：
-Docker中每个容器都是相对独立的，所以PHP-FPM和MySQL容器也是独立开的。在项目的配置文件中数据库host配置项一般是127.0.0.1，但这样写的话项目是去访问的PHP-FPM容器，这个容器中自然没有MySQL所以访问不到......
+      最近开始使用Laradock作为开发环境进行项目开发，按照教程将必备的软件都搭建好了，结果在项目中一直连接不上MySQL。网上查了好多资料后知道了问题原因：Docker中每个容器都是相对独立的，所以PHP-FPM和MySQL容器也是独立开的。在项目的配置文件中数据库host配置项一般是127.0.0.1，但这样写的话项目是去访问的PHP-FPM容器，这个容器中自然没有MySQL所以访问不到。......
     </div>
   </a>
   
@@ -690,15 +679,14 @@ Docker中每个容器都是相对独立的，所以PHP-FPM和MySQL容器也是�
       
     </h3>
     <div class="post-content-preview">
-      PHP中把以两个下划线开头的方法称为魔术方法（Magic Method），这些方法在PHP中有举足轻重的作用。
-魔术方法包括：
+      PHP中把以两个下划线开头的方法称为魔术方法（Magic Method），这些方法在PHP中有举足轻重的作用。魔术方法包括：
 
 __construct()  类的构造函数
 __destruct()  类的析构函数
 __call()  在对象中调用一个不可访问的方法时调用
 __callStatic()  在静态方式中调用一个不可访问的方法时调用
 __get()  获得一个类的成员变量时调用
-......
+_......
     </div>
   </a>
   
@@ -727,12 +715,9 @@ __get()  获得一个类的成员变量时调用
       
     </h3>
     <div class="post-content-preview">
-      我发现自己在开发中很容易将可变变量操作符$$和引用操作符&amp;搞混，所以特开此贴加以区分牢记。
-可变变量
-可变变量允许我们动态地改变一个变量的名称。这个特性的工作原理是用一个变量的值作为另一个变量的名称。
-1234567$a = &#x27;b&#x27;;$$a = 5;echo $b; //输出：5//相当于：$b = 5;
-引用操作符
-引用操作符&amp;可以在关联赋值中使用。通常......
+      我发现自己在开发中很容易将可变变量操作符$$$$和引用操作符&amp;搞混，所以特开此贴加以区分牢记。
+可变变量可变变量允许我们动态地改变一个变量的名称。这个特性的工作原理是用一个变量的值作为另一个变量的名称。1234567$a = &#x27;b&#x27;;$$a = 5;echo $b; //输出：5//相当于：$b = 5;
+引用操作符引用操作符&amp;可以在关联赋值中使用。通常在......
     </div>
   </a>
   
@@ -762,9 +747,7 @@ __get()  获得一个类的成员变量时调用
     </h3>
     <div class="post-content-preview">
       用PHP开发了这么多年，遇到需要使用循环的时候好像一般很少选择while循环或者do…while循环，时间久了感觉对它们有点不那么熟了，最近刚好在巩固PHP基础知识，于是单独拿出来复习一下。
-while循环
-PHP中最简单的循环就是while循环。就像if语句，它也依赖于一个条件。
-while循环语句和if循环语句的不同在于，if语句只有在条件为true的情况下才执行后续的代码一次，而whi......
+while循环PHP中最简单的循环就是while循环。就像if语句，它也依赖于一个条件。while循环语句和if循环语句的不同在于，if语句只有在条件为true的情况下才执行后续的代码一次，而while......
     </div>
   </a>
   
@@ -830,10 +813,6 @@ while循环语句和if循环语句的不同在于，if语句只有在条件为tr
   <div class="tags">
     
     
-    <a href="/tags/#Hexo-Theme" title="Hexo-Theme" rel="1">Hexo-Theme</a>
-    
-    
-    
     <a href="/tags/#Docker" title="Docker" rel="4">Docker</a>
     
     
@@ -850,7 +829,7 @@ while循环语句和if循环语句的不同在于，if语句只有在条件为tr
     
     
     
-    <a href="/tags/#Markdown" title="Markdown" rel="1">Markdown</a>
+    <a href="/tags/#Hexo-Theme" title="Hexo-Theme" rel="1">Hexo-Theme</a>
     
     
     
@@ -870,7 +849,15 @@ while循环语句和if循环语句的不同在于，if语句只有在条件为tr
     
     
     
+    <a href="/tags/#Markdown" title="Markdown" rel="1">Markdown</a>
+    
+    
+    
     <a href="/tags/#Python" title="Python" rel="6">Python</a>
+    
+    
+    
+    <a href="/tags/#面向对象" title="面向对象" rel="1">面向对象</a>
     
     
     
@@ -887,10 +874,6 @@ while循环语句和if循环语句的不同在于，if语句只有在条件为tr
     
     
     <a href="/tags/#MacOS" title="MacOS" rel="1">MacOS</a>
-    
-    
-    
-    <a href="/tags/#面向对象" title="面向对象" rel="1">面向对象</a>
     
     
     
@@ -1002,16 +985,12 @@ while循环语句和if循环语句的不同在于，if语句只有在条件为tr
 <div class="widget">
   <ul>
     
-    <a href="/categories/#Hexo-Theme">
-      <li>Hexo-Theme</li>
-    </a>
-    
     <a href="/categories/#环境搭建">
       <li>环境搭建</li>
     </a>
     
-    <a href="/categories/#Markdown">
-      <li>Markdown</li>
+    <a href="/categories/#Hexo-Theme">
+      <li>Hexo-Theme</li>
     </a>
     
     <a href="/categories/#Docker">
@@ -1022,8 +1001,20 @@ while循环语句和if循环语句的不同在于，if语句只有在条件为tr
       <li>PHP</li>
     </a>
     
+    <a href="/categories/#Markdown">
+      <li>Markdown</li>
+    </a>
+    
     <a href="/categories/#Python">
       <li>Python</li>
+    </a>
+    
+    <a href="/categories/#Docker">
+      <li>Docker</li>
+    </a>
+    
+    <a href="/categories/#PHP基础">
+      <li>PHP基础</li>
     </a>
     
     <a href="/categories/#缓存技术">
@@ -1034,20 +1025,12 @@ while循环语句和if循环语句的不同在于，if语句只有在条件为tr
       <li>操作系统</li>
     </a>
     
-    <a href="/categories/#PHP基础">
-      <li>PHP基础</li>
-    </a>
-    
-    <a href="/categories/#网络">
-      <li>网络</li>
-    </a>
-    
-    <a href="/categories/#Docker">
-      <li>Docker</li>
-    </a>
-    
     <a href="/categories/#Python基础">
       <li>Python基础</li>
+    </a>
+    
+    <a href="/categories/#LaraDock">
+      <li>LaraDock</li>
     </a>
     
     <a href="/categories/#Redis">
@@ -1058,12 +1041,12 @@ while循环语句和if循环语句的不同在于，if语句只有在条件为tr
       <li>MacOS</li>
     </a>
     
-    <a href="/categories/#LaraDock">
-      <li>LaraDock</li>
-    </a>
-    
     <a href="/categories/#Python面向对象">
       <li>Python面向对象</li>
+    </a>
+    
+    <a href="/categories/#网络">
+      <li>网络</li>
     </a>
     
     <a href="/categories/#解决问题">

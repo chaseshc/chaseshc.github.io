@@ -450,76 +450,55 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <p>在Python中，模块是一个包含Python定义和声明的文件。库是一组相关模块的集合。使用模块和库可以显著提高编程效率和代码质量。</p>
-<h2 id="模块">模块</h2>
-<p>在Python中，一个模块通常是一个包含Python代码的文件（通常是以.py结尾）。模块可以包含函数、类和变量，以及可运行的代码。</p>
-<h3 id="使用模块">使用模块</h3>
-<p>使用<code>import</code>语句来导入模块。一旦导入，你就可以使用该模块中定义的函数和变量。</p>
-<p><strong>语法：</strong><br>
-<code>import module_name</code><br>
-或<br>
-<code>from module_name import some_function</code></p>
-<h2 id="库">库</h2>
-<p>库是一组相关的模块的集合。它可以由一个模块组成，也可以由很多模块组成。库提供了一组工具或功能，可以在多个程序中使用。</p>
+<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><p>在Python中，一个模块通常是一个包含Python代码的文件（通常是以.py结尾）。模块可以包含函数、类和变量，以及可运行的代码。</p>
+<h3 id="使用模块"><a href="#使用模块" class="headerlink" title="使用模块"></a>使用模块</h3><p>使用<code>import</code>语句来导入模块。一旦导入，你就可以使用该模块中定义的函数和变量。</p>
+<p><strong>语法：</strong><br><code>import module_name</code><br>或<br><code>from module_name import some_function</code></p>
+<h2 id="库"><a href="#库" class="headerlink" title="库"></a>库</h2><p>库是一组相关的模块的集合。它可以由一个模块组成，也可以由很多模块组成。库提供了一组工具或功能，可以在多个程序中使用。</p>
 <p>许多Python库也可以被视为模块，特别是当这些库被设计为单个文件时。这种情况在Python中相当普遍，尤其是对于那些功能相对集中的库。这里有一些细节来帮助理解：</p>
 <ul>
-<li>
-<p>单文件库：有些Python库实际上是一个单独的.py文件，提供了一系列功能。在这种情况下，库和模块基本上是同一回事，因为整个库就是一个单独的模块。</p>
+<li><p>单文件库：有些Python库实际上是一个单独的.py文件，提供了一系列功能。在这种情况下，库和模块基本上是同一回事，因为整个库就是一个单独的模块。</p>
 </li>
-<li>
-<p>包含多个模块的库：对于更大、更复杂的库，它们通常包含多个模块（或子模块）。例如，numpy、pandas和matplotlib这样的库包含多个模块，您可以根据需要导入这些库中的特定模块。在这种情况下，整个库被视为一个包含多个模块的集合。</p>
+<li><p>包含多个模块的库：对于更大、更复杂的库，它们通常包含多个模块（或子模块）。例如，numpy、pandas和matplotlib这样的库包含多个模块，您可以根据需要导入这些库中的特定模块。在这种情况下，整个库被视为一个包含多个模块的集合。</p>
 </li>
-<li>
-<p>模块与库的关系：模块是构成库的基础。一个库可以由一个单独的模块组成，也可以由多个相互关联的模块组成。因此，当谈论一个特定的库时，我们可能实际上是在引用它的一个或多个模块。</p>
+<li><p>模块与库的关系：模块是构成库的基础。一个库可以由一个单独的模块组成，也可以由多个相互关联的模块组成。因此，当谈论一个特定的库时，我们可能实际上是在引用它的一个或多个模块。</p>
 </li>
 </ul>
 <p>总之，许多Python库可以被视为模块，尤其是当这些库相对简单，或者被设计为单个文件时。但是，更大、更复杂的库可能包含多个模块，每个模块提供不同的功能。</p>
-<h3 id="库的导入方式">库的导入方式</h3>
-<p>当使用import语句导入一个库时，实际上是在导入该库的一个主模块，或者是该库中的特定模块。例如，当您执行<code>import numpy</code>时，实际上是在导入numpy库的主模块。</p>
-<p>也可以使用<code>from ... import ...</code>语句来导入特定的函数、类、变量或子模块，而具体导入什么取决于您的需要和库的结构。了解库的结构和内容是很重要的，这样才能有效地使用它。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sqrt</span><br><span class="line"><span class="built_in">print</span>(sqrt(<span class="number">16</span>))  <span class="comment"># 输出4.0</span></span><br></pre></td></tr></table></figure>
+<h3 id="库的导入方式"><a href="#库的导入方式" class="headerlink" title="库的导入方式"></a>库的导入方式</h3><p>当使用import语句导入一个库时，实际上是在导入该库的一个主模块，或者是该库中的特定模块。例如，当您执行<code>import numpy</code>时，实际上是在导入numpy库的主模块。</p>
+<p>也可以使用<code>from ... import ...</code>语句来导入特定的函数、类、变量或子模块，而具体导入什么取决于您的需要和库的结构。了解库的结构和内容是很重要的，这样才能有效地使用它。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sqrt</span><br><span class="line"><span class="built_in">print</span>(sqrt(<span class="number">16</span>))  <span class="comment"># 输出4.0</span></span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <p>这段代码会导入<code>math</code>模块中的<code>sqrt</code>函数，然后直接使用<code>sqrt(16)</code>来计算16的平方根。如果您想使用<code>math.sqrt</code>格式，您应该使用<code>import math</code>来导入整个模块，而不是只导入特定的函数。</p>
 </blockquote>
 <p>当导入一个库的主模块时，也可以访问它的所有子模块，但需要通过主模块来引用这些子模块。不需要单独导入每个子模块，除非想为某个子模块设置一个别名或者只想导入该子模块。以下是两种访问子模块的方法：</p>
 <ul>
-<li>直接通过numpy主模块访问子模块</li>
-</ul>
+<li><p>直接通过numpy主模块访问子模块</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用numpy的随机数子模块</span></span><br><span class="line">random_array = np.random.rand(<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用numpy的线性代数子模块</span></span><br><span class="line">result = np.linalg.solve([[<span class="number">3</span>, <span class="number">1</span>], [<span class="number">1</span>, <span class="number">2</span>]], [<span class="number">9</span>, <span class="number">8</span>])</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>在这种情况下，我们首先导入了numpy作为np，然后通过np访问random和linalg这两个子模块。</p>
 </blockquote>
-<ul>
-<li>单独导入特定子模块</li>
-</ul>
+</li>
+<li><p>单独导入特定子模块</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> numpy <span class="keyword">import</span> random, linalg</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用numpy的随机数子模块</span></span><br><span class="line">random_array = random.rand(<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用numpy的线性代数子模块</span></span><br><span class="line">result = linalg.solve([[<span class="number">3</span>, <span class="number">1</span>], [<span class="number">1</span>, <span class="number">2</span>]], [<span class="number">9</span>, <span class="number">8</span>])</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>这种方法中，我们直接从numpy库中导入了random和linalg子模块。这样做的好处是代码更加简洁，尤其是当您只需要使用库中的特定部分时。</p>
-</blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> numpy <span class="keyword">import</span> array</span><br><span class="line"></span><br><span class="line">my_array = array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])  <span class="comment"># 如果使用了 from numpy import array</span></span><br></pre></td></tr></table></figure>
-<blockquote>
 <p>这种导入方式下，导入的是numpy库主模块中的array函数。</p>
 </blockquote>
+</li>
+</ul>
 <p>通常，选择哪种方式取决于您的个人喜好和具体的使用场景。如果您只使用库的某个特定功能，单独导入相关子模块可以使代码更加清晰。但是，如果您需要使用库的多个功能，那么直接导入整个主模块可能更方便。</p>
-<h3 id="标准库">标准库</h3>
-<p>Python有一个广泛的标准库，无需安装额外的东西即可使用。<br>
-例如，math模块包含数学相关的函数，datetime模块用于处理日期和时间。</p>
-<h3 id="第三方库">第三方库</h3>
-<p>第三方库是由Python社区成员创建的。你可以使用pip安装它们。</p>
+<h3 id="标准库"><a href="#标准库" class="headerlink" title="标准库"></a>标准库</h3><p>Python有一个广泛的标准库，无需安装额外的东西即可使用。<br>例如，math模块包含数学相关的函数，datetime模块用于处理日期和时间。</p>
+<h3 id="第三方库"><a href="#第三方库" class="headerlink" title="第三方库"></a>第三方库</h3><p>第三方库是由Python社区成员创建的。你可以使用pip安装它们。</p>
 <p>例如，requests库用于处理HTTP请求，numpy用于科学计算。</p>
-<h2 id="help-函数">help()函数</h2>
-<p>help()是Python内置的一个非常有用的函数，用于显示任何对象（包括模块、函数、类等）的文档字符串（docstring）。这个函数特别有助于快速了解某个模块的功能和使用方法，或者查看特定函数或类的文档。以下是如何使用help()函数的示例：</p>
-<h3 id="使用help-函数查看模块的文档">使用help()函数查看模块的文档</h3>
-<p>假设您想要查看numpy模块的文档，您可以这样做：</p>
+<h2 id="help-函数"><a href="#help-函数" class="headerlink" title="help()函数"></a>help()函数</h2><p>help()是Python内置的一个非常有用的函数，用于显示任何对象（包括模块、函数、类等）的文档字符串（docstring）。这个函数特别有助于快速了解某个模块的功能和使用方法，或者查看特定函数或类的文档。以下是如何使用help()函数的示例：</p>
+<h3 id="使用help-函数查看模块的文档"><a href="#使用help-函数查看模块的文档" class="headerlink" title="使用help()函数查看模块的文档"></a>使用help()函数查看模块的文档</h3><p>假设您想要查看numpy模块的文档，您可以这样做：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy</span><br><span class="line"><span class="built_in">help</span>(numpy)</span><br></pre></td></tr></table></figure>
 <p>这将会显示numpy模块的文档，包括它的函数、类、子模块等的简要说明。</p>
-<h3 id="查看特定函数或类的文档">查看特定函数或类的文档</h3>
-<p>如果您想查看某个特定函数或类的文档，例如<code>numpy.array</code>，您可以直接对该函数或类使用<code>help()</code>：</p>
+<h3 id="查看特定函数或类的文档"><a href="#查看特定函数或类的文档" class="headerlink" title="查看特定函数或类的文档"></a>查看特定函数或类的文档</h3><p>如果您想查看某个特定函数或类的文档，例如<code>numpy.array</code>，您可以直接对该函数或类使用<code>help()</code>：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy</span><br><span class="line"><span class="built_in">help</span>(numpy.array)</span><br></pre></td></tr></table></figure>
 <p>这将显示关于<code>numpy.array</code>函数的文档，包括它的参数、返回值和简短的描述。</p>
-<h3 id="在交互式环境中使用help">在交互式环境中使用help()</h3>
-<p>help()函数在交互式Python环境（如Python shell或Jupyter Notebook）中特别有用。在这些环境中，您可以直接输入<code>help()</code>命令来获取信息。</p>
-<h4 id="退出help">退出help()</h4>
-<p>在某些交互式环境中，help()函数会打开一个长文档，您可以使用方向键来上下滚动。要退出help()，通常可以按<code>q</code>键。</p>
+<h3 id="在交互式环境中使用help"><a href="#在交互式环境中使用help" class="headerlink" title="在交互式环境中使用help()"></a>在交互式环境中使用help()</h3><p>help()函数在交互式Python环境（如Python shell或Jupyter Notebook）中特别有用。在这些环境中，您可以直接输入<code>help()</code>命令来获取信息。</p>
+<h4 id="退出help"><a href="#退出help" class="headerlink" title="退出help()"></a>退出help()</h4><p>在某些交互式环境中，help()函数会打开一个长文档，您可以使用方向键来上下滚动。要退出help()，通常可以按<code>q</code>键。</p>
 <p>help()函数是了解Python代码和第三方库的强大工具，特别是当您没有即时访问互联网或外部文档时。</p>
 
 
