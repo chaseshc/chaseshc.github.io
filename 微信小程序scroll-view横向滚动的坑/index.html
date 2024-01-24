@@ -451,15 +451,19 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <p>按照微信小程序文档写了个scroll-view设置横向滚动<code>scroll-x=&quot;true&quot;</code>，可是怎么都不动。。。<br>后来发现是要几个样式：<br><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;scroll-<span class="built_in">view</span> scroll-x=<span class="string">&quot;true&quot;</span> <span class="built_in">style</span>=<span class="string">&quot;background:black;height:110px; white-space: nowrap;&quot;</span>&gt;</span><br><span class="line">  &lt;<span class="built_in">view</span> <span class="built_in">style</span>=<span class="string">&quot;background: red; width: 200px; height: 100px; display: inline-block;&quot;</span>&gt;&lt;/<span class="built_in">view</span>&gt;</span><br><span class="line">  &lt;<span class="built_in">view</span> <span class="built_in">style</span>=<span class="string">&quot;background: green; width: 200px; height: 100px; display: inline-block;&quot;</span>&gt;&lt;/<span class="built_in">view</span>&gt;</span><br><span class="line">  &lt;<span class="built_in">view</span> <span class="built_in">style</span>=<span class="string">&quot;background: blue; width: 200px; height: 100px; display: inline-block;&quot;</span>&gt;&lt;/<span class="built_in">view</span>&gt;</span><br><span class="line">  &lt;<span class="built_in">view</span> <span class="built_in">style</span>=<span class="string">&quot;background: yellow; width: 200px; height: 100px; display: inline-block;&quot;</span>&gt;&lt;/<span class="built_in">view</span>&gt;</span><br><span class="line">&lt;/scroll-<span class="built_in">view</span>&gt;</span><br></pre></td></tr></table></figure></p>
+        <p>按照微信小程序文档写了个scroll-view设置横向滚动<code>scroll-x=&quot;true&quot;</code>，可是怎么都不动。。。<br>
+后来发现是要几个样式：</p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;scroll-<span class="built_in">view</span> scroll-x=<span class="string">&quot;true&quot;</span> <span class="built_in">style</span>=<span class="string">&quot;background:black;height:110px; white-space: nowrap;&quot;</span>&gt;</span><br><span class="line">  &lt;<span class="built_in">view</span> <span class="built_in">style</span>=<span class="string">&quot;background: red; width: 200px; height: 100px; display: inline-block;&quot;</span>&gt;&lt;/<span class="built_in">view</span>&gt;</span><br><span class="line">  &lt;<span class="built_in">view</span> <span class="built_in">style</span>=<span class="string">&quot;background: green; width: 200px; height: 100px; display: inline-block;&quot;</span>&gt;&lt;/<span class="built_in">view</span>&gt;</span><br><span class="line">  &lt;<span class="built_in">view</span> <span class="built_in">style</span>=<span class="string">&quot;background: blue; width: 200px; height: 100px; display: inline-block;&quot;</span>&gt;&lt;/<span class="built_in">view</span>&gt;</span><br><span class="line">  &lt;<span class="built_in">view</span> <span class="built_in">style</span>=<span class="string">&quot;background: yellow; width: 200px; height: 100px; display: inline-block;&quot;</span>&gt;&lt;/<span class="built_in">view</span>&gt;</span><br><span class="line">&lt;/scroll-<span class="built_in">view</span>&gt;</span><br></pre></td></tr></table></figure>
 <ol>
 <li>内部的view必须要设置宽高;</li>
-<li>scroll-view容器要设置<code>white-space: nowrap;</code><br><code>white-space</code>属性设置如何处理元素内的空白：<ul>
-<li>normal 默认。规定段落中的文本不进行换行,空白会被浏览器忽略。 </li>
-<li>pre 空白会被浏览器保留。其行为方式类似 HTML 中的 pre 标签。 </li>
-<li>nowrap 文本不会换行，文本会在在同一行上继续，直到遇到br 标签为止。 </li>
-<li>pre-wrap 保留空白符序列，但是正常地进行换行。 </li>
-<li>pre-line 合并空白符序列，但是保留换行符。 </li>
+<li>scroll-view容器要设置<code>white-space: nowrap;</code><br>
+<code>white-space</code>属性设置如何处理元素内的空白：
+<ul>
+<li>normal 默认。规定段落中的文本不进行换行,空白会被浏览器忽略。</li>
+<li>pre 空白会被浏览器保留。其行为方式类似 HTML 中的 pre 标签。</li>
+<li>nowrap 文本不会换行，文本会在在同一行上继续，直到遇到br 标签为止。</li>
+<li>pre-wrap 保留空白符序列，但是正常地进行换行。</li>
+<li>pre-line 合并空白符序列，但是保留换行符。</li>
 <li>inherit 规定应该从父元素继承 white-space 属性的值。</li>
 </ul>
 </li>

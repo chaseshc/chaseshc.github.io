@@ -431,6 +431,72 @@
 <div class="post-preview">
   
 
+  <a href="/PHP基础回顾-可变变量和引用操作符/">
+    <h2 class="post-title">
+      [PHP基础回顾]可变变量和引用操作符
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      我发现自己在开发中很容易将可变变量操作符$$和引用操作符&amp;搞混，所以特开此贴加以区分牢记。
+可变变量
+可变变量允许我们动态地改变一个变量的名称。这个特性的工作原理是用一个变量的值作为另一个变量的名称。
+1234567$a = &#x27;b&#x27;;$$a = 5;echo $b; //输出：5//相当于：$b = 5;
+引用操作符
+引用操作符&amp;可以在关联赋值中使用。通常......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Chase Shen on
+    2020-11-20
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#PHP" title="PHP">PHP</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+
+  <a href="/PHP基础回顾-while循环和do-while循环/">
+    <h2 class="post-title">
+      [PHP基础回顾]while循环和do...while循环
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      用PHP开发了这么多年，遇到需要使用循环的时候好像一般很少选择while循环或者do…while循环，时间久了感觉对它们有点不那么熟了，最近刚好在巩固PHP基础知识，于是单独拿出来复习一下。
+while循环
+PHP中最简单的循环就是while循环。就像if语句，它也依赖于一个条件。
+while循环语句和if循环语句的不同在于，if语句只有在条件为true的情况下才执行后续的代码一次，而whi......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Chase Shen on
+    2020-11-19
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#PHP" title="PHP">PHP</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+
   <a href="/华硕RT-AC86U刷梅林改版系统/">
     <h2 class="post-title">
       华硕RT-AC86U刷梅林改版系统
@@ -440,13 +506,16 @@
     </h3>
     <div class="post-content-preview">
       刷机前的准备
+
 EXT格式的1G以上U盘一个，如果不知道怎么格式化，可以查看此文章附录。（可选）
 改版梅林安装包，下载地址，或直接到Coolshare论坛下载
 科学上网工具离线安装包，下载地址，或直接到GitHub上找到与你机器相匹配的
 
-正式开刷系统初始化
+正式开刷
+系统初始化
+
 拿到机器后，打开机器背后开关键，然后连上电源，开机。
-找到一根网线，一头接自己的电脑，另一头接路由器的LAN口，或者直接连接路由器的Wi......
+找到一根网线，一头接自己的电脑，另一头接路由器的LAN口，或者直接连接路由器......
     </div>
   </a>
   
@@ -478,8 +547,10 @@ EXT格式的1G以上U盘一个，如果不知道怎么格式化，可以查看�
     </h3>
     <div class="post-content-preview">
       Redis有5个基本数据结构，string、list、hash、set和zset。它们是日常开发中使用频率非常高应用最为广泛的数据结构，把这5个数据结构都吃透了，基本就掌握了Redis应用知识的一半了。
-stringstring表示的是一个可变的字节数组，我们初始化字符串的内容、可以拿到字符串的长度，可以获取string的子串，可以覆盖string的子串内容，可以追加子串。
-Redis的字符......
+string
+string表示的是一个可变的字节数组，我们初始化字符串的内容、可以拿到字符串的长度，可以获取string的子串，可以覆盖string的子串内容，可以追加子串。
+
+Redis的......
     </div>
   </a>
   
@@ -511,13 +582,15 @@ Redis的字符......
     </h3>
     <div class="post-content-preview">
       1. cookie和session区别
+
 session存在服务器，cookie存在浏览器；
 session安全性比cookie高；
 session为会话服务，在使用时需要开启服务，cookie不需要开启，可以直接使用。
 
 2. redis和memcached区别
+
 redis 系统库有个快照，即突然断电，数据还会存在，而memached 就没了；
-memcached 是简单的键值对，Key-V......
+memcached 是简单的键值对，Key......
     </div>
   </a>
   
@@ -546,11 +619,17 @@ memcached 是简单的键值对，Key-V......
       
     </h3>
     <div class="post-content-preview">
-      以 Mac 电脑下操作为例插上U盘
+      以 Mac 电脑下操作为例
+插上U盘
 
-打开 Mac 终端，输入下面代码/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;按回车键后要求你按任意键执行输入 Mac 电脑密码，回车，会自动下载安装，过程需要稍等片刻。
 
-输入下面代码......
+打开 Mac 终端，输入下面代码
+/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+按回车键后要求你按任意键执行
+输入 Mac 电脑密码，回车，会自动下载安装，过程需要稍等片刻。
+
+
+......
     </div>
   </a>
   
@@ -581,7 +660,9 @@ memcached 是简单的键值对，Key-V......
       
     </h3>
     <div class="post-content-preview">
-      按照微信小程序文档写了个scroll-view设置横向滚动scroll-x=&quot;true&quot;，可是怎么都不动。。。后来发现是要几个样式：123456&lt;scroll-view scroll-x=&quot;true&quot; style=&quot;background:black;height:110px; white-space: nowrap;&quot;&gt;......
+      按照微信小程序文档写了个scroll-view设置横向滚动scroll-x=&quot;true&quot;，可是怎么都不动。。。
+后来发现是要几个样式：
+123456&lt;scroll-view scroll-x=&quot;true&quot; style=&quot;background:black;height:110px; white-space: nowrap;&quot;&g......
     </div>
   </a>
   
@@ -612,9 +693,12 @@ memcached 是简单的键值对，Key-V......
       
     </h3>
     <div class="post-content-preview">
-      匿名函数匿名函数也叫闭包函数（closures），也就是没有定义名字的函数。匿名函数的定义：
+      匿名函数
+匿名函数也叫闭包函数（closures），也就是没有定义名字的函数。
+匿名函数的定义：
 123$closureFunc = function () &#123;	......&#125;;
-因为匿名函数没有名字，如果要使用它，需要将其赋值给一个变量，通过变量来调用。匿名函数也可以像普通函数一样声明参数，调用方法也相同：12345678$func = function ($param) ......
+因为匿名函数没有名字，如果要使用它，需要将其赋值给一个变量，通过变量来调用。匿名函数也可以像普通函数一样声明参数，调用方法也相同：
+12345678$func = function ($para......
     </div>
   </a>
   
@@ -684,10 +768,11 @@ memcached 是简单的键值对，Key-V......
       
     </h3>
     <div class="post-content-preview">
-      &ensp;了解完Docker的基本概念后，本来应该是安装教程，因为我用的MacOS，直接下载安装就可以了，这里我就不赘述了。接下来用最简单的“Hello World” image体验一下Docker。
+       了解完Docker的基本概念后，本来应该是安装教程，因为我用的MacOS，直接下载安装就可以了，这里我就不赘述了。接下来用最简单的“Hello World” image体验一下Docker。
 首先需要将image文件从仓库拉取到本地：
 1$ docker image pull library/hello-world
-$ docker image pull是抓取image文件的命令......
+$ docker image pull是抓取image文件的命令。
+lib......
     </div>
   </a>
   
@@ -704,77 +789,6 @@ $ docker image pull是抓取image文件的命令......
     <a href="/tags/#环境搭建" title="环境搭建">环境搭建</a>
     
     <a href="/tags/#环境配置" title="环境配置">环境配置</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-
-  <a href="/Docker入门/">
-    <h2 class="post-title">
-      Docker入门
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      写在前面&ensp;在进行后端开发之前，首先需要在本地搭建一套PHP环境，需要安装PHP、PHP-FPM、WEB服务器、MySQL，有时候还需要Redis和Memcached等NoSQL服务。每个服务又有很多版本，有时候后端开发人员在自己本地安装的版本和运维部署到服务器上的版本会不一样，这样会造成代码不兼容的问题，这种情况在我工作过的公司中是普遍存在的，不仅会浪费时间排斥问题，还造成了很多的......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Chase Shen on
-    2020-09-07
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Docker" title="Docker">Docker</a>
-    
-    <a href="/tags/#本地开发" title="本地开发">本地开发</a>
-    
-    <a href="/tags/#环境搭建" title="环境搭建">环境搭建</a>
-    
-    <a href="/tags/#环境配置" title="环境配置">环境配置</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-
-  <a href="/Markdown基本语法/">
-    <h2 class="post-title">
-      Markdown基本语法
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      Markdown是一种纯文本格式的标记语言。通过简单的标记语法，就可以使普通文本内容具有一定的格式。使用Markdown的好处是可以让文章编辑者专注于写作本身。
-标题在想要设置为标题的文字前面加#就可以完成标题设置
-一个#是一级标题，两个#代表二级标题，以此类推，最多支持六级标题。
-注：标准语法一般在#后跟一个空格再写文字
-
-    # 这是一级标题
-    ## 这是二级标题
-    ##......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Chase Shen on
-    2020-08-16
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Markdown" title="Markdown">Markdown</a>
     
   </div>
   
@@ -854,6 +868,10 @@ $ docker image pull是抓取image文件的命令......
     
     
     
+    <a href="/tags/#Markdown" title="Markdown" rel="1">Markdown</a>
+    
+    
+    
     <a href="/tags/#PHP" title="PHP" rel="7">PHP</a>
     
     
@@ -870,23 +888,11 @@ $ docker image pull是抓取image文件的命令......
     
     
     
-    <a href="/tags/#Markdown" title="Markdown" rel="1">Markdown</a>
+    <a href="/tags/#Python" title="Python" rel="7">Python</a>
     
     
     
-    <a href="/tags/#Python" title="Python" rel="6">Python</a>
-    
-    
-    
-    <a href="/tags/#面向对象" title="面向对象" rel="1">面向对象</a>
-    
-    
-    
-    <a href="/tags/#Redis" title="Redis" rel="1">Redis</a>
-    
-    
-    
-    <a href="/tags/#缓存技术" title="缓存技术" rel="1">缓存技术</a>
+    <a href="/tags/#面向对象" title="面向对象" rel="2">面向对象</a>
     
     
     
@@ -895,6 +901,14 @@ $ docker image pull是抓取image文件的命令......
     
     
     <a href="/tags/#MacOS" title="MacOS" rel="1">MacOS</a>
+    
+    
+    
+    <a href="/tags/#Redis" title="Redis" rel="1">Redis</a>
+    
+    
+    
+    <a href="/tags/#缓存技术" title="缓存技术" rel="1">缓存技术</a>
     
     
     
@@ -964,8 +978,16 @@ $ docker image pull是抓取image文件的命令......
 <div class="widget">
   <ul>
     
+    <a href="../../Python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B-%E5%A4%9A%E9%87%8D%E7%BB%A7%E6%89%BF/">
+      <li>Python面向对象编程-多重继承</li>
+    </a>
+    
     <a href="../../Python%E5%9F%BA%E7%A1%80-args%EF%BC%88%E7%94%A8%E4%BA%8E%E4%BD%8D%E7%BD%AE%E5%8F%82%E6%95%B0%EF%BC%89%E5%92%8C-kwargs%EF%BC%88%E7%94%A8%E4%BA%8E%E5%85%B3%E9%94%AE%E5%AD%97%E5%8F%82%E6%95%B0%EF%BC%89/">
       <li>[Python基础] *args（用于位置参数）和**kwargs（用于关键字参数）</li>
+    </a>
+    
+    <a href="../../Python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9D%97/">
+      <li>[Python面向对象编程] 自定义模块</li>
     </a>
     
     <a href="../../Python%E5%9F%BA%E7%A1%80-%E8%A3%85%E9%A5%B0%E5%99%A8/">
@@ -974,14 +996,6 @@ $ docker image pull是抓取image文件的命令......
     
     <a href="../../Python%E5%9F%BA%E7%A1%80-%E4%BD%8D%E7%BD%AE%E5%8F%82%E6%95%B0%E5%92%8C%E5%85%B3%E9%94%AE%E5%AD%97%E5%8F%82%E6%95%B0/">
       <li>[Python基础] 位置参数和关键字参数</li>
-    </a>
-    
-    <a href="../../Python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B-%E7%B1%BB%E7%9A%84%E5%B1%9E%E6%80%A7/">
-      <li>[Python面向对象编程] 类的属性</li>
-    </a>
-    
-    <a href="../../python%E5%9F%BA%E7%A1%80-%E6%A8%A1%E5%9D%97%E5%92%8C%E5%BA%93/">
-      <li>[python基础] 模块和库</li>
     </a>
     
   </ul>
@@ -994,7 +1008,7 @@ $ docker image pull是抓取image文件的命令......
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/11/">November 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/10/">October 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/09/">September 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/04/">April 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/01/">January 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2024/01/">January 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/11/">November 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/10/">October 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/09/">September 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/04/">April 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/01/">January 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1018,12 +1032,12 @@ $ docker image pull是抓取image文件的命令......
       <li>Docker</li>
     </a>
     
-    <a href="/categories/#PHP">
-      <li>PHP</li>
-    </a>
-    
     <a href="/categories/#Markdown">
       <li>Markdown</li>
+    </a>
+    
+    <a href="/categories/#PHP">
+      <li>PHP</li>
     </a>
     
     <a href="/categories/#Python">
@@ -1034,16 +1048,24 @@ $ docker image pull是抓取image文件的命令......
       <li>Docker</li>
     </a>
     
-    <a href="/categories/#PHP基础">
-      <li>PHP基础</li>
+    <a href="/categories/#操作系统">
+      <li>操作系统</li>
     </a>
     
     <a href="/categories/#缓存技术">
       <li>缓存技术</li>
     </a>
     
-    <a href="/categories/#操作系统">
-      <li>操作系统</li>
+    <a href="/categories/#PHP基础">
+      <li>PHP基础</li>
+    </a>
+    
+    <a href="/categories/#网络">
+      <li>网络</li>
+    </a>
+    
+    <a href="/categories/#解决问题">
+      <li>解决问题</li>
     </a>
     
     <a href="/categories/#Python基础">
@@ -1054,24 +1076,16 @@ $ docker image pull是抓取image文件的命令......
       <li>LaraDock</li>
     </a>
     
-    <a href="/categories/#Redis">
-      <li>Redis</li>
-    </a>
-    
     <a href="/categories/#MacOS">
       <li>MacOS</li>
     </a>
     
+    <a href="/categories/#Redis">
+      <li>Redis</li>
+    </a>
+    
     <a href="/categories/#Python面向对象">
       <li>Python面向对象</li>
-    </a>
-    
-    <a href="/categories/#网络">
-      <li>网络</li>
-    </a>
-    
-    <a href="/categories/#解决问题">
-      <li>解决问题</li>
     </a>
     
   </ul>
