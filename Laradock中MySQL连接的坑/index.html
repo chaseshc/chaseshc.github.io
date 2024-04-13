@@ -478,7 +478,7 @@ Docker中每个容器都是相对独立的，所以PHP-FPM和MySQL容器也是�
         <ul class="pager">
           
           <li class="previous">
-            <a href="/Python基础-错误处理/" data-toggle="tooltip" data-placement="top" title="[Python基础] 错误处理">&larr; Previous Post</a>
+            <a href="/Python面向对象编程-slots-属性/" data-toggle="tooltip" data-placement="top" title="[Python面向对象编程] __slots__属性">&larr; Previous Post</a>
           </li>
           
           
@@ -1189,5 +1189,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

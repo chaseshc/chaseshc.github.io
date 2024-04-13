@@ -431,6 +431,121 @@
 <div class="post-preview">
   
 
+  <a href="/Python基础-错误处理/">
+    <h2 class="post-title">
+      [Python基础] 错误处理
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      在编程中，错误处理是非常重要的一环。它可以帮助你的程序在遇到问题时继续运行，而不是直接崩溃。Python使用try和except语句来处理错误。
+try和except
+
+try块让你测试一段代码是否有错误。
+except块让你处理错误。
+可以有多个不同的except块来捕获不同类型的错误。
+
+示例
+
+假设你有一个除法函数，它接受两个参数。如果第二个参数是0，除法就会出错。我们可以使用try和......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Chase Shen on
+    2021-01-16
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Python" title="Python">Python</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+
+  <a href="/Python面向对象编程-slots-属性/">
+    <h2 class="post-title">
+      [Python面向对象编程] __slots__属性
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      __slots__ 是 Python 中用于限制类的实例可以拥有的属性的机制。通过定义__slots__属性，你可以告诉 Python，该类的实例只能拥有指定的属性，而不能动态地添加新的属性。
+通常情况下，Python 中的对象可以动态地添加新的属性。但是，有时候我们希望限制对象的属性，只允许拥有预先定义好的属性。这种情况下，可以使用__slots__属性。
+123456789class P......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Chase Shen on
+    2021-01-03
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Python" title="Python">Python</a>
+    
+    <a href="/tags/#面向对象" title="面向对象">面向对象</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+
+  <a href="/Laradock中MySQL连接的坑/">
+    <h2 class="post-title">
+      Laradock中MySQL连接的坑
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      最近开始使用Laradock作为开发环境进行项目开发，按照教程将必备的软件都搭建好了，结果在项目中一直连接不上MySQL。网上查了好多资料后知道了问题原因：
+Docker中每个容器都是相对独立的，所以PHP-FPM和MySQL容器也是独立开的。在项目的配置文件中数据库host配置项一般是127.0.0.1，但这样写的话项目是去访问的PHP-FPM容器，这个容器中自然没有MySQL所以访问不到......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Chase Shen on
+    2020-12-09
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Docker" title="Docker">Docker</a>
+    
+    <a href="/tags/#本地开发" title="本地开发">本地开发</a>
+    
+    <a href="/tags/#环境搭建" title="环境搭建">环境搭建</a>
+    
+    <a href="/tags/#环境配置" title="环境配置">环境配置</a>
+    
+    <a href="/tags/#PHP" title="PHP">PHP</a>
+    
+    <a href="/tags/#Laravel" title="Laravel">Laravel</a>
+    
+    <a href="/tags/#LaraDock" title="LaraDock">LaraDock</a>
+    
+    <a href="/tags/#MySQL" title="MySQL">MySQL</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+
   <a href="/PHP基础回顾-PHP中十六个魔术方法详解/">
     <h2 class="post-title">
       [PHP基础回顾]PHP中十六个魔术方法详解
@@ -686,114 +801,6 @@ memcached 是简单的键值对，Key......
 </div>
 <hr>
 
-<div class="post-preview">
-  
-
-  <a href="/微信小程序scroll-view横向滚动的坑/">
-    <h2 class="post-title">
-      微信小程序scroll-view横向滚动的坑
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      按照微信小程序文档写了个scroll-view设置横向滚动scroll-x=&quot;true&quot;，可是怎么都不动。。。
-后来发现是要几个样式：
-123456&lt;scroll-view scroll-x=&quot;true&quot; style=&quot;background:black;height:110px; white-space: nowrap;&quot;&g......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Chase Shen on
-    2020-10-03
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#小程序" title="小程序">小程序</a>
-    
-    <a href="/tags/#前端" title="前端">前端</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-
-  <a href="/PHP中的匿名函数和闭包/">
-    <h2 class="post-title">
-      PHP中的匿名函数和闭包
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      匿名函数
-匿名函数也叫闭包函数（closures），也就是没有定义名字的函数。
-匿名函数的定义：
-123$closureFunc = function () &#123;	......&#125;;
-因为匿名函数没有名字，如果要使用它，需要将其赋值给一个变量，通过变量来调用。匿名函数也可以像普通函数一样声明参数，调用方法也相同：
-12345678$func = function ($para......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Chase Shen on
-    2020-09-26
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#PHP" title="PHP">PHP</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-
-  <a href="/基于LaraDock在Docker构建Laravel应用/">
-    <h2 class="post-title">
-      基于Laradock在Docker构建Laravel应用
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      Laradock 是为 Docker 提供的完整 PHP 本地开发环境，和 Homestead 一样提供了一系列打包好（包括配置）的 Docker Image。Laradock 早期专注为 Laravel 打造 Docker 开发环境，因而最早在 Laravel 社区中出名，后来随着影响力的扩大，逐渐被 PHP 社区接纳和采用，目前支持的 PHP 项目除了 Laravel 之外，还有 Sym......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Chase Shen on
-    2020-09-10
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Docker" title="Docker">Docker</a>
-    
-    <a href="/tags/#本地开发" title="本地开发">本地开发</a>
-    
-    <a href="/tags/#环境搭建" title="环境搭建">环境搭建</a>
-    
-    <a href="/tags/#环境配置" title="环境配置">环境配置</a>
-    
-    <a href="/tags/#PHP" title="PHP">PHP</a>
-    
-    <a href="/tags/#Laravel" title="Laravel">Laravel</a>
-    
-    <a href="/tags/#LaraDock" title="LaraDock">LaraDock</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
 
   <!-- Pager -->
   <ul class="pager">
@@ -890,11 +897,11 @@ memcached 是简单的键值对，Key......
     
     
     
-    <a href="/tags/#Python" title="Python" rel="18">Python</a>
+    <a href="/tags/#Python" title="Python" rel="21">Python</a>
     
     
     
-    <a href="/tags/#面向对象" title="面向对象" rel="7">面向对象</a>
+    <a href="/tags/#面向对象" title="面向对象" rel="8">面向对象</a>
     
     
     
@@ -984,20 +991,20 @@ memcached 是简单的键值对，Key......
       <li>ChatGPT提示词原则</li>
     </a>
     
+    <a href="../../Python%E6%A1%88%E4%BE%8B-%E5%8F%91%E9%80%81%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6/">
+      <li>[Python案例] 发送电子邮件</li>
+    </a>
+    
+    <a href="../../Python%E5%9F%BA%E7%A1%80-%E5%A4%9A%E8%BF%9B%E7%A8%8B%E8%BF%98%E6%98%AF%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+      <li>[Python基础] 多进程还是多线程</li>
+    </a>
+    
     <a href="../../Python%E5%9F%BA%E7%A1%80-name%E5%86%85%E7%BD%AE%E5%8F%98%E9%87%8F%E7%9A%84%E7%94%A8%E6%B3%95/">
       <li>[Python基础] __name__内置变量的用法</li>
     </a>
     
     <a href="../../Python%E5%9F%BA%E7%A1%80-%E5%AD%97%E5%85%B8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
       <li>[Python基础] 字典数据结构</li>
-    </a>
-    
-    <a href="../../Python%E5%9F%BA%E7%A1%80-%E9%9B%86%E5%90%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-      <li>[Python基础] 集合数据结构</li>
-    </a>
-    
-    <a href="../../Python%E5%9F%BA%E7%A1%80-%E5%85%83%E7%BB%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-      <li>[Python基础] 元组数据结构</li>
     </a>
     
   </ul>
@@ -1010,7 +1017,7 @@ memcached 是简单的键值对，Key......
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2023/05/">May 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/02/">February 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">16</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/11/">November 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/10/">October 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/09/">September 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/04/">April 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/01/">January 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2023/05/">May 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/04/">April 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/11/">November 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/10/">October 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/09/">September 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/04/">April 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/01/">January 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1571,5 +1578,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>
