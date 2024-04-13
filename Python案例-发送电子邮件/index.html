@@ -459,7 +459,7 @@
 <p><code>MIMEMultipart</code> 类表示的是一个多部分邮件消息，可以包含多个部分，例如文本、HTML、附件等。而 <code>MIMEText</code> 类则表示的是单一部分的邮件消息，只包含文本内容。</p>
 <p><code>msg.attach()</code> 方法用于将 <code>MIME</code> 子部件附加到多部分消息中。在这个特定的例子中，<code>MIMEText(body, 'plain')</code> 创建了一个纯文本类型的 <code>MIME</code> 子部件，表示邮件的主体内容。然后，<code>msg.attach()</code> 方法将这个 <code>MIME</code> 子部件添加到了多部分消息对象 <code>msg</code> 中，以便将其作为邮件的一部分发送出去。如果想一次添加多个内容，需要多次调用 <code>msg.attach()</code> 方法，每次附加一个 <code>MIME</code> 子部件。</p>
 <h1>4. 连接 SMTP 服务器并发送邮件</h1>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="keyword">with</span> smtplib.SMTP(smtp_server, smtp_port) <span class="keyword">as</span> server:</span><br><span class="line">        server.starttls()  <span class="comment"># 开启 TLS 加密</span></span><br><span class="line">        server.login(smtp_username, smtp_password)</span><br><span class="line">        server.send_message(msg)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Email sent successfully!&#x27;</span>)</span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;Failed to send email: <span class="subst">&#123;e&#125;</span>&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">e</span><br><span class="line">    <span class="keyword">with</span> smtplib.SMTP(smtp_server, smtp_port) <span class="keyword">as</span> server:</span><br><span class="line">        server.starttls()  <span class="comment"># 开启 TLS 加密</span></span><br><span class="line">        server.login(smtp_username, smtp_password)</span><br><span class="line">        server.send_message(msg)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Email sent successfully!&#x27;</span>)</span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;Failed to send email: <span class="subst">&#123;e&#125;</span>&#x27;</span>)</span><br></pre></td></tr></table></figure>
 <p>使用 <code>with</code> 语句可以确保在代码块执行完毕后自动调用 <code>server.quit()</code> 方法来关闭 <code>smtplib.SMTP</code> 对象的连接。<br>
 这样做的好处是确保在使用完 <code>smtplib.SMTP</code> 对象后，及时释放资源并关闭连接，防止资源泄漏和连接泄露，同时也提高了代码的可读性和简洁性。</p>
 <hr>
@@ -471,7 +471,7 @@
         <ul class="pager">
           
           <li class="previous">
-            <a href="/ChatGPT提示词原则/" data-toggle="tooltip" data-placement="top" title="ChatGPT提示词原则">&larr; Previous Post</a>
+            <a href="/Python案例-发送短信/" data-toggle="tooltip" data-placement="top" title="[Python案例] 发送短信">&larr; Previous Post</a>
           </li>
           
           

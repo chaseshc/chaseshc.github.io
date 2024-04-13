@@ -30,6 +30,13 @@
   </url>
   
   <url>
+    <loc>http://yoursite-url/Python%E6%A1%88%E4%BE%8B-%E5%8F%91%E9%80%81%E7%9F%AD%E4%BF%A1/</loc>
+    
+    <lastmod>2021-04-13</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite-url/Python%E6%A1%88%E4%BE%8B-%E5%8F%91%E9%80%81%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6/</loc>
     
     <lastmod>2021-04-12</lastmod>
@@ -305,13 +312,6 @@
 
   
   <url>
-    <loc>http://yoursite-url/tags/AI-ChatGPT/</loc>
-    <lastmod>2024-04-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://yoursite-url/tags/Docker/</loc>
     <lastmod>2024-04-13</lastmod>
     <changefreq>daily</changefreq>
@@ -446,6 +446,20 @@
   
   <url>
     <loc>http://yoursite-url/tags/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2024-04-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/tags/AI/</loc>
+    <lastmod>2024-04-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/tags/ChatGPT/</loc>
     <lastmod>2024-04-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
