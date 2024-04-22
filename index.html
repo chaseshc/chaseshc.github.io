@@ -472,6 +472,190 @@ XML标签 &lt;tag&gt; &lt;/tag&gt;
 <div class="post-preview">
   
 
+  <a href="/订单中心架构设计与实践/">
+    <h2 class="post-title">
+      订单中心架构设计与实践
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      背景随着公司业务增长，如果每天1000多万笔订单的话，3个月将有约10亿的订单量，之前数据库采用单库单表的形式已经不满足于业务需求，数据库改造迫在眉睫。
+订单数据如何划分我们可以将订单数据划分成两大类型：分别是热数据和冷数据。
+
+热数据：3个月内的订单数据，查询实时性较高;
+冷数据A：3个月 ~ 12个月前的订单数据，查询频率不高;
+冷数据B：1年前的订单数据，几乎不会查询，只有偶尔的查询需......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Chase Shen on
+    2021-06-13
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+
+  <a href="/何时使用Elasticsearch而不是MySQL/">
+    <h2 class="post-title">
+      何时使用Elasticsearch而不是MySQL
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      MySQL 和 Elasticsearch 是两种不同的数据管理系统，它们各有优劣，适用于不同的场景。本文将从以下几个方面对它们进行比较和分析：
+
+数据模型
+查询语言
+索引和搜索
+分布式和高可用
+性能和扩展性
+使用场景
+
+数据模型MySQL 是一个关系型数据库管理系统（RDBMS），它使用表（table）来存储结构化的数据，每个表由多个行（row）和列（column）组成，每个列有一个预定义......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Chase Shen on
+    2021-06-12
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+
+  <a href="/电商微服务架构的设计/">
+    <h2 class="post-title">
+      电商微服务架构的设计
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      应用的无状态化很多网站一开始可能不是微服务化的，在早期的一些项目里，我们为了快速上线交付，会做一些单体的应用。随着订单量的发展，我们就开始做所谓的“微服务化”，第一步是把所谓的单体应用，变成应用的无状态化，以登录 SSO 来看，就是一种解决去状态化的方法。 我们会拿到一个 Token，每次访问都会带着 Token，这就是所谓的去状态化。之后每一个应用都有横向可扩的能力。当访问量大的时候，就可......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Chase Shen on
+    2021-05-22
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+
+  <a href="/什么是微服务？/">
+    <h2 class="post-title">
+      什么是微服务？
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      微服务是一种软件架构风格，其中应用程序被构建为一组小型、自治的服务，每个服务都围绕特定的业务功能进行构建，并通过轻量级通信机制（通常是HTTP API）相互通信。这些服务可以独立部署、扩展和管理，每个服务都可以由不同的团队开发和维护。
+整体式架构与微服务架构通过整体式架构，所有进程紧密耦合，并可作为单项服务运行。这意味着，如果应用程序的一个进程遇到需求峰值，则必须扩展整个架构。随着代码库的增......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Chase Shen on
+    2021-05-20
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+
+  <a href="/B端系统设计5要素/">
+    <h2 class="post-title">
+      B端系统设计5要素
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      1. B端系统的价值任何一个业务模式的开展，无论是单边市场还是双边市场，都离不开用户和平台两端，用户端主要与用户打交道，使用C端系统（PC网站、APP、小程序等），主要负责C端业务的呈现，为业务做拉新与留存；平台端对应B端业务，使用B端系统（订单系统、支付系统、库存系统、供应链系统等），除了为C端提供提供后台的服务能力外，还承担着企业内部降本增效的使命。
+在业务的开展过程中，B端系统承接了C......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Chase Shen on
+    2021-05-12
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+
+  <a href="/仓库管理系统设计/">
+    <h2 class="post-title">
+      仓库管理系统设计
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      
+1. 入库业务
+入库有许多种类，如采购入库、调拨入库、退换货入库等，先把商品的 ASN 码导入系统中，通过预约送货模块，进行送货预约。
+当货物送达仓库后，仓库进行验收入库，对货物的型号、效期、包装等进行检查，通过后才可以被接收。
+根据系统的建议，进行商品上架。
+
+2. 出库业务仓库管理系统接收到订单系统传输过来的出库单信息，进行打波次、拣货、 分拣、装箱、出库等操作，其中的波次是支持自动波......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Chase Shen on
+    2021-05-02
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+
   <a href="/电商物流业务的闭环/">
     <h2 class="post-title">
       电商物流业务的闭环
@@ -550,213 +734,6 @@ XML标签 &lt;tag&gt; &lt;/tag&gt;
   <p class="post-meta" style="margin: 10px 0;">
     Posted by Chase Shen on
     2021-04-13
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Python" title="Python">Python</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-
-  <a href="/Python案例-发送电子邮件/">
-    <h2 class="post-title">
-      [Python案例] 发送电子邮件
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      使用Python发送邮件要使用SMTP（简单邮件传输协议），SMTP也是一个建立在TCP（传输控制协议）提供的可靠数据传输服务的基础上的应用级协议，它规定了邮件的发送者如何跟发送邮件的服务器进行通信的细节，而Python中的smtplib模块将这些操作简化成了几个简单的函数，并使用 email 库来创建和格式化邮件。
-1. 导入所需的库
-123import smtplibfrom email......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Chase Shen on
-    2021-04-12
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Python" title="Python">Python</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-
-  <a href="/Python基础-多进程还是多线程/">
-    <h2 class="post-title">
-      [Python基础] 多进程还是多线程
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      选择多进程还是多线程取决于你的具体需求和情况。下面是一些考虑因素：
-1. 并发性能需求（多进程）
-如果你的应用程序需要处理大量的并发任务，并且这些任务是计算密集型的（CPU 密集型），那么多进程可能更适合，因为每个进程有自己独立的内存空间和 CPU 执行上下文，可以充分利用多核 CPU。
-使用多进程进行计算的主要原因是Python中的全局解释器锁（Global Interpreter Loc......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Chase Shen on
-    2021-02-10
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Python" title="Python">Python</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-
-  <a href="/Python基础-name内置变量的用法/">
-    <h2 class="post-title">
-      [Python基础] __name__内置变量的用法
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      在 Python 中，__name__ 是一个特殊的内置变量，它是一个字符串。对于任何 Python 文件，__name__的值取决于该文件是被直接运行还是作为模块被导入到另一个文件中。
-
-当 Python 文件被直接执行时，例如通过命令行直接运行某个文件 (python script.py)，那么该文件中的 __name__ 变量将被设置为 “__main__”。这意味着，如果你在一个 P......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Chase Shen on
-    2021-02-06
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Python" title="Python">Python</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-
-  <a href="/Python基础-字典数据结构/">
-    <h2 class="post-title">
-      [Python基础] 字典数据结构
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      字典（Dictionary）是 Python 中的一种数据结构，它可以存储任意类型对象，与列表、集合不同的是，字典的每个元素都是由一个键和一个值组成的“键值对”（key-value pairs），键和值通过冒号分开。字典是可变的、无序的，并且键是唯一的，但值可以重复。
-1. 定义字典
-创建字典有多种方式：
-1. 字面量语法
-使用花括号&#123;&#125;定义字典，键值对之间用冒号:分隔，......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Chase Shen on
-    2021-02-01
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Python" title="Python">Python</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-
-  <a href="/Python基础-集合数据结构/">
-    <h2 class="post-title">
-      [Python基础] 集合数据结构
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      集合（Set）是 Python 中的一种无序、可变的数据结构，用于存储不重复的元素。集合使用花括号&#123;&#125;定义，元素之间用逗号 , 分隔。
-1. 集合的特点
-
-
-唯一性：
-集合中的元素是唯一的，即集合中不允许存在重复的元素。
-
-
-无序性：
-集合中的元素没有固定的顺序，每次访问元素的顺序可能不同。
-
-
-可变性：
-集合是可变的，即可以添加、删除和更新元素。
-
-
-2. 创建集合
-创......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Chase Shen on
-    2021-01-29
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Python" title="Python">Python</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-
-  <a href="/Python基础-元组数据结构/">
-    <h2 class="post-title">
-      [Python基础] 元组数据结构
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      元组（Tuple）是 Python 中的一种数据结构，类似于列表，但是元组中的元素是不可变的，即元组是不可变序列。元组使用圆括号()定义，元素之间用逗号,分隔。
-下面是元组的一些特点和用法：
-1. 不可变性
-元组中的元素是不可变的，即无法修改、添加或删除元组中的元素。
-但是，元组中的元素可以是可变对象，比如列表。如果元组中包含了可变对象，那么这些可变对象的内容是可以修改的。
-123456l2......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Chase Shen on
-    2021-01-29
   </p>
   <div class="tags">
     
@@ -958,20 +935,20 @@ XML标签 &lt;tag&gt; &lt;/tag&gt;
       <li>ChatGPT提示词原则</li>
     </a>
     
-    <a href="%E7%94%B5%E5%95%86%E7%89%A9%E6%B5%81%E4%B8%9A%E5%8A%A1%E7%9A%84%E9%97%AD%E7%8E%AF/">
-      <li>电商物流业务的闭环</li>
+    <a href="%E8%AE%A2%E5%8D%95%E4%B8%AD%E5%BF%83%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E8%B7%B5/">
+      <li>订单中心架构设计与实践</li>
     </a>
     
-    <a href="%E4%BE%9B%E5%BA%94%E9%93%BE%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%A7%84%E5%88%92/">
-      <li>供应链系统的规划</li>
+    <a href="%E4%BD%95%E6%97%B6%E4%BD%BF%E7%94%A8Elasticsearch%E8%80%8C%E4%B8%8D%E6%98%AFMySQL/">
+      <li>何时使用Elasticsearch而不是MySQL</li>
     </a>
     
-    <a href="Python%E6%A1%88%E4%BE%8B-%E5%8F%91%E9%80%81%E7%9F%AD%E4%BF%A1/">
-      <li>[Python案例] 发送短信</li>
+    <a href="%E7%94%B5%E5%95%86%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%9A%84%E8%AE%BE%E8%AE%A1/">
+      <li>电商微服务架构的设计</li>
     </a>
     
-    <a href="Python%E6%A1%88%E4%BE%8B-%E5%8F%91%E9%80%81%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6/">
-      <li>[Python案例] 发送电子邮件</li>
+    <a href="%E4%BB%80%E4%B9%88%E6%98%AF%E5%BE%AE%E6%9C%8D%E5%8A%A1%EF%BC%9F/">
+      <li>什么是微服务？</li>
     </a>
     
   </ul>
@@ -984,7 +961,7 @@ XML标签 &lt;tag&gt; &lt;/tag&gt;
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2023/05/">May 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/04/">April 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/01/">January 2021</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/12/">December 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/11/">November 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/10/">October 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/09/">September 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/08/">August 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/04/">April 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/01/">January 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2023/05/">May 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/06/">June 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/05/">May 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/04/">April 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/01/">January 2021</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/12/">December 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/11/">November 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/10/">October 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/09/">September 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/08/">August 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/04/">April 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/01/">January 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1545,5 +1522,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

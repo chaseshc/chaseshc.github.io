@@ -431,6 +431,227 @@
 <div class="post-preview">
   
 
+  <a href="/Python面向对象编程-slots-属性/">
+    <h2 class="post-title">
+      [Python面向对象编程] __slots__属性
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      __slots__ 是 Python 中用于限制类的实例可以拥有的属性的机制。通过定义__slots__属性，你可以告诉 Python，该类的实例只能拥有指定的属性，而不能动态地添加新的属性。
+通常情况下，Python 中的对象可以动态地添加新的属性。但是，有时候我们希望限制对象的属性，只允许拥有预先定义好的属性。这种情况下，可以使用__slots__属性。
+123456789class P......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Chase Shen on
+    2021-01-03
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Python" title="Python">Python</a>
+    
+    <a href="/tags/#面向对象" title="面向对象">面向对象</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+
+  <a href="/Laradock中MySQL连接的坑/">
+    <h2 class="post-title">
+      Laradock中MySQL连接的坑
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      最近开始使用Laradock作为开发环境进行项目开发，按照教程将必备的软件都搭建好了，结果在项目中一直连接不上MySQL。网上查了好多资料后知道了问题原因：
+Docker中每个容器都是相对独立的，所以PHP-FPM和MySQL容器也是独立开的。在项目的配置文件中数据库host配置项一般是127.0.0.1，但这样写的话项目是去访问的PHP-FPM容器，这个容器中自然没有MySQL所以访问不到......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Chase Shen on
+    2020-12-09
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Docker" title="Docker">Docker</a>
+    
+    <a href="/tags/#本地开发" title="本地开发">本地开发</a>
+    
+    <a href="/tags/#环境搭建" title="环境搭建">环境搭建</a>
+    
+    <a href="/tags/#环境配置" title="环境配置">环境配置</a>
+    
+    <a href="/tags/#PHP" title="PHP">PHP</a>
+    
+    <a href="/tags/#Laravel" title="Laravel">Laravel</a>
+    
+    <a href="/tags/#LaraDock" title="LaraDock">LaraDock</a>
+    
+    <a href="/tags/#MySQL" title="MySQL">MySQL</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+
+  <a href="/PHP基础回顾-PHP中十六个魔术方法详解/">
+    <h2 class="post-title">
+      [PHP基础回顾]PHP中十六个魔术方法详解
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      PHP中把以两个下划线开头的方法称为魔术方法（Magic Method），这些方法在PHP中有举足轻重的作用。
+魔术方法包括：
+
+__construct()  类的构造函数
+__destruct()  类的析构函数
+__call()  在对象中调用一个不可访问的方法时调用
+__callStatic()  在静态方式中调用一个不可访问的方法时调用
+__get()  获得一个类的成员变量时调用
+......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Chase Shen on
+    2020-11-20
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#PHP" title="PHP">PHP</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+
+  <a href="/PHP基础回顾-可变变量和引用操作符/">
+    <h2 class="post-title">
+      [PHP基础回顾]可变变量和引用操作符
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      我发现自己在开发中很容易将可变变量操作符$$和引用操作符&amp;搞混，所以特开此贴加以区分牢记。
+可变变量
+可变变量允许我们动态地改变一个变量的名称。这个特性的工作原理是用一个变量的值作为另一个变量的名称。
+1234567$a = &#x27;b&#x27;;$$a = 5;echo $b; //输出：5//相当于：$b = 5;
+引用操作符
+引用操作符&amp;可以在关联赋值中使用。通常......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Chase Shen on
+    2020-11-20
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#PHP" title="PHP">PHP</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+
+  <a href="/PHP基础回顾-while循环和do-while循环/">
+    <h2 class="post-title">
+      [PHP基础回顾]while循环和do...while循环
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      用PHP开发了这么多年，遇到需要使用循环的时候好像一般很少选择while循环或者do…while循环，时间久了感觉对它们有点不那么熟了，最近刚好在巩固PHP基础知识，于是单独拿出来复习一下。
+while循环
+PHP中最简单的循环就是while循环。就像if语句，它也依赖于一个条件。
+while循环语句和if循环语句的不同在于，if语句只有在条件为true的情况下才执行后续的代码一次，而whi......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Chase Shen on
+    2020-11-19
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#PHP" title="PHP">PHP</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+
+  <a href="/华硕RT-AC86U刷梅林改版系统/">
+    <h2 class="post-title">
+      华硕RT-AC86U刷梅林改版系统
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      刷机前的准备
+
+EXT格式的1G以上U盘一个，如果不知道怎么格式化，可以查看此文章附录。（可选）
+改版梅林安装包，下载地址，或直接到Coolshare论坛下载
+科学上网工具离线安装包，下载地址，或直接到GitHub上找到与你机器相匹配的
+
+正式开刷
+系统初始化
+
+拿到机器后，打开机器背后开关键，然后连上电源，开机。
+找到一根网线，一头接自己的电脑，另一头接路由器的LAN口，或者直接连接路由器......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Chase Shen on
+    2020-11-17
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#路由器" title="路由器">路由器</a>
+    
+    <a href="/tags/#网络" title="网络">网络</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+
   <a href="/Redis中的数据结构/">
     <h2 class="post-title">
       Redis中的数据结构
@@ -568,228 +789,6 @@ memcached 是简单的键值对，Key......
     <a href="/tags/#小程序" title="小程序">小程序</a>
     
     <a href="/tags/#前端" title="前端">前端</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-
-  <a href="/PHP中的匿名函数和闭包/">
-    <h2 class="post-title">
-      PHP中的匿名函数和闭包
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      匿名函数
-匿名函数也叫闭包函数（closures），也就是没有定义名字的函数。
-匿名函数的定义：
-123$closureFunc = function () &#123;	......&#125;;
-因为匿名函数没有名字，如果要使用它，需要将其赋值给一个变量，通过变量来调用。匿名函数也可以像普通函数一样声明参数，调用方法也相同：
-12345678$func = function ($para......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Chase Shen on
-    2020-09-26
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#PHP" title="PHP">PHP</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-
-  <a href="/基于LaraDock在Docker构建Laravel应用/">
-    <h2 class="post-title">
-      基于Laradock在Docker构建Laravel应用
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      Laradock 是为 Docker 提供的完整 PHP 本地开发环境，和 Homestead 一样提供了一系列打包好（包括配置）的 Docker Image。Laradock 早期专注为 Laravel 打造 Docker 开发环境，因而最早在 Laravel 社区中出名，后来随着影响力的扩大，逐渐被 PHP 社区接纳和采用，目前支持的 PHP 项目除了 Laravel 之外，还有 Sym......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Chase Shen on
-    2020-09-10
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Docker" title="Docker">Docker</a>
-    
-    <a href="/tags/#本地开发" title="本地开发">本地开发</a>
-    
-    <a href="/tags/#环境搭建" title="环境搭建">环境搭建</a>
-    
-    <a href="/tags/#环境配置" title="环境配置">环境配置</a>
-    
-    <a href="/tags/#PHP" title="PHP">PHP</a>
-    
-    <a href="/tags/#Laravel" title="Laravel">Laravel</a>
-    
-    <a href="/tags/#LaraDock" title="LaraDock">LaraDock</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-
-  <a href="/Docker实例/">
-    <h2 class="post-title">
-      Docker实例
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-       了解完Docker的基本概念后，本来应该是安装教程，因为我用的MacOS，直接下载安装就可以了，这里我就不赘述了。接下来用最简单的“Hello World” image体验一下Docker。
-首先需要将image文件从仓库拉取到本地：
-1$ docker image pull library/hello-world
-$ docker image pull是抓取image文件的命令。
-lib......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Chase Shen on
-    2020-09-09
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Docker" title="Docker">Docker</a>
-    
-    <a href="/tags/#本地开发" title="本地开发">本地开发</a>
-    
-    <a href="/tags/#环境搭建" title="环境搭建">环境搭建</a>
-    
-    <a href="/tags/#环境配置" title="环境配置">环境配置</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-
-  <a href="/Docker入门/">
-    <h2 class="post-title">
-      Docker入门
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      写在前面
- 在进行后端开发之前，首先需要在本地搭建一套PHP环境，需要安装PHP、PHP-FPM、WEB服务器、MySQL，有时候还需要Redis和Memcached等NoSQL服务。每个服务又有很多版本，有时候后端开发人员在自己本地安装的版本和运维部署到服务器上的版本会不一样，这样会造成代码不兼容的问题，这种情况在我工作过的公司中是普遍存在的，不仅会浪费时间排斥问题，还造成了很多的沟通成本......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Chase Shen on
-    2020-09-07
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Docker" title="Docker">Docker</a>
-    
-    <a href="/tags/#本地开发" title="本地开发">本地开发</a>
-    
-    <a href="/tags/#环境搭建" title="环境搭建">环境搭建</a>
-    
-    <a href="/tags/#环境配置" title="环境配置">环境配置</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-
-  <a href="/Markdown基本语法/">
-    <h2 class="post-title">
-      Markdown基本语法
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      Markdown是一种纯文本格式的标记语言。通过简单的标记语法，就可以使普通文本内容具有一定的格式。使用Markdown的好处是可以让文章编辑者专注于写作本身。
-标题
-在想要设置为标题的文字前面加#就可以完成标题设置
-一个#是一级标题，两个#代表二级标题，以此类推，最多支持六级标题。
-注：标准语法一般在#后跟一个空格再写文字
-
-	# 这是一级标题
-	## 这是二级标题
-	### 这是三级标题......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Chase Shen on
-    2020-08-16
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Markdown" title="Markdown">Markdown</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-
-  <a href="/Hexo-Theme-LiveMyLife/">
-    <h2 class="post-title">
-      Hexo-Theme-LiveMyLife
-    </h2>
-    <h3 class="post-subtitle">
-      A succinct hexo theme...
-    </h3>
-    <div class="post-content-preview">
-      
-移植 Hux Blog 的主题，感谢 Huxpro 设计了如此完美的主题。
-由 Vincent 创建的 LiveMyLife 的主题修改来源 YenYuHsuan，参考主题 dusign、Utone，感谢 dusign、Utone。
-
-仓库
-Github 仓库地址：https://github.com/V-Vincen/hexo-theme-livemylife
-Gitee 仓库地址：ht......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Chase Shen on
-    2020-04-17
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Hexo-Theme" title="Hexo-Theme">Hexo-Theme</a>
     
   </div>
   
@@ -991,20 +990,20 @@ Gitee 仓库地址：ht......
       <li>ChatGPT提示词原则</li>
     </a>
     
-    <a href="../../%E7%94%B5%E5%95%86%E7%89%A9%E6%B5%81%E4%B8%9A%E5%8A%A1%E7%9A%84%E9%97%AD%E7%8E%AF/">
-      <li>电商物流业务的闭环</li>
+    <a href="../../%E8%AE%A2%E5%8D%95%E4%B8%AD%E5%BF%83%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E8%B7%B5/">
+      <li>订单中心架构设计与实践</li>
     </a>
     
-    <a href="../../%E4%BE%9B%E5%BA%94%E9%93%BE%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%A7%84%E5%88%92/">
-      <li>供应链系统的规划</li>
+    <a href="../../%E4%BD%95%E6%97%B6%E4%BD%BF%E7%94%A8Elasticsearch%E8%80%8C%E4%B8%8D%E6%98%AFMySQL/">
+      <li>何时使用Elasticsearch而不是MySQL</li>
     </a>
     
-    <a href="../../Python%E6%A1%88%E4%BE%8B-%E5%8F%91%E9%80%81%E7%9F%AD%E4%BF%A1/">
-      <li>[Python案例] 发送短信</li>
+    <a href="../../%E7%94%B5%E5%95%86%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%9A%84%E8%AE%BE%E8%AE%A1/">
+      <li>电商微服务架构的设计</li>
     </a>
     
-    <a href="../../Python%E6%A1%88%E4%BE%8B-%E5%8F%91%E9%80%81%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6/">
-      <li>[Python案例] 发送电子邮件</li>
+    <a href="../../%E4%BB%80%E4%B9%88%E6%98%AF%E5%BE%AE%E6%9C%8D%E5%8A%A1%EF%BC%9F/">
+      <li>什么是微服务？</li>
     </a>
     
   </ul>
@@ -1017,7 +1016,7 @@ Gitee 仓库地址：ht......
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2023/05/">May 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/04/">April 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/11/">November 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/10/">October 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/09/">September 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/04/">April 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/01/">January 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2023/05/">May 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/06/">June 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/05/">May 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/04/">April 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/11/">November 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/10/">October 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/09/">September 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/04/">April 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/01/">January 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1578,5 +1577,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

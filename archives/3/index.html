@@ -431,6 +431,218 @@
 <div class="post-preview">
   
 
+  <a href="/Python面向对象编程-多重继承/">
+    <h2 class="post-title">
+      [Python面向对象编程] 多重继承
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      在Python中，多重继承是指一个类可以继承多个父类。这是一种强大的功能，但也需要谨慎使用，因为它可能导致一些复杂的情况，比如继承冲突和结构不清晰。
+多重继承的基础
+定义多重继承
+在Python中，您可以定义一个类继承自多个父类，如下所示：
+12345678class Base1:    passclass Base2:    passclass Derived(Base1, Base2):......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Chase Shen on
+    2021-01-24
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Python" title="Python">Python</a>
+    
+    <a href="/tags/#面向对象" title="面向对象">面向对象</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+
+  <a href="/Python面向对象编程-深入理解类方法（-classmethod）和静态方法（-staticmethod）的区别和用途/">
+    <h2 class="post-title">
+      [Python面向对象编程] 深入理解类方法（@classmethod）和静态方法（@staticmethod）的区别和用途
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      在Python中，类方法（@classmethod）和静态方法（@staticmethod）都是附加在类上的方法，但它们在用途和行为上有所不同。
+类方法（@classmethod）
+定义和用途
+
+类方法是一种方法，它接收类本身作为第一个参数而不是类的实例。这个参数通常被命名为cls。
+类方法可以访问类属性和其他类方法，但不能访问实例属性。
+类方法常用于工厂方法，即创建并返回类的实例。
+
+示例......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Chase Shen on
+    2021-01-24
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Python" title="Python">Python</a>
+    
+    <a href="/tags/#面向对象" title="面向对象">面向对象</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+
+  <a href="/Python面向对象编程-特殊方法-str-和-repr/">
+    <h2 class="post-title">
+      [Python面向对象编程] 特殊方法__str__和__repr__
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      特殊方法（有时也称为魔术方法）在Python中扮演着重要角色。它们由双下划线（__）包围的方法名定义，用于实现特定的内置行为或操作。最常见的特殊方法包括__str__和__repr__，它们分别用于定义对象的可打印表示和官方字符串表示。
+__str__ 方法
+
+
+用途：
+
+定义了对象的“字符串表示”，它的主要目的是提供一个对象的可读性高的描述，用于打印对象或将对象转换为字符串时的友好显示。
+......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Chase Shen on
+    2021-01-24
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Python" title="Python">Python</a>
+    
+    <a href="/tags/#面向对象" title="面向对象">面向对象</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+
+  <a href="/Python基础-args（用于位置参数）和-kwargs（用于关键字参数）/">
+    <h2 class="post-title">
+      [Python基础] *args（用于位置参数）和**kwargs（用于关键字参数）
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      在Python中，*args和**kwargs是用于函数定义中，以允许接收不确定数量的参数。这两个是专门的语法结构，用于处理那些在函数定义时不确定具体数量或名称的参数。
+*args和**kwargs的命名本身不是固定的，但前缀*和**是必须的，它们分别用于定义可变数量的位置参数和关键字参数。args和kwargs只是按照惯例使用的名称，您可以用其他任何有效的变量名来替换它们。
+*args（用......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Chase Shen on
+    2021-01-23
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Python" title="Python">Python</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+
+  <a href="/Python面向对象编程-自定义模块/">
+    <h2 class="post-title">
+      [Python面向对象编程] 自定义模块
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      在大型Python项目中，通过模块化的方式组织和引用代码是非常常见且推荐的做法。模块化允许将功能相关的类和函数分组到不同的文件中，使代码更加清晰、易于管理，并且提高了代码的可重用性和可维护性。
+大型Python项目的模块化
+
+模块：通常是单个.py文件，包含相关的函数和类。
+包：是一个包含多个模块的目录，该目录包含一个特殊的文件__init__.py（可能为空）。包可以进一步组织大型项目。
+......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Chase Shen on
+    2021-01-23
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Python" title="Python">Python</a>
+    
+    <a href="/tags/#面向对象" title="面向对象">面向对象</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+
+  <a href="/Python基础-装饰器/">
+    <h2 class="post-title">
+      [Python基础] 装饰器
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      装饰器（Decorator）是Python中一个非常有用的功能，它允许您修改或增强函数或方法的行为，而不需要改变其本身的代码。装饰器本质上是一个函数，它接受一个函数作为参数，并返回一个新的函数。
+装饰器的作用：
+
+增强功能： 装饰器可以在不修改原函数或方法代码的情况下，给它们添加额外的功能。这符合开闭原则（对扩展开放，对修改封闭）。
+代码复用： 装饰器可以在多个函数或类方法之间共享，从而避免......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Chase Shen on
+    2021-01-22
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Python" title="Python">Python</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+
   <a href="/Python基础-位置参数和关键字参数/">
     <h2 class="post-title">
       [Python基础] 位置参数和关键字参数
@@ -564,227 +776,6 @@ except块让你处理错误。
   <div class="tags">
     
     <a href="/tags/#Python" title="Python">Python</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-
-  <a href="/Python面向对象编程-slots-属性/">
-    <h2 class="post-title">
-      [Python面向对象编程] __slots__属性
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      __slots__ 是 Python 中用于限制类的实例可以拥有的属性的机制。通过定义__slots__属性，你可以告诉 Python，该类的实例只能拥有指定的属性，而不能动态地添加新的属性。
-通常情况下，Python 中的对象可以动态地添加新的属性。但是，有时候我们希望限制对象的属性，只允许拥有预先定义好的属性。这种情况下，可以使用__slots__属性。
-123456789class P......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Chase Shen on
-    2021-01-03
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Python" title="Python">Python</a>
-    
-    <a href="/tags/#面向对象" title="面向对象">面向对象</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-
-  <a href="/Laradock中MySQL连接的坑/">
-    <h2 class="post-title">
-      Laradock中MySQL连接的坑
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      最近开始使用Laradock作为开发环境进行项目开发，按照教程将必备的软件都搭建好了，结果在项目中一直连接不上MySQL。网上查了好多资料后知道了问题原因：
-Docker中每个容器都是相对独立的，所以PHP-FPM和MySQL容器也是独立开的。在项目的配置文件中数据库host配置项一般是127.0.0.1，但这样写的话项目是去访问的PHP-FPM容器，这个容器中自然没有MySQL所以访问不到......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Chase Shen on
-    2020-12-09
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Docker" title="Docker">Docker</a>
-    
-    <a href="/tags/#本地开发" title="本地开发">本地开发</a>
-    
-    <a href="/tags/#环境搭建" title="环境搭建">环境搭建</a>
-    
-    <a href="/tags/#环境配置" title="环境配置">环境配置</a>
-    
-    <a href="/tags/#PHP" title="PHP">PHP</a>
-    
-    <a href="/tags/#Laravel" title="Laravel">Laravel</a>
-    
-    <a href="/tags/#LaraDock" title="LaraDock">LaraDock</a>
-    
-    <a href="/tags/#MySQL" title="MySQL">MySQL</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-
-  <a href="/PHP基础回顾-PHP中十六个魔术方法详解/">
-    <h2 class="post-title">
-      [PHP基础回顾]PHP中十六个魔术方法详解
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      PHP中把以两个下划线开头的方法称为魔术方法（Magic Method），这些方法在PHP中有举足轻重的作用。
-魔术方法包括：
-
-__construct()  类的构造函数
-__destruct()  类的析构函数
-__call()  在对象中调用一个不可访问的方法时调用
-__callStatic()  在静态方式中调用一个不可访问的方法时调用
-__get()  获得一个类的成员变量时调用
-......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Chase Shen on
-    2020-11-20
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#PHP" title="PHP">PHP</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-
-  <a href="/PHP基础回顾-可变变量和引用操作符/">
-    <h2 class="post-title">
-      [PHP基础回顾]可变变量和引用操作符
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      我发现自己在开发中很容易将可变变量操作符$$和引用操作符&amp;搞混，所以特开此贴加以区分牢记。
-可变变量
-可变变量允许我们动态地改变一个变量的名称。这个特性的工作原理是用一个变量的值作为另一个变量的名称。
-1234567$a = &#x27;b&#x27;;$$a = 5;echo $b; //输出：5//相当于：$b = 5;
-引用操作符
-引用操作符&amp;可以在关联赋值中使用。通常......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Chase Shen on
-    2020-11-20
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#PHP" title="PHP">PHP</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-
-  <a href="/PHP基础回顾-while循环和do-while循环/">
-    <h2 class="post-title">
-      [PHP基础回顾]while循环和do...while循环
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      用PHP开发了这么多年，遇到需要使用循环的时候好像一般很少选择while循环或者do…while循环，时间久了感觉对它们有点不那么熟了，最近刚好在巩固PHP基础知识，于是单独拿出来复习一下。
-while循环
-PHP中最简单的循环就是while循环。就像if语句，它也依赖于一个条件。
-while循环语句和if循环语句的不同在于，if语句只有在条件为true的情况下才执行后续的代码一次，而whi......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Chase Shen on
-    2020-11-19
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#PHP" title="PHP">PHP</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-
-  <a href="/华硕RT-AC86U刷梅林改版系统/">
-    <h2 class="post-title">
-      华硕RT-AC86U刷梅林改版系统
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      刷机前的准备
-
-EXT格式的1G以上U盘一个，如果不知道怎么格式化，可以查看此文章附录。（可选）
-改版梅林安装包，下载地址，或直接到Coolshare论坛下载
-科学上网工具离线安装包，下载地址，或直接到GitHub上找到与你机器相匹配的
-
-正式开刷
-系统初始化
-
-拿到机器后，打开机器背后开关键，然后连上电源，开机。
-找到一根网线，一头接自己的电脑，另一头接路由器的LAN口，或者直接连接路由器......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Chase Shen on
-    2020-11-17
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#路由器" title="路由器">路由器</a>
-    
-    <a href="/tags/#网络" title="网络">网络</a>
     
   </div>
   
@@ -986,20 +977,20 @@ EXT格式的1G以上U盘一个，如果不知道怎么格式化，可以查看�
       <li>ChatGPT提示词原则</li>
     </a>
     
-    <a href="../../%E7%94%B5%E5%95%86%E7%89%A9%E6%B5%81%E4%B8%9A%E5%8A%A1%E7%9A%84%E9%97%AD%E7%8E%AF/">
-      <li>电商物流业务的闭环</li>
+    <a href="../../%E8%AE%A2%E5%8D%95%E4%B8%AD%E5%BF%83%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E8%B7%B5/">
+      <li>订单中心架构设计与实践</li>
     </a>
     
-    <a href="../../%E4%BE%9B%E5%BA%94%E9%93%BE%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%A7%84%E5%88%92/">
-      <li>供应链系统的规划</li>
+    <a href="../../%E4%BD%95%E6%97%B6%E4%BD%BF%E7%94%A8Elasticsearch%E8%80%8C%E4%B8%8D%E6%98%AFMySQL/">
+      <li>何时使用Elasticsearch而不是MySQL</li>
     </a>
     
-    <a href="../../Python%E6%A1%88%E4%BE%8B-%E5%8F%91%E9%80%81%E7%9F%AD%E4%BF%A1/">
-      <li>[Python案例] 发送短信</li>
+    <a href="../../%E7%94%B5%E5%95%86%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%9A%84%E8%AE%BE%E8%AE%A1/">
+      <li>电商微服务架构的设计</li>
     </a>
     
-    <a href="../../Python%E6%A1%88%E4%BE%8B-%E5%8F%91%E9%80%81%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6/">
-      <li>[Python案例] 发送电子邮件</li>
+    <a href="../../%E4%BB%80%E4%B9%88%E6%98%AF%E5%BE%AE%E6%9C%8D%E5%8A%A1%EF%BC%9F/">
+      <li>什么是微服务？</li>
     </a>
     
   </ul>
@@ -1012,7 +1003,7 @@ EXT格式的1G以上U盘一个，如果不知道怎么格式化，可以查看�
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2023/05/">May 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/04/">April 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/11/">November 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/10/">October 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/09/">September 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/04/">April 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/01/">January 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2023/05/">May 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/06/">June 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/05/">May 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/04/">April 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/11/">November 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/10/">October 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/09/">September 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/04/">April 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/01/">January 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1573,5 +1564,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>
