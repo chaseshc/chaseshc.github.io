@@ -381,11 +381,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">1</span> Minutes
+              Estimated Reading Time <span class="post-count">2</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">538</span> In Total
+              Words <span class="post-count">593</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -447,8 +447,10 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>随着公司业务增长，如果每天1000多万笔订单的话，3个月将有约10亿的订单量，之前数据库采用单库单表的形式已经不满足于业务需求，数据库改造迫在眉睫。</p>
-<h1 id="订单数据如何划分"><a href="#订单数据如何划分" class="headerlink" title="订单数据如何划分"></a>订单数据如何划分</h1><p>我们可以将订单数据划分成两大类型：分别是热数据和冷数据。</p>
+        <h1>背景</h1>
+<p>随着公司业务增长，如果每天1000多万笔订单的话，3个月将有约10亿的订单量，之前数据库采用单库单表的形式已经不满足于业务需求，数据库改造迫在眉睫。</p>
+<h1>订单数据如何划分</h1>
+<p>我们可以将订单数据划分成两大类型：分别是热数据和冷数据。</p>
 <ul>
 <li>热数据：3个月内的订单数据，查询实时性较高;</li>
 <li>冷数据A：3个月 ~ 12个月前的订单数据，查询频率不高;</li>
@@ -461,7 +463,13 @@
 <li>冷数据A: 对于这类数据可以存储在ES中，利用搜索引擎的特性基本上也可以做到比较快的查询；</li>
 <li>冷数据B: 对于这类不经常查询的数据，可以存放到Hive中；</li>
 </ul>
-<h1 id="MySql-如何分库分表"><a href="#MySql-如何分库分表" class="headerlink" title="MySql 如何分库分表"></a>MySql 如何分库分表</h1><h2 id="1-按业务拆分"><a href="#1-按业务拆分" class="headerlink" title="1. 按业务拆分"></a>1. 按业务拆分</h2><p>在业务初始阶段，为了加快应用上线和快速迭代，很多应用都采用集中式的架构。但是随着业务系统的扩大，系统匾额越来越复杂，越来越难以维护，开发效率变得越来越低，并且对资源的消耗也变得越来越大，通过硬件提高系统性能的成本会变得更高。<br>通常一般的电商平台，包含了用户、商品、订单等几大模块，简单的做法是在同一个库中分别建4张表，如下图所示：<br><img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/订单中心架构设计与实践/image.png" alt=""></p>
+<h1>MySql 如何分库分表</h1>
+<h2 id="1-按业务拆分">1. 按业务拆分</h2>
+<p>在业务初始阶段，为了加快应用上线和快速迭代，很多应用都采用集中式的架构。但是随着业务系统的扩大，系统匾额越来越复杂，越来越难以维护，开发效率变得越来越低，并且对资源的消耗也变得越来越大，通过硬件提高系统性能的成本会变得更高。<br>
+通常一般的电商平台，包含了用户、商品、订单等几大模块，简单的做法是在同一个库中分别建4张表，如下图所示：<br>
+<img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/订单中心架构设计与实践/image.png" alt=""></p>
+<p>但是随着业务的提升，将所有业务都放在一个库中已经变得越来越难以维护，因此我们建议，将不同业务放在不同的库中，如下图所示：<br>
+<img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/订单中心架构设计与实践/image-2.png" alt=""></p>
 
 
         <hr>
@@ -610,7 +618,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E8%83%8C%E6%99%AF"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">背景</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E8%AE%A2%E5%8D%95%E6%95%B0%E6%8D%AE%E5%A6%82%E4%BD%95%E5%88%92%E5%88%86"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">订单数据如何划分</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#MySql-%E5%A6%82%E4%BD%95%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">MySql 如何分库分表</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-%E6%8C%89%E4%B8%9A%E5%8A%A1%E6%8B%86%E5%88%86"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">1. 按业务拆分</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">背景</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">订单数据如何划分</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">MySql 如何分库分表</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-%E6%8C%89%E4%B8%9A%E5%8A%A1%E6%8B%86%E5%88%86"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">1. 按业务拆分</span></a></li></ol></li></ol>
         
         </div>
       </aside>
