@@ -567,10 +567,10 @@
 <p>如果我们使用事件源，那么从事件存储中读取数据就变得困难了。要从数据存储中获取实体，我们需要处理所有的实体事件。有时我们对读写操作还会有不同的一致性和吞吐量要求。</p>
 <p>这种情况，我们可以使用 CQRS 模式。在该模式中，系统的数据修改部分（命令）与数据读取部分（查询）是分离的。而 CQRS 模式有两种容易令人混淆的模式，分别是简单的和高级的。</p>
 <p>在其简单形式中，不同实体或 ORM 模型被用于读写操作，如下所示：</p>
-<img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/微服务架构中10个常用的设计模式/CQRS" alt="(simple).png ">
+<img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/微服务架构中10个常用的设计模式/CQRS(simple).png" alt="">
 <p>它有助于强化单一职责原则和分离关注点，从而实现更简洁的设计。</p>
 <p>在其高级形式中，会有不同的数据存储用于读写操作。高级的 CQRS 通常结合事件源模式。根据不同情况，会使用不同类型的写数据存储和读数据存储。写数据存储是“记录的系统”，也就是整个系统的核心源头。</p>
-<img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/微服务架构中10个常用的设计模式/CQRS" alt="(advanced).png ">
+<img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/微服务架构中10个常用的设计模式/CQRS(advanced).png" alt="">
 <p>对于读频繁的应用程序或微服务架构，OLTP 数据库（任何提供 ACID 事务保证的关系或非关系数据库）或分布式消息系统都可以被用作写存储。对于写频繁的应用程序（写操作高可伸缩性和大吞吐量），需要使用写可水平伸缩的数据库（如全球托管的公共云数据库）。标准化的数据则保存在写数据存储中。</p>
 <p>对搜索（例如 Apache Solr、Elasticsearch）或读操作（KV 数据库、文档数据库）进行优化的非关系数据库常被用作读存储。许多情况会在需要 SQL 查询的地方使用读可伸缩的关系数据库。非标准化和特殊优化过的数据则保存在读存储中。</p>
 <p>数据是从写存储异步复制到读存储中的，所以读存储和写存储之间会有延迟，但最终是一致的。</p>
