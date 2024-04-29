@@ -373,7 +373,7 @@
             <h2 class="subheading"></h2>
             <span class="meta">
               Posted by Chase Shen on
-              2021-05-02
+              2022-05-02
             </span>
 
 
@@ -447,16 +447,22 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <p><img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/仓库管理系统设计/image.png" alt=""></p>
-<h2 id="1-入库业务"><a href="#1-入库业务" class="headerlink" title="1. 入库业务"></a>1. 入库业务</h2><ul>
+        <img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/仓库管理系统设计/image.png" alt="">
+<h2 id="1-入库业务">1. 入库业务</h2>
+<ul>
 <li>入库有许多种类，如采购入库、调拨入库、退换货入库等，先把商品的 ASN 码导入系统中，通过预约送货模块，进行送货预约。</li>
 <li>当货物送达仓库后，仓库进行验收入库，对货物的型号、效期、包装等进行检查，通过后才可以被接收。</li>
 <li>根据系统的建议，进行商品上架。</li>
 </ul>
-<h2 id="2-出库业务"><a href="#2-出库业务" class="headerlink" title="2. 出库业务"></a>2. 出库业务</h2><pre><code>仓库管理系统接收到订单系统传输过来的出库单信息，进行打波次、拣货、 分拣、装箱、出库等操作，其中的波次是支持自动波次和人工波次的，拣货支持 RF 拣货、纸单拣货、系统推荐拣货等。
-</code></pre><h2 id="3-库存管理"><a href="#3-库存管理" class="headerlink" title="3. 库存管理"></a>3. 库存管理</h2><pre><code>此功能是对仓库货物做主要操作的模块，功能包括库存移动、库存盘点、库存锁定等，货物上架以后，不能任意移动货物，否则容易造成系统库存和实物库存对不上，造成损耗问题。
-</code></pre><h2 id="4-系统管理、基础管理"><a href="#4-系统管理、基础管理" class="headerlink" title="4. 系统管理、基础管理"></a>4. 系统管理、基础管理</h2><pre><code>这部分是一些基础信息、权限和系统配置的设定模块，通常在系统初始化的时候进行资料的导入，后面再根据实际情况去维护这些信息数据。
+<h2 id="2-出库业务">2. 出库业务</h2>
+<pre><code>仓库管理系统接收到订单系统传输过来的出库单信息，进行打波次、拣货、 分拣、装箱、出库等操作，其中的波次是支持自动波次和人工波次的，拣货支持 RF 拣货、纸单拣货、系统推荐拣货等。
 </code></pre>
+<h2 id="3-库存管理">3. 库存管理</h2>
+<pre><code>此功能是对仓库货物做主要操作的模块，功能包括库存移动、库存盘点、库存锁定等，货物上架以后，不能任意移动货物，否则容易造成系统库存和实物库存对不上，造成损耗问题。
+</code></pre>
+<h2 id="4-系统管理、基础管理">4. 系统管理、基础管理</h2>
+<pre><code>这部分是一些基础信息、权限和系统配置的设定模块，通常在系统初始化的时候进行资料的导入，后面再根据实际情况去维护这些信息数据。</code></pre>
+
 
         <hr>
         <!-- Pager -->
@@ -551,7 +557,7 @@
       repo: '',
       owner: '',
       admin: '',
-      id: 'Sun May 02 2021 17:39:16 GMT+0800', // Ensure uniqueness and length less than 50
+      id: 'Mon May 02 2022 17:39:16 GMT+0800', // Ensure uniqueness and length less than 50
       distractionFreeMode: false, // Facebook-like distraction free mode
       perPage: 10,
       pagerDirection: 'last',
@@ -1169,20 +1175,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+	</body>
 </html>

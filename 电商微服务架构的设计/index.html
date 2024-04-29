@@ -373,7 +373,7 @@
             <h2 class="subheading"></h2>
             <span class="meta">
               Posted by Chase Shen on
-              2021-05-22
+              2022-05-22
             </span>
 
 
@@ -447,24 +447,34 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1 id="应用的无状态化"><a href="#应用的无状态化" class="headerlink" title="应用的无状态化"></a>应用的无状态化</h1><p>很多网站一开始可能不是微服务化的，在早期的一些项目里，我们为了快速上线交付，会做一些单体的应用。随着订单量的发展，我们就开始做所谓的“微服务化”，第一步是把所谓的单体应用，变成应用的无状态化，以登录 SSO 来看，就是一种解决去状态化的方法。 我们会拿到一个 Token，每次访问都会带着 Token，这就是所谓的去状态化。之后每一个应用都有横向可扩的能力。当访问量大的时候，就可以通过加服务器来增强水平扩展的能力。</p>
-<h1 id="单体应用的拆分"><a href="#单体应用的拆分" class="headerlink" title="单体应用的拆分"></a>单体应用的拆分</h1><p>在做了应用的无状态之后，就是对单体应用的拆分。拆分有几个维度：</p>
+        <h1>应用的无状态化</h1>
+<p>很多网站一开始可能不是微服务化的，在早期的一些项目里，我们为了快速上线交付，会做一些单体的应用。随着订单量的发展，我们就开始做所谓的“微服务化”，第一步是把所谓的单体应用，变成应用的无状态化，以登录 SSO 来看，就是一种解决去状态化的方法。 我们会拿到一个 Token，每次访问都会带着 Token，这就是所谓的去状态化。之后每一个应用都有横向可扩的能力。当访问量大的时候，就可以通过加服务器来增强水平扩展的能力。</p>
+<h1>单体应用的拆分</h1>
+<p>在做了应用的无状态之后，就是对单体应用的拆分。拆分有几个维度：</p>
 <ul>
 <li>一个是从系统的维度，最简单的拆法，就是前后台拆开，比如购物车、商品、搜索、首页等属于前端，而后端给网站运营人员用。</li>
 <li>还可以按功能的维度来拆分，对于用户服务，从 Service 层到表结构，其实是可以独立部署的，这就是微服务的概念。技术架构反应的，就是组织架构，在这种架构下，开发团队分为用户服务开发组、价格开发组、商品开发组等。</li>
 <li>还可以根据读写维度进行拆分。比如搜索和商城的索引，肯定是独立的两个服务。用户注册下单支付，是一个完整的业务流程。这些是由若干个微服务构成。</li>
 </ul>
-<h1 id="服务架构搭建"><a href="#服务架构搭建" class="headerlink" title="服务架构搭建"></a>服务架构搭建</h1><h2 id="1-数据的异构"><a href="#1-数据的异构" class="headerlink" title="1. 数据的异构"></a>1. 数据的异构</h2><p>在大型电商系统里面的服务架构搭建的经验和技巧，首先是数据的异构，以订单表为例，一般订单都非常庞大，一般按照 ID 来分表分库。这种分法对于查询用户所有订单时就要去各表捞数据，因此可以按用户维度来异构一张表。对于数据的存储，会分为热数据、冷数据和温数据，分别存在不同的地方。同时也会对数据进行聚合。在一些订单详情页，由于有很多 AJAX 请求，由于请求数太多，也需要做一些请求合并。后台的服务也要做一个合并。<br>以商品详情页为例，使几个接口的数据缓存合并在 Redis 中，从 Redis 中取得聚合好的数据，称为数据闭环。这是优化网络请求的通常做法。</p>
-<h2 id="2-缓存"><a href="#2-缓存" class="headerlink" title="2. 缓存"></a>2. 缓存</h2><p>缓存在大型电商系统中是常用的优化技巧。浏览器级别的缓存通过响应头进行设置。还会用到 App 客户端的缓存，把 H5/CSS/JS/ 图片打包，提前拉到客户端，在客户端做一个代理服务器，但是不会读取数据，可以提升用户体验。缓存的使用在网络上还有常用的 CDN。进到接入层后，如果使用软负载，也可以使用内存级别的缓存。</p>
-<h2 id="3-消息队列的应用"><a href="#3-消息队列的应用" class="headerlink" title="3. 消息队列的应用"></a>3. 消息队列的应用</h2><p>消息队列的应用，是做服务解耦的好方法。也要考虑消息失败和重试的场景，需要来做一些额外补偿来防止数据丢失。还有一个机制，是数据的校验和补偿。很多的场景能做到的， 是最终一致性。大型的电商系统和金融系统场景，非常不一样，在设计分布式系统时，这是常用的方式。在电商中大多数情况，只要实现最终一致性就可以了。</p>
-<h1 id="高可用的架构设计"><a href="#高可用的架构设计" class="headerlink" title="高可用的架构设计"></a>高可用的架构设计</h1><p>高可用的架构设计，对于电商来说，其实高可用是最基本的要求。如果在促销时，引来千万级别的用户，宕机会损失很大。</p>
-<h2 id="1-服务的降级、分组和故障的隔离"><a href="#1-服务的降级、分组和故障的隔离" class="headerlink" title="1. 服务的降级、分组和故障的隔离"></a>1. 服务的降级、分组和故障的隔离</h2><p>基于微服务架构的电商系统，高可用的方案有以下几个部分：</p>
+<h1>服务架构搭建</h1>
+<h2 id="1-数据的异构">1. 数据的异构</h2>
+<p>在大型电商系统里面的服务架构搭建的经验和技巧，首先是数据的异构，以订单表为例，一般订单都非常庞大，一般按照 ID 来分表分库。这种分法对于查询用户所有订单时就要去各表捞数据，因此可以按用户维度来异构一张表。对于数据的存储，会分为热数据、冷数据和温数据，分别存在不同的地方。同时也会对数据进行聚合。在一些订单详情页，由于有很多 AJAX 请求，由于请求数太多，也需要做一些请求合并。后台的服务也要做一个合并。<br>
+以商品详情页为例，使几个接口的数据缓存合并在 Redis 中，从 Redis 中取得聚合好的数据，称为数据闭环。这是优化网络请求的通常做法。</p>
+<h2 id="2-缓存">2. 缓存</h2>
+<p>缓存在大型电商系统中是常用的优化技巧。浏览器级别的缓存通过响应头进行设置。还会用到 App 客户端的缓存，把 H5/CSS/JS/ 图片打包，提前拉到客户端，在客户端做一个代理服务器，但是不会读取数据，可以提升用户体验。缓存的使用在网络上还有常用的 CDN。进到接入层后，如果使用软负载，也可以使用内存级别的缓存。</p>
+<h2 id="3-消息队列的应用">3. 消息队列的应用</h2>
+<p>消息队列的应用，是做服务解耦的好方法。也要考虑消息失败和重试的场景，需要来做一些额外补偿来防止数据丢失。还有一个机制，是数据的校验和补偿。很多的场景能做到的， 是最终一致性。大型的电商系统和金融系统场景，非常不一样，在设计分布式系统时，这是常用的方式。在电商中大多数情况，只要实现最终一致性就可以了。</p>
+<h1>高可用的架构设计</h1>
+<p>高可用的架构设计，对于电商来说，其实高可用是最基本的要求。如果在促销时，引来千万级别的用户，宕机会损失很大。</p>
+<h2 id="1-服务的降级、分组和故障的隔离">1. 服务的降级、分组和故障的隔离</h2>
+<p>基于微服务架构的电商系统，高可用的方案有以下几个部分：</p>
 <ul>
 <li>首先要支持服务的降级。要做降级的开关，通常写在配置中心里面。比如在大促时，先把订单放在缓存时，再进行落库等操作。</li>
 <li>同时还要有服务分组和故障的隔离。比如秒杀时，对秒杀的应用单独部署服务，当秒杀的应用挂了之后，不会影响其他服务，因为有服务的隔离。</li>
 <li>同时要有限流机制，很多的框架都有支持。</li>
 </ul>
-<h2 id="2-流量治理"><a href="#2-流量治理" class="headerlink" title="2. 流量治理"></a>2. 流量治理</h2><p>在极限的场景下，对流量的治理要从多层面进行。比如在促销当天，会开启对于爬虫和机器人的流量进行限流。一般会在大促前进行封板，如果出现问题，就进行回滚，比如数据版本的回滚，在设置数据结构的时候，要做支持带数据版本号的回滚。</p>
+<h2 id="2-流量治理">2. 流量治理</h2>
+<p>在极限的场景下，对流量的治理要从多层面进行。比如在促销当天，会开启对于爬虫和机器人的流量进行限流。一般会在大促前进行封板，如果出现问题，就进行回滚，比如数据版本的回滚，在设置数据结构的时候，要做支持带数据版本号的回滚。</p>
 
 
         <hr>
@@ -560,7 +570,7 @@
       repo: '',
       owner: '',
       admin: '',
-      id: 'Sat May 22 2021 18:32:04 GMT+0800', // Ensure uniqueness and length less than 50
+      id: 'Sun May 22 2022 18:32:04 GMT+0800', // Ensure uniqueness and length less than 50
       distractionFreeMode: false, // Facebook-like distraction free mode
       perPage: 10,
       pagerDirection: 'last',
@@ -613,7 +623,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%BA%94%E7%94%A8%E7%9A%84%E6%97%A0%E7%8A%B6%E6%80%81%E5%8C%96"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">应用的无状态化</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%8D%95%E4%BD%93%E5%BA%94%E7%94%A8%E7%9A%84%E6%8B%86%E5%88%86"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">单体应用的拆分</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E6%90%AD%E5%BB%BA"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">服务架构搭建</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-%E6%95%B0%E6%8D%AE%E7%9A%84%E5%BC%82%E6%9E%84"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">1. 数据的异构</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-%E7%BC%93%E5%AD%98"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">2. 缓存</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3-%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">3. 消息队列的应用</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E9%AB%98%E5%8F%AF%E7%94%A8%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">高可用的架构设计</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-%E6%9C%8D%E5%8A%A1%E7%9A%84%E9%99%8D%E7%BA%A7%E3%80%81%E5%88%86%E7%BB%84%E5%92%8C%E6%95%85%E9%9A%9C%E7%9A%84%E9%9A%94%E7%A6%BB"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">1. 服务的降级、分组和故障的隔离</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-%E6%B5%81%E9%87%8F%E6%B2%BB%E7%90%86"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">2. 流量治理</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">应用的无状态化</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">单体应用的拆分</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">服务架构搭建</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-%E6%95%B0%E6%8D%AE%E7%9A%84%E5%BC%82%E6%9E%84"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">1. 数据的异构</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-%E7%BC%93%E5%AD%98"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">2. 缓存</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3-%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">3. 消息队列的应用</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">高可用的架构设计</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-%E6%9C%8D%E5%8A%A1%E7%9A%84%E9%99%8D%E7%BA%A7%E3%80%81%E5%88%86%E7%BB%84%E5%92%8C%E6%95%85%E9%9A%9C%E7%9A%84%E9%9A%94%E7%A6%BB"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">1. 服务的降级、分组和故障的隔离</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-%E6%B5%81%E9%87%8F%E6%B2%BB%E7%90%86"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">2. 流量治理</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -1178,20 +1188,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+	</body>
 </html>

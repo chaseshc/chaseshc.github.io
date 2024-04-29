@@ -373,7 +373,7 @@
             <h2 class="subheading"></h2>
             <span class="meta">
               Posted by Chase Shen on
-              2021-05-12
+              2022-05-12
             </span>
 
 
@@ -447,25 +447,41 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1 id="1-B端系统的价值"><a href="#1-B端系统的价值" class="headerlink" title="1. B端系统的价值"></a>1. B端系统的价值</h1><p>任何一个业务模式的开展，无论是单边市场还是双边市场，都离不开用户和平台两端，用户端主要与用户打交道，使用C端系统（PC网站、APP、小程序等），主要负责C端业务的呈现，为业务做拉新与留存；平台端对应B端业务，使用B端系统（订单系统、支付系统、库存系统、供应链系统等），除了为C端提供提供后台的服务能力外，还承担着企业内部降本增效的使命。</p>
+        <h1>1. B端系统的价值</h1>
+<p>任何一个业务模式的开展，无论是单边市场还是双边市场，都离不开用户和平台两端，用户端主要与用户打交道，使用C端系统（PC网站、APP、小程序等），主要负责C端业务的呈现，为业务做拉新与留存；平台端对应B端业务，使用B端系统（订单系统、支付系统、库存系统、供应链系统等），除了为C端提供提供后台的服务能力外，还承担着企业内部降本增效的使命。</p>
 <p>在业务的开展过程中，B端系统承接了C端呈现之外的所有能力，例如用户下单业务中，用户下单前的搜索、商品列表与商品详情、加购物车和下单流程属于C端，一旦下单以后的履约、仓储、物流环节都属于B端业务了，如何在保证用户服务体验的同时，让效率最高，成本最低，这是B端业务开展的核心诉求，也是B端系统存在的价值，B端系统设计的目标是为了更好的辅助业务达成业务目标，一定是建立在业务合理性之上的。</p>
-<h1 id="2-B端业务开展流程"><a href="#2-B端业务开展流程" class="headerlink" title="2. B端业务开展流程"></a>2. B端业务开展流程</h1><p>了解了B端系统的存在价值以后，我们在设计B端系统时，就不会闭门造车了，因为我们知道系统的设计一定是和业务搭配的，这也是B端产品经理的价值所在，设计系统之前，先了解业务流程，再基于业务流程中需要系统支持的部分转换成系统需求。</p>
+<h1>2. B端业务开展流程</h1>
+<p>了解了B端系统的存在价值以后，我们在设计B端系统时，就不会闭门造车了，因为我们知道系统的设计一定是和业务搭配的，这也是B端产品经理的价值所在，设计系统之前，先了解业务流程，再基于业务流程中需要系统支持的部分转换成系统需求。</p>
 <p>以采购订单建单为例，我们一起来拆解一下采购订单从业务梳理到系统设计的过程：</p>
 <p>首先，采购订单的目的是从A供应商处采购X商品，所以要开展采购业务，前提是先有S商品和供应商等基本信息，需要先把商品和供应商信息在系统中维护全。</p>
 <p>然后，不同的采购场景会有不同的采购流程和应对策略，比如不同的采购价格需要不同的采购审批流程（如2000以下不需要审批，超过2000需要部门尽力审批，超过10000需要部门总监审批），那么在采购业务开展之前，就需要预先定义好审批流程，根据不同的采购金额设置不同的审批策略。</p>
 <p>以上信息完成以后，才能在系统中正常开展采购订单的创建，采购建单需要哪些功能呢？我们调研完采购员的日常工作流程以后，发现主要是创建采购单、编辑采购单（修改、删除）和审批采购单，这是采购建单业务最核心的功能，也是采购建单最常操作的场景，且必须要系统支持。于是，系统设计上也需要支持创建、编辑和审批采购单3个核心功能。</p>
 <p>同时，为了让采购流程更加高效顺畅，采购员提出需要系统支持批量建单（一次性建多个采购单），以及采购单的导入和导出功能，这些功能显然不是核心功能，但如果没有，会极大的降低采购员的工作效率。</p>
 <p>最后，为了评估采购的情况，便于日常运营，采购员需要定期对采购订单进行统计分析，于是，系统里还需要增加采购分析和统计的功能。</p>
-<p>综上，一个完整的采购订单业务想要顺利开展，需要5个系统能力与之匹配，如图：<br>我们将以上流程再抽象一下，便得到大多数B端业务流程的开展的通用模型：</p>
-<p>一、建基础数据→ 二、业务策略配置 → 三、开展业务 → 四、添加辅助工具 → 五、输出统计报表<br><img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/B端系统设计5要素/image.png" alt=""></p>
-<h1 id="3-B端系统设计5要素"><a href="#3-B端系统设计5要素" class="headerlink" title="3. B端系统设计5要素"></a>3. B端系统设计5要素</h1><p>顺着B端业务开展的通用模型，我们就此推导出B端系统设计的5要素，即任何一个完整的B端系统，都离不开基础数据模块、策略与配置模块、业务处理模块、辅助工具和统计报表功能这5个要素，就像盖房子的地基、地平、主体、门窗和屋顶一样，缺一不可。</p>
-<h3 id="1-基础数据模块"><a href="#1-基础数据模块" class="headerlink" title="1. 基础数据模块"></a>1. 基础数据模块</h3><pre><code>在业务发生前已经定义好，用于标识某个业务或主体的静态数据，比如采购系统里的商品和供应商数据、仓库里的货位数据、财务系统里的会计目录等；
-</code></pre><h3 id="2-策略与配置模块"><a href="#2-策略与配置模块" class="headerlink" title="2. 策略与配置模块"></a>2. 策略与配置模块</h3><pre><code>为指导业务开展而提前设定好的业务规则，包含参数、配置项、系统逻辑等，比如采购的审核策略、仓库的入库策略、商品的上架策略、商品的包邮策略等；
-</code></pre><h3 id="3-业务处理模块"><a href="#3-业务处理模块" class="headerlink" title="3. 业务处理模块"></a>3. 业务处理模块</h3><pre><code>执行并记录业务发生的过程，是完成业务最核心最常用的功能，一般以单据的形式记录，包含业务发生的过程和数据、单据状态流转、操作页面等，比如采购系统里的采购订单、仓储系统中的入库和出库管理流程、财务系统的核算流程、工单系统的工单创建和流转流程等；
-</code></pre><h3 id="4-辅助工具"><a href="#4-辅助工具" class="headerlink" title="4. 辅助工具"></a>4. 辅助工具</h3><pre><code>为了辅助达成业务目标，为降本增效、容错防呆而添加的软硬件功能，比如常用的批量处理、导入导出功能，以及物流里的各类自动化设备等；
-</code></pre><h3 id="5-统计报表"><a href="#5-统计报表" class="headerlink" title="5. 统计报表"></a>5. 统计报表</h3><pre><code>用于统计和查询业务数据的看板、报表等，便于更好的呈现业务的全貌，发现业务的问题。
-</code></pre><p><img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/B端系统设计5要素/image-2.png" alt=""></p>
-<h1 id="4-B端设计5要素的应用"><a href="#4-B端设计5要素的应用" class="headerlink" title="4. B端设计5要素的应用"></a>4. B端设计5要素的应用</h1><p>5要素是把B端系统剥离了业务以后提炼的一套设计方法，它不再受制于业务，可以让系统设计看起来更加简单，在日常工作中，我们可以基于5要素来举一反三：</p>
+<p>综上，一个完整的采购订单业务想要顺利开展，需要5个系统能力与之匹配，如图：<br>
+我们将以上流程再抽象一下，便得到大多数B端业务流程的开展的通用模型：</p>
+<p>一、建基础数据→ 二、业务策略配置 → 三、开展业务 → 四、添加辅助工具 → 五、输出统计报表<br>
+<img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/B端系统设计5要素/image.png" alt=""></p>
+<h1>3. B端系统设计5要素</h1>
+<p>顺着B端业务开展的通用模型，我们就此推导出B端系统设计的5要素，即任何一个完整的B端系统，都离不开基础数据模块、策略与配置模块、业务处理模块、辅助工具和统计报表功能这5个要素，就像盖房子的地基、地平、主体、门窗和屋顶一样，缺一不可。</p>
+<h3 id="1-基础数据模块">1. 基础数据模块</h3>
+<pre><code>在业务发生前已经定义好，用于标识某个业务或主体的静态数据，比如采购系统里的商品和供应商数据、仓库里的货位数据、财务系统里的会计目录等；
+</code></pre>
+<h3 id="2-策略与配置模块">2. 策略与配置模块</h3>
+<pre><code>为指导业务开展而提前设定好的业务规则，包含参数、配置项、系统逻辑等，比如采购的审核策略、仓库的入库策略、商品的上架策略、商品的包邮策略等；
+</code></pre>
+<h3 id="3-业务处理模块">3. 业务处理模块</h3>
+<pre><code>执行并记录业务发生的过程，是完成业务最核心最常用的功能，一般以单据的形式记录，包含业务发生的过程和数据、单据状态流转、操作页面等，比如采购系统里的采购订单、仓储系统中的入库和出库管理流程、财务系统的核算流程、工单系统的工单创建和流转流程等；
+</code></pre>
+<h3 id="4-辅助工具">4. 辅助工具</h3>
+<pre><code>为了辅助达成业务目标，为降本增效、容错防呆而添加的软硬件功能，比如常用的批量处理、导入导出功能，以及物流里的各类自动化设备等；
+</code></pre>
+<h3 id="5-统计报表">5. 统计报表</h3>
+<pre><code>用于统计和查询业务数据的看板、报表等，便于更好的呈现业务的全貌，发现业务的问题。
+</code></pre>
+<img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/B端系统设计5要素/image-2.png" alt="">
+<h1>4. B端设计5要素的应用</h1>
+<p>5要素是把B端系统剥离了业务以后提炼的一套设计方法，它不再受制于业务，可以让系统设计看起来更加简单，在日常工作中，我们可以基于5要素来举一反三：</p>
 <p>一、基于5要素从0到1设计系统。5要素是很好的一套系统框架，当我们从0到1设计系统时，可以快速的把功能进行分组，其实很多系统的菜单功能就是基于5要素做的分组。</p>
 <p>二、基于5要素转行学习。当我们切换到一个新的B端业务领域时，可以基于5要素快速的学习和查漏补缺。例如从供应链领域转到saas领域，虽然业务和行业变了，但是B端系统设计的思路还是一样的，可以基于5要素快速的学习基础数据、策略配置和业务处理模块，掌握核心要领，事半功倍。</p>
 <p>三、基于5要素，可以很清晰的知道每个系统功能的定位和价值。如果做的是核心的业务处理，那价值肯定是高的，而如果实现的是辅助工具，就要评估一下业务价值了。</p>
@@ -566,7 +582,7 @@
       repo: '',
       owner: '',
       admin: '',
-      id: 'Wed May 12 2021 18:04:54 GMT+0800', // Ensure uniqueness and length less than 50
+      id: 'Thu May 12 2022 18:04:54 GMT+0800', // Ensure uniqueness and length less than 50
       distractionFreeMode: false, // Facebook-like distraction free mode
       perPage: 10,
       pagerDirection: 'last',
@@ -619,7 +635,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#1-B%E7%AB%AF%E7%B3%BB%E7%BB%9F%E7%9A%84%E4%BB%B7%E5%80%BC"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">1. B端系统的价值</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#2-B%E7%AB%AF%E4%B8%9A%E5%8A%A1%E5%BC%80%E5%B1%95%E6%B5%81%E7%A8%8B"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">2. B端业务开展流程</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#3-B%E7%AB%AF%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A15%E8%A6%81%E7%B4%A0"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">3. B端系统设计5要素</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9D%97"><span class="toc-nav-number">3.0.1.</span> <span class="toc-nav-text">1. 基础数据模块</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-%E7%AD%96%E7%95%A5%E4%B8%8E%E9%85%8D%E7%BD%AE%E6%A8%A1%E5%9D%97"><span class="toc-nav-number">3.0.2.</span> <span class="toc-nav-text">2. 策略与配置模块</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-%E4%B8%9A%E5%8A%A1%E5%A4%84%E7%90%86%E6%A8%A1%E5%9D%97"><span class="toc-nav-number">3.0.3.</span> <span class="toc-nav-text">3. 业务处理模块</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7"><span class="toc-nav-number">3.0.4.</span> <span class="toc-nav-text">4. 辅助工具</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-%E7%BB%9F%E8%AE%A1%E6%8A%A5%E8%A1%A8"><span class="toc-nav-number">3.0.5.</span> <span class="toc-nav-text">5. 统计报表</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#4-B%E7%AB%AF%E8%AE%BE%E8%AE%A15%E8%A6%81%E7%B4%A0%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">4. B端设计5要素的应用</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">1. B端系统的价值</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">2. B端业务开展流程</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">3. B端系统设计5要素</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9D%97"><span class="toc-nav-number">3.0.1.</span> <span class="toc-nav-text">1. 基础数据模块</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-%E7%AD%96%E7%95%A5%E4%B8%8E%E9%85%8D%E7%BD%AE%E6%A8%A1%E5%9D%97"><span class="toc-nav-number">3.0.2.</span> <span class="toc-nav-text">2. 策略与配置模块</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-%E4%B8%9A%E5%8A%A1%E5%A4%84%E7%90%86%E6%A8%A1%E5%9D%97"><span class="toc-nav-number">3.0.3.</span> <span class="toc-nav-text">3. 业务处理模块</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7"><span class="toc-nav-number">3.0.4.</span> <span class="toc-nav-text">4. 辅助工具</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-%E7%BB%9F%E8%AE%A1%E6%8A%A5%E8%A1%A8"><span class="toc-nav-number">3.0.5.</span> <span class="toc-nav-text">5. 统计报表</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">4. B端设计5要素的应用</span></a></li></ol>
         
         </div>
       </aside>
@@ -1184,20 +1200,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+	</body>
 </html>

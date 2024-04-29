@@ -373,7 +373,7 @@
             <h2 class="subheading"></h2>
             <span class="meta">
               Posted by Chase Shen on
-              2021-05-20
+              2022-05-20
             </span>
 
 
@@ -448,20 +448,36 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <p>微服务是一种软件架构风格，其中应用程序被构建为一组小型、自治的服务，每个服务都围绕特定的业务功能进行构建，并通过轻量级通信机制（通常是HTTP API）相互通信。这些服务可以独立部署、扩展和管理，每个服务都可以由不同的团队开发和维护。</p>
-<h1 id="整体式架构与微服务架构"><a href="#整体式架构与微服务架构" class="headerlink" title="整体式架构与微服务架构"></a>整体式架构与微服务架构</h1><p>通过整体式架构，所有进程紧密耦合，并可作为单项服务运行。这意味着，如果应用程序的一个进程遇到需求峰值，则必须扩展整个架构。随着代码库的增长，添加或改进整体式应用程序的功能变得更加复杂。这种复杂性限制了试验的可行性，并使实施新概念变得困难。整体式架构增加了应用程序可用性的风险，因为许多依赖且紧密耦合的进程会扩大单个进程故障的影响。</p>
-<p>使用微服务架构，将应用程序构建为独立的组件，并将每个应用程序进程作为一项服务运行。这些服务使用轻量级 API 通过明确定义的接口进行通信。这些服务是围绕业务功能构建的，每项服务执行一项功能。由于它们是独立运行的，因此可以针对各项服务进行更新、部署和扩展，以满足对应用程序特定功能的需求。<br><img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/什么是微服务？/image.png" alt=""></p>
-<h1 id="微服务架构的主要特点"><a href="#微服务架构的主要特点" class="headerlink" title="微服务架构的主要特点"></a>微服务架构的主要特点</h1><h3 id="松耦合性"><a href="#松耦合性" class="headerlink" title="松耦合性"></a>松耦合性</h3><p>微服务之间通过定义良好的接口进行通信，它们相互独立，可以独立部署和扩展，从而实现松耦合。</p>
-<h3 id="单一职责"><a href="#单一职责" class="headerlink" title="单一职责"></a>单一职责</h3><p>每个微服务都专注于实现一个特定的业务功能，遵循单一职责原则。</p>
-<h3 id="自治性"><a href="#自治性" class="headerlink" title="自治性"></a>自治性</h3><p>每个微服务都是自治的，可以使用不同的编程语言、技术栈和数据存储。它们可以独立部署、扩展和管理，不受其他微服务的影响。</p>
-<h3 id="分布式部署"><a href="#分布式部署" class="headerlink" title="分布式部署"></a>分布式部署</h3><p>微服务架构将应用程序拆分为多个服务，并将这些服务部署在不同的服务器上，从而提高了系统的弹性和可靠性。</p>
-<h3 id="技术多样性"><a href="#技术多样性" class="headerlink" title="技术多样性"></a>技术多样性</h3><p>微服务允许每个服务使用适合其需求的最佳技术，因此可以选择最适合特定业务需求的技术栈。</p>
-<h1 id="微服务的优势"><a href="#微服务的优势" class="headerlink" title="微服务的优势"></a>微服务的优势</h1><h3 id="敏捷性"><a href="#敏捷性" class="headerlink" title="敏捷性"></a>敏捷性</h3><p>微服务促进若干小型独立团队形成一个组织，这些团队负责自己的服务。各团队在小型且易于理解的环境中行事，并且可以更独立、更快速地工作。这缩短了开发周期时间。</p>
-<h3 id="灵活扩展"><a href="#灵活扩展" class="headerlink" title="灵活扩展"></a>灵活扩展</h3><p>通过微服务，您可以独立扩展各项服务以满足其支持的应用程序功能的需求。这使团队能够适当调整基础设施需求，准确衡量功能成本，并在服务需求激增时保持可用性。</p>
-<h3 id="轻松部署"><a href="#轻松部署" class="headerlink" title="轻松部署"></a>轻松部署</h3><p>微服务支持持续集成和持续交付，可以轻松尝试新想法，并可以在无法正常运行时回滚。由于故障成本较低，因此可以大胆试验，更轻松地更新代码，并缩短新功能的上市时间。</p>
-<h3 id="技术自由"><a href="#技术自由" class="headerlink" title="技术自由"></a>技术自由</h3><p>微服务架构不遵循“一刀切”的方法。团队可以自由选择最佳工具来解决他们的具体问题。因此，构建微服务的团队可以为每项作业选择最佳工具。</p>
-<h3 id="可重复使用的代码"><a href="#可重复使用的代码" class="headerlink" title="可重复使用的代码"></a>可重复使用的代码</h3><p>将软件划分为小型且明确定义的模块，让团队可以将功能用于多种目的。专为某项功能编写的服务可以用作另一项功能的构建块。这样应用程序就可以自行引导，因为开发人员可以创建新功能，而无需从头开始编写代码。</p>
-<h3 id="弹性"><a href="#弹性" class="headerlink" title="弹性"></a>弹性</h3><p>服务独立性增加了应用程序应对故障的弹性。在整体式架构中，如果一个组件出现故障，可能导致整个应用程序无法运行。通过微服务，应用程序可以通过降低功能而不导致整个应用程序崩溃来处理总体服务故障。</p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>微服务架构适用于复杂的、大型的软件系统，它使得软件系统更易于理解、开发、部署和维护。然而，微服务架构也带来了一些挑战，比如服务之间的通信复杂性、分布式事务管理、服务发现和治理等问题。</p>
+<h1>整体式架构与微服务架构</h1>
+<p>通过整体式架构，所有进程紧密耦合，并可作为单项服务运行。这意味着，如果应用程序的一个进程遇到需求峰值，则必须扩展整个架构。随着代码库的增长，添加或改进整体式应用程序的功能变得更加复杂。这种复杂性限制了试验的可行性，并使实施新概念变得困难。整体式架构增加了应用程序可用性的风险，因为许多依赖且紧密耦合的进程会扩大单个进程故障的影响。</p>
+<p>使用微服务架构，将应用程序构建为独立的组件，并将每个应用程序进程作为一项服务运行。这些服务使用轻量级 API 通过明确定义的接口进行通信。这些服务是围绕业务功能构建的，每项服务执行一项功能。由于它们是独立运行的，因此可以针对各项服务进行更新、部署和扩展，以满足对应用程序特定功能的需求。<br>
+<img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/什么是微服务？/image.png" alt=""></p>
+<h1>微服务架构的主要特点</h1>
+<h3 id="松耦合性">松耦合性</h3>
+<p>微服务之间通过定义良好的接口进行通信，它们相互独立，可以独立部署和扩展，从而实现松耦合。</p>
+<h3 id="单一职责">单一职责</h3>
+<p>每个微服务都专注于实现一个特定的业务功能，遵循单一职责原则。</p>
+<h3 id="自治性">自治性</h3>
+<p>每个微服务都是自治的，可以使用不同的编程语言、技术栈和数据存储。它们可以独立部署、扩展和管理，不受其他微服务的影响。</p>
+<h3 id="分布式部署">分布式部署</h3>
+<p>微服务架构将应用程序拆分为多个服务，并将这些服务部署在不同的服务器上，从而提高了系统的弹性和可靠性。</p>
+<h3 id="技术多样性">技术多样性</h3>
+<p>微服务允许每个服务使用适合其需求的最佳技术，因此可以选择最适合特定业务需求的技术栈。</p>
+<h1>微服务的优势</h1>
+<h3 id="敏捷性">敏捷性</h3>
+<p>微服务促进若干小型独立团队形成一个组织，这些团队负责自己的服务。各团队在小型且易于理解的环境中行事，并且可以更独立、更快速地工作。这缩短了开发周期时间。</p>
+<h3 id="灵活扩展">灵活扩展</h3>
+<p>通过微服务，您可以独立扩展各项服务以满足其支持的应用程序功能的需求。这使团队能够适当调整基础设施需求，准确衡量功能成本，并在服务需求激增时保持可用性。</p>
+<h3 id="轻松部署">轻松部署</h3>
+<p>微服务支持持续集成和持续交付，可以轻松尝试新想法，并可以在无法正常运行时回滚。由于故障成本较低，因此可以大胆试验，更轻松地更新代码，并缩短新功能的上市时间。</p>
+<h3 id="技术自由">技术自由</h3>
+<p>微服务架构不遵循“一刀切”的方法。团队可以自由选择最佳工具来解决他们的具体问题。因此，构建微服务的团队可以为每项作业选择最佳工具。</p>
+<h3 id="可重复使用的代码">可重复使用的代码</h3>
+<p>将软件划分为小型且明确定义的模块，让团队可以将功能用于多种目的。专为某项功能编写的服务可以用作另一项功能的构建块。这样应用程序就可以自行引导，因为开发人员可以创建新功能，而无需从头开始编写代码。</p>
+<h3 id="弹性">弹性</h3>
+<p>服务独立性增加了应用程序应对故障的弹性。在整体式架构中，如果一个组件出现故障，可能导致整个应用程序无法运行。通过微服务，应用程序可以通过降低功能而不导致整个应用程序崩溃来处理总体服务故障。</p>
+<h1>总结</h1>
+<p>微服务架构适用于复杂的、大型的软件系统，它使得软件系统更易于理解、开发、部署和维护。然而，微服务架构也带来了一些挑战，比如服务之间的通信复杂性、分布式事务管理、服务发现和治理等问题。</p>
 
 
         <hr>
@@ -557,7 +573,7 @@
       repo: '',
       owner: '',
       admin: '',
-      id: 'Thu May 20 2021 18:18:01 GMT+0800', // Ensure uniqueness and length less than 50
+      id: 'Fri May 20 2022 18:18:01 GMT+0800', // Ensure uniqueness and length less than 50
       distractionFreeMode: false, // Facebook-like distraction free mode
       perPage: 10,
       pagerDirection: 'last',
@@ -610,7 +626,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E6%95%B4%E4%BD%93%E5%BC%8F%E6%9E%B6%E6%9E%84%E4%B8%8E%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">整体式架构与微服务架构</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%9A%84%E4%B8%BB%E8%A6%81%E7%89%B9%E7%82%B9"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">微服务架构的主要特点</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9D%BE%E8%80%A6%E5%90%88%E6%80%A7"><span class="toc-nav-number">2.0.1.</span> <span class="toc-nav-text">松耦合性</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8D%95%E4%B8%80%E8%81%8C%E8%B4%A3"><span class="toc-nav-number">2.0.2.</span> <span class="toc-nav-text">单一职责</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%87%AA%E6%B2%BB%E6%80%A7"><span class="toc-nav-number">2.0.3.</span> <span class="toc-nav-text">自治性</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%86%E5%B8%83%E5%BC%8F%E9%83%A8%E7%BD%B2"><span class="toc-nav-number">2.0.4.</span> <span class="toc-nav-text">分布式部署</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%8A%80%E6%9C%AF%E5%A4%9A%E6%A0%B7%E6%80%A7"><span class="toc-nav-number">2.0.5.</span> <span class="toc-nav-text">技术多样性</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">微服务的优势</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%95%8F%E6%8D%B7%E6%80%A7"><span class="toc-nav-number">3.0.1.</span> <span class="toc-nav-text">敏捷性</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%81%B5%E6%B4%BB%E6%89%A9%E5%B1%95"><span class="toc-nav-number">3.0.2.</span> <span class="toc-nav-text">灵活扩展</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BD%BB%E6%9D%BE%E9%83%A8%E7%BD%B2"><span class="toc-nav-number">3.0.3.</span> <span class="toc-nav-text">轻松部署</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%8A%80%E6%9C%AF%E8%87%AA%E7%94%B1"><span class="toc-nav-number">3.0.4.</span> <span class="toc-nav-text">技术自由</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%AF%E9%87%8D%E5%A4%8D%E4%BD%BF%E7%94%A8%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">3.0.5.</span> <span class="toc-nav-text">可重复使用的代码</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%BC%B9%E6%80%A7"><span class="toc-nav-number">3.0.6.</span> <span class="toc-nav-text">弹性</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">总结</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">整体式架构与微服务架构</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">微服务架构的主要特点</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9D%BE%E8%80%A6%E5%90%88%E6%80%A7"><span class="toc-nav-number">2.0.1.</span> <span class="toc-nav-text">松耦合性</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8D%95%E4%B8%80%E8%81%8C%E8%B4%A3"><span class="toc-nav-number">2.0.2.</span> <span class="toc-nav-text">单一职责</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%87%AA%E6%B2%BB%E6%80%A7"><span class="toc-nav-number">2.0.3.</span> <span class="toc-nav-text">自治性</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%86%E5%B8%83%E5%BC%8F%E9%83%A8%E7%BD%B2"><span class="toc-nav-number">2.0.4.</span> <span class="toc-nav-text">分布式部署</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%8A%80%E6%9C%AF%E5%A4%9A%E6%A0%B7%E6%80%A7"><span class="toc-nav-number">2.0.5.</span> <span class="toc-nav-text">技术多样性</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">微服务的优势</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%95%8F%E6%8D%B7%E6%80%A7"><span class="toc-nav-number">3.0.1.</span> <span class="toc-nav-text">敏捷性</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%81%B5%E6%B4%BB%E6%89%A9%E5%B1%95"><span class="toc-nav-number">3.0.2.</span> <span class="toc-nav-text">灵活扩展</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BD%BB%E6%9D%BE%E9%83%A8%E7%BD%B2"><span class="toc-nav-number">3.0.3.</span> <span class="toc-nav-text">轻松部署</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%8A%80%E6%9C%AF%E8%87%AA%E7%94%B1"><span class="toc-nav-number">3.0.4.</span> <span class="toc-nav-text">技术自由</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%AF%E9%87%8D%E5%A4%8D%E4%BD%BF%E7%94%A8%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">3.0.5.</span> <span class="toc-nav-text">可重复使用的代码</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%BC%B9%E6%80%A7"><span class="toc-nav-number">3.0.6.</span> <span class="toc-nav-text">弹性</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">总结</span></a></li></ol>
         
         </div>
       </aside>
@@ -1175,20 +1191,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+	</body>
 </html>
