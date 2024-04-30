@@ -375,7 +375,7 @@
             <h2 class="subheading"></h2>
             <span class="meta">
               Posted by Chase Shen on
-              2024-04-30
+              2022-07-30
             </span>
 
 
@@ -387,7 +387,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">916</span> In Total
+              Words <span class="post-count">911</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -450,7 +450,7 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <p>这是一条标准的查询语句:</p>
-<img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/图解-SQL-执行顺序/image1.png" alt="">
+<p><img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/图解-SQL-执行顺序/image1.png" alt=""></p>
 <p>这是我们实际上SQL执行顺序：</p>
 <ul>
 <li>我们先执行<code>from</code>,<code>join</code>来确定表之间的连接关系，得到初步的数据</li>
@@ -461,65 +461,58 @@
 <li>将查询结果去重<code>distinct</code></li>
 <li>最后合并各组的查询结果，按照<code>order by</code>的条件进行排序</li>
 </ul>
-<img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/图解-SQL-执行顺序/image2.png" alt="">
-<h1>数据的关联过程</h1>
-<p>数据库中的两张表</p>
-<img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/图解-SQL-执行顺序/image3.png" alt="">
-<h2 id="from-join-where"><code>from</code> &amp; <code>join</code> &amp; <code>where</code></h2>
-<p>用于确定我们要查询的表的范围，涉及哪些表。</p>
-<p>选择一张表，然后用join连接</p>
+<p><img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/图解-SQL-执行顺序/image2.png" alt=""></p>
+<h1 id="数据的关联过程"><a href="#数据的关联过程" class="headerlink" title="数据的关联过程"></a>数据的关联过程</h1><p>数据库中的两张表</p>
+<p><img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/图解-SQL-执行顺序/image3.png" alt=""></p>
+<h2 id="from-amp-join-amp-where"><a href="#from-amp-join-amp-where" class="headerlink" title="from &amp; join &amp; where"></a><code>from</code> &amp; <code>join</code> &amp; <code>where</code></h2><p>用于确定我们要查询的表的范围，涉及哪些表。</p>
+<p>选择一张表，然后用<code>join</code>连接</p>
 <ul>
 <li><code>from table1 join table2 on table1.id=table2.id</code></li>
 </ul>
-<p>选择多张表，用where做关联条件</p>
+<p>选择多张表，用<code>where</code>做关联条件</p>
 <ul>
 <li><code>from table1,table2 where table1.id=table2.id</code></li>
 </ul>
 <p>我们会得到满足关联条件的两张表的数据，不加关联条件会出现笛卡尔积。</p>
-<h2 id="group-by"><code>group by</code></h2>
-<p>按照我们的分组条件，将数据进行分组，但是不会筛选数据。</p>
+<h2 id="group-by"><a href="#group-by" class="headerlink" title="group by"></a><code>group by</code></h2><p>按照我们的分组条件，将数据进行分组，但是不会筛选数据。</p>
 <p>比如我们按照即id的奇偶分组</p>
-<img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/图解-SQL-执行顺序/image4.png" alt="">
-<h2 id="having-where"><code>having&amp;where</code></h2>
-<p><code>having</code>中可以是普通条件的筛选，也能是聚合函数。而<code>where</code>只能是普通函数，一般情况下，有<code>having</code>可以不写<code>where</code>，把<code>where</code>的筛选放在<code>having</code>里，SQL语句看上去更丝滑。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/图解-SQL-执行顺序/image4.png" alt=""></p>
+<h2 id="having-amp-where"><a href="#having-amp-where" class="headerlink" title="having&amp;where"></a><code>having&amp;where</code></h2><p><code>having</code>中可以是普通条件的筛选，也能是聚合函数。而<code>where</code>只能是普通函数，一般情况下，有<code>having</code>可以不写<code>where</code>，把<code>where</code>的筛选放在<code>having</code>里，SQL语句看上去更丝滑。</p>
 <ul>
-<li>
-<p><strong>使用<code>where</code>再group by</strong><br>
-先把不满足<code>where</code>条件的数据删除，再去分组</p>
+<li><p><strong>使用<code>where</code>再<code>group by</code></strong><br>先把不满足<code>where</code>条件的数据删除，再去分组</p>
 </li>
-<li>
-<p><strong>使用<code>group by</code>再<code>having</code></strong><br>
-先分组再删除不满足<code>having</code>条件的数据，这两种方法有区别吗，几乎没有！</p>
+<li><p><strong>使用<code>group by</code>再<code>having</code></strong><br>先分组再删除不满足<code>having</code>条件的数据，这两种方法有区别吗，几乎没有！</p>
 </li>
 </ul>
-<p><em><strong>举个例子：</strong></em></p>
+<p><strong><em>举个例子：</em></strong></p>
 <p><code>100/2=50</code>，此时我们把100拆分<code>(10+10+10+10+10…)/2=5+5+5+…+5=50</code>,只要筛选条件没变，即便是分组了也得满足筛选条件，所以<code>where</code>后<code>group by</code> 和<code>group by</code>再<code>having</code>是不影响结果的！</p>
 <p>不同的是，<code>having</code>语法支持聚合函数,其实<code>having</code>的意思就是针对每组的条件进行筛选。我们之前看到了普通的筛选条件是不影响的，但是<code>having</code>还支持聚合函数，这是<code>where</code>无法实现的。</p>
 <p>当前数据分组情况</p>
-<img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/图解-SQL-执行顺序/image4.png" alt="">
+<p><img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/图解-SQL-执行顺序/image4.png" alt=""></p>
 <p>执行<code>having</code>的筛选条件，可以使用聚合函数。筛选掉工资小于各组平均工资的<code>having salary&lt;avg(salary)</code></p>
-<img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/图解-SQL-执行顺序/image5.png" alt="">
-<h2 id="select"><code>select</code></h2>
-<p>分组结束之后，我们再执行<code>select</code>语句，因为聚合函数是依赖于分组的，聚合函数会单独新增一个查询出来的字段，这里用紫色表示，这里我们两个id重复了，我们就保留一个id，重复字段名需要指向来自哪张表，否则会出现唯一性问题。最后按照用户名去重。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/图解-SQL-执行顺序/image5.png" alt=""></p>
+<h2 id="select"><a href="#select" class="headerlink" title="select"></a><code>select</code></h2><p>分组结束之后，我们再执行<code>select</code>语句，因为聚合函数是依赖于分组的，聚合函数会单独新增一个查询出来的字段，这里用紫色表示，这里我们两个id重复了，我们就保留一个id，重复字段名需要指向来自哪张表，否则会出现唯一性问题。最后按照用户名去重。</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> employee.id,<span class="keyword">distinct</span> name,salary, <span class="built_in">avg</span>(salary)</span><br></pre></td></tr></table></figure>
 <p>将各组<code>having</code>之后的数据再合并数据。</p>
-<img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/图解-SQL-执行顺序/image6.png" alt="">
-<h2 id="order-by"><code>order by</code></h2>
-<p>最后我们执行<code>order by</code> 将数据按照一定顺序排序，比如这里按照id排序。如果此时有<code>limit</code>那么查询到相应的我们需要的记录数时，就不继续往下查了。</p>
-<img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/图解-SQL-执行顺序/image7.png" alt="">
-<h2 id="limit"><code>limit</code></h2>
-<p>记住<code>limit</code>是最后查询的，为什么呢？假如我们要查询年级最小的三个数据，如果在排序之前就截取到3个数据。实际上查询出来的不是最小的三个数据而是前三个数据了，记住这一点。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/图解-SQL-执行顺序/image6.png" alt=""></p>
+<h2 id="order-by"><a href="#order-by" class="headerlink" title="order by"></a><code>order by</code></h2><p>最后我们执行<code>order by</code> 将数据按照一定顺序排序，比如这里按照id排序。如果此时有<code>limit</code>那么查询到相应的我们需要的记录数时，就不继续往下查了。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/图解-SQL-执行顺序/image7.png" alt=""></p>
+<h2 id="limit"><a href="#limit" class="headerlink" title="limit"></a><code>limit</code></h2><p>记住<code>limit</code>是最后查询的，为什么呢？假如我们要查询年级最小的三个数据，如果在排序之前就截取到3个数据。实际上查询出来的不是最小的三个数据而是前三个数据了，记住这一点。</p>
 <p>我们如果<code>limit 0,3</code>窃取前三个数据再排序，实际上最少工资的是2000,4000,5000。你这里只能是4000,5000,8000了。</p>
-<img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/图解-SQL-执行顺序/image8.png" alt="">
+<p><img src="https://cdn.jsdelivr.net/gh/chaseshc/JSDelivr@latest/post-assets/图解-SQL-执行顺序/image8.png" alt=""></p>
 
 
         <hr>
         <!-- Pager -->
         <ul class="pager">
           
+          <li class="previous">
+            <a href="/微服务架构中10个常用的设计模式/" data-toggle="tooltip" data-placement="top" title="微服务架构中10个常用的设计模式">&larr; Previous Post</a>
+          </li>
+          
           
           <li class="next">
-            <a href="/ChatGPT提示词原则/" data-toggle="tooltip" data-placement="top" title="ChatGPT提示词原则">Next Post &rarr;</a>
+            <a href="/使用PHP做图片防盗链/" data-toggle="tooltip" data-placement="top" title="使用PHP做图片防盗链">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -602,7 +595,7 @@
       repo: '',
       owner: '',
       admin: '',
-      id: 'Tue Apr 30 2024 15:41:24 GMT+0800', // Ensure uniqueness and length less than 50
+      id: 'Sat Jul 30 2022 15:41:24 GMT+0800', // Ensure uniqueness and length less than 50
       distractionFreeMode: false, // Facebook-like distraction free mode
       perPage: 10,
       pagerDirection: 'last',
@@ -655,7 +648,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">数据的关联过程</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#from-join-where"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">from &amp; join &amp; where</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#group-by"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">group by</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#having-where"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">having&amp;where</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#select"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">select</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#order-by"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">order by</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#limit"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">limit</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E6%95%B0%E6%8D%AE%E7%9A%84%E5%85%B3%E8%81%94%E8%BF%87%E7%A8%8B"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">数据的关联过程</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#from-amp-join-amp-where"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">from &amp; join &amp; where</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#group-by"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">group by</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#having-amp-where"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">having&amp;where</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#select"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">select</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#order-by"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">order by</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#limit"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">limit</span></a></li></ol></li></ol>
         
         </div>
       </aside>
